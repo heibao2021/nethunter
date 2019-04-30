@@ -160,6 +160,8 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 
 # - Samsung Galaxy Tab S4
 # Samsung Experience 9.5 / Android 8.1 Oreo
+# defconfig WiFi: gts4lwifi_kali_defconfig
+# defconfig LTE: gts4llte_kali_defconfig
 # git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter
 
 # - Sony Xperia Z1
