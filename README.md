@@ -4,7 +4,7 @@ This repository contains all the precompiled kernels, kernel modules, and instal
 necessary for building an installer tailored for a supported device.
 
 It should be cloned by `./bootstrap.sh` in the nethunter-installer directory of the main Kali NetHunter repository.  
-You can find that here: https://github.com/offensive-security/kali-nethunter/tree/master/nethunter-installer
+You can find that here: https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/tree/master/nethunter-installer
 
 ## How to add a new/unsupported device
 
