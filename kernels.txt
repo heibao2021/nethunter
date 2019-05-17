@@ -131,6 +131,8 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # - Samsung Galaxy S4
 # AOSP/CM
 # git clone https://github.com/semsevens/nethunter_kernel_jfltexx.git -b cm-13.0
+# LineageOS 14.X
+# git clone https://github.com/fasheng/nethunter_kernel_jfltexx.git -b cm-14.1
 
 # - Samsung Galaxy S5
 # TouchWiz
