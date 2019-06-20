@@ -239,6 +239,11 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # MIUI/Nougat 
 # git clone https://github.com/DroidKali/santoni_kernel_nethunter.git
 
+# Motorola Moto G5 Plus
+# Lineage OS 16.0 Based ROM's
+# git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0
+
+
 # - Toolchain
 # Google reference
 # git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7
