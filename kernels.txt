@@ -48,6 +48,7 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release nexus6-5
 # CM
 # git clone https://github.com/discipuloosho/android_kernel_moto_shamu.git -b nethunter_cm-14.1
+# git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0 
 
 # - Nexus 5X
 # git clone https://github.com/kamarush/bullhead.git -b nethunter-8.1
@@ -120,6 +121,10 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # - LG G5 & LG V20
 # LG Stock
 # git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0
+
+# - LG V20 H990
+# LG Stock Oreo
+# git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0
 
 # - Samsung Galaxy Note 3
 # TouchWiz
