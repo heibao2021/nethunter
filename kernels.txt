@@ -125,6 +125,8 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0
 
 # - LG V20 H990
+# LG Stock Nougat with dirtysanta patch
+# git clone https://github.com/Re4son/android_kernel_lge_msm8996 -b nethunter-7.0
 # LG Stock Oreo
 # git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0
 
