@@ -1,0 +1,24 @@
+# Aliases extracted from modules themselves.
+alias fs-texfat exfat
+alias crypto-ansi_cprng ansi_cprng
+alias ansi_cprng ansi_cprng
+alias crypto-stdrng ansi_cprng
+alias stdrng ansi_cprng
+alias spi:spidev spidev
+alias of:N*T*Cqcom,spi-msm-codec-slave* spidev
+alias of:N*T*Crohm,dh2228fv* spidev
+alias input:b*v*p*e*-e*k*r*a*m*l*s*f*w* evbug
+alias i2c:tda18212 tda18212
+alias i2c:e4000 e4000
+alias i2c:si2157 si2157
+alias i2c:m88ts2022 m88ts2022
+alias i2c:it913x it913x
+alias i2c:mxl301rf mxl301rf
+alias i2c:qm1d1c0042 qm1d1c0042
+alias i2c:au8522 au8522_decoder
+alias i2c:si2168 si2168
+alias i2c:sp2 sp2
+alias i2c:af9033 af9033
+alias i2c:tc90522ter tc90522
+alias i2c:tc90522sat tc90522
+alias tty-ldisc-26 brcm_hci_ldisc
