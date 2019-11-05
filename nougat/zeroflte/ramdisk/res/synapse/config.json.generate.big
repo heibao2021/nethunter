@@ -9,19 +9,19 @@ cat << CTAG
 	}},        
 	{ SLiveLabel:{
                   title:"CPU frequency",
-                  description:"Current frequencies.",
+                  description:"Current frequency.",
                   refresh:500,
-                  action:"live LiveCPUFrequency_big"
+                  action:"FREQ=\$(cat /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_cur_freq); L=\"\${FREQ%???}MHz\"; echo \$L;"
         }},
 	{ SSeekBar:{
        		title:"CPU max frequency",
 		description:"Set the maximum freqency the CPU scales up to.",
-		default:2100000,
+		default:`cat /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq`,
 		action:"generic /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
 		values:{
 `
 			for FREQ in $(cat /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_freq_table); do
-				LABEL=$(($FREQ / 1000))
+				LABEL=$(expr $FREQ / 1000)
 				echo "$FREQ:\"${LABEL}MHz\", "
 			done
 `
@@ -35,7 +35,7 @@ cat << CTAG
 		values:{
 `
 			for FREQ in $(cat /sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster1_freq_table); do
-				LABEL=$(($FREQ / 1000))
+				LABEL=$(expr $FREQ / 1000)
 				echo "$FREQ:\"${LABEL}MHz\", "
 			done
 `
@@ -57,16 +57,6 @@ cat << CTAG
 				to:"/sys/devices/system/cpu/cpu4/cpufreq"
 			}
 		]
-	}},
-	{ SPane:{
-		title:"HPM Voltage Control",
-        }},
-	{ SSeekBar:{
-		title:"Atlas HPM voltage margin",
-		description:"Set the maximum voltage margin the APM undervolts down to.",
-		default:`cat /sys/kernel/debug/mailbox/atl_cl_margin`,
-		action:"generic /sys/kernel/debug/mailbox/atl_cl_margin",
-		unit:"µV", weight:6250.0, min:0, step:1, max:10
 	}},
 	{ SPane:{
 		title:"CPU voltage control",

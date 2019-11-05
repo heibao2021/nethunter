@@ -1,6 +1,10 @@
 #!/system/bin/sh
 
-BB=/system/xbin/busybox;
+if [ ! -f /su/xbin/busybox ]; then
+	BB=/system/xbin/busybox;
+else
+	BB=/su/xbin/busybox;
+fi;
 
 cat << CTAG
 {
@@ -17,7 +21,7 @@ cat << CTAG
 		description:"Default is bic.\n",
 		default:$(cat proc/sys/net/ipv4/tcp_congestion_control),
 		action:"generic proc/sys/net/ipv4/tcp_congestion_control",
-		values:[`while read values; do printf "%s, \n" $values; done < proc/sys/net/ipv4/tcp_available_congestion_control`]
+		values:[`while read values; do $BB printf "%s, \n" $values; done < proc/sys/net/ipv4/tcp_available_congestion_control`]
 	}},
 	{ SSpacer:{
 		height:1
@@ -147,7 +151,7 @@ cat << CTAG
 	}},
 	{ SOptionList:{
 		title:"IPv6 optimistic_dad",
-		description:"Perform Optimistic Duplicate Address Detection. Default is Disabled.\n",
+		description:"Perform Optimistic Duplicate Address Detection. Default is Enabled.\n",
 		default:1,
 		action:"generic /proc/sys/net/ipv6/conf/all/optimistic_dad",
 		values:{
@@ -159,7 +163,7 @@ cat << CTAG
 	}},
 	{ SOptionList:{
 		title:"IPv6 use_optimistic",
-		description:"Default is Disabled.\n",
+		description:"Default is Enabled.\n",
 		default:1,
 		action:"generic /proc/sys/net/ipv6/conf/all/use_optimistic",
 		values:{
