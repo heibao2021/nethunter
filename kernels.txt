@@ -166,7 +166,7 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 
 # - Samsung Galaxy S6, Galaxy S6 edge
 # AOSP/LineageOS
-# git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1
+# git clone https://gitlab.com/rafa_99/android_kernel_samsung_exynos7420_aosp_nougat -b cm-14.1
 # TouchWiz
 # git clone https://github.com/XXH3X/Ultimate-Kali
 
