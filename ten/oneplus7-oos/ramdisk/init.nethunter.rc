@@ -11,12 +11,14 @@ on boot
     write /config/usb_gadget/g1/functions/hid.0/protocol "1"
     write /config/usb_gadget/g1/functions/hid.0/subclass "1"
     write /config/usb_gadget/g1/functions/hid.0/report_length "8"
-    copy /keyboard-descriptor.bin /config/usb_gadget/g1/functions/hid.0/report_desc
+    ## Copying the keyboard descriptor is not required on OnePlus7 and even causes bootloops
+    ## copy /keyboard-descriptor.bin /config/usb_gadget/g1/functions/hid.0/report_desc
     mkdir /config/usb_gadget/g1/functions/hid.1
     write /config/usb_gadget/g1/functions/hid.1/protocol "1"
     write /config/usb_gadget/g1/functions/hid.1/subclass "2"
     write /config/usb_gadget/g1/functions/hid.1/report_length "4"
-    copy /mouse-descriptor.bin /config/usb_gadget/g1/functions/hid.1/report_desc
+    ## Copying the mouse descriptor is not required on OnePlus7 and even causes bootloops
+    ##copy /mouse-descriptor.bin /config/usb_gadget/g1/functions/hid.1/report_desc
 
 # USB Attack for OnePlus7
 
@@ -39,7 +41,7 @@ on property:sys.usb.config=win,mtp,hid && property:sys.usb.configfs=1
     setprop sys.usb.state ${sys.usb.config}
 
 ### MTP + HID + ADB ###
-on property:sys.usb.config=win,mpt,hid,adb && property:sys.usb.configfs=1
+on property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=1
     start adbd
     
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=1
@@ -337,7 +339,7 @@ on property:sys.usb.config=win,mtp,hid && property:sys.usb.configfs=1
     setprop sys.usb.state ${sys.usb.config}
 
 ### MTP + HID + ADB ###
-on property:sys.usb.config=win,mpt,hid,adb && property:sys.usb.configfs=1
+on property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=1
     start adbd
     
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=1
@@ -424,7 +426,8 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mac,mass_storage,adb 
     write /config/usb_gadget/g1/idVendor 0x0930
     write /config/usb_gadget/g1/idProduct 0x6545
     symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/f1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/ffs.adb
+/config/usb_gadget/g1/configs/b.1/f2
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
