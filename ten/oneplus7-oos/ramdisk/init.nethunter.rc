@@ -11,16 +11,14 @@ on boot
     write /config/usb_gadget/g1/functions/hid.0/protocol "1"
     write /config/usb_gadget/g1/functions/hid.0/subclass "1"
     write /config/usb_gadget/g1/functions/hid.0/report_length "8"
-    ## Copying the keyboard descriptor is not required on OnePlus7 and even causes bootloops
-    ## copy /keyboard-descriptor.bin /config/usb_gadget/g1/functions/hid.0/report_desc
+    copy /keyboard-descriptor.bin /config/usb_gadget/g1/functions/hid.0/report_desc
     mkdir /config/usb_gadget/g1/functions/hid.1
     write /config/usb_gadget/g1/functions/hid.1/protocol "1"
     write /config/usb_gadget/g1/functions/hid.1/subclass "2"
     write /config/usb_gadget/g1/functions/hid.1/report_length "4"
-    ## Copying the mouse descriptor is not required on OnePlus7 and even causes bootloops
-    ##copy /mouse-descriptor.bin /config/usb_gadget/g1/functions/hid.1/report_desc
+    copy /mouse-descriptor.bin /config/usb_gadget/g1/functions/hid.1/report_desc
 
-# USB Attack for OnePlus7
+# USB Attack for NetHunter
 
 # -- Against Windows OS -- #
 ### MTP + HID ###

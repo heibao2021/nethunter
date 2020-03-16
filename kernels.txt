@@ -123,7 +123,8 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # - OnePlus 7
 # OOS 9.x
 # git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0
-# git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-10.0
+# OOS 10.x
+# git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_arter97 -b nethunter-10.0
 
 # - Planet Computers Gemini PDA 4G
 # git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter
@@ -285,7 +286,15 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0
 
 
-# - Toolchain
+# - Toolchains
+#
+# For > 4.x kernels
+# use the NetHunter Kernel-Builder:
+#
+# https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel
+#
+#
+# For older kernels, refer to:
 # Google reference
 # git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7
 # git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b lollipop-release
