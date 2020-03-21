@@ -1,0 +1,5 @@
+kernel/drivers/video/backlight/lcd.ko:
+kernel/drivers/media/rc/msm-geni-ir.ko:
+kernel/drivers/media/usb/gspca/gspca_main.ko:
+kernel/drivers/mmc/core/mmc_test.ko:
+kernel/net/bridge/br_netfilter.ko:
