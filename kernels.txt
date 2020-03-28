@@ -124,7 +124,7 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # OOS 9.x
 # git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0
 # OOS 10.x
-# git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_arter97 -b nethunter-10.0
+# git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0
 
 # - Planet Computers Gemini PDA 4G
 # git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter
