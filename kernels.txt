@@ -154,6 +154,10 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # LineageOS 14.X
 # git clone https://github.com/fasheng/nethunter_kernel_jfltexx.git -b cm-14.1
 
+# - Samsung Galaxy A5 (2016)
+# TouchWiz
+# git clone https://github.com/Re4son/android_kernel_samsung-a5xelte -b nethunter-7.0
+
 # - Samsung Galaxy S5 Mini
 # LineageOS
 # https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b N kminilte-14.1
@@ -287,7 +291,7 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 
 # - Xiaomi Mi 9T
 # MIUI Global 11.0.4
-# git https://github.com/Re4son/android_kernel_xiaomi_davinci -b nethunter-10.0
+# git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0
 
 
 # - Toolchains
