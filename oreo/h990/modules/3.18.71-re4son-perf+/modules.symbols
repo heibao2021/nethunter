@@ -1,0 +1,12 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:mausb_dump_urb mausb_core
+alias symbol:event_handler mausb_core
+alias symbol:mausb_event_add mausb_core
+alias symbol:mausb_debug_flag mausb_core
+alias symbol:mausb_start_eh mausb_core
+alias symbol:mausb_bind_unbind mausb_device
+alias symbol:mausb_stop_eh mausb_core
+alias symbol:mausb_recv mausb_core
+alias symbol:mausb_recv_xbuff mausb_core
+alias symbol:dev_attr_mausb_debug mausb_core
+alias symbol:mausb_event_happened mausb_core
