@@ -1,0 +1,13 @@
+image: "python:3.7"
+
+stages:
+  - generate_documentation
+  
+generate_documentation:
+  stage: generate_documentation
+  script:
+  - python scripts/generate_documentation.py
+  artifacts:
+    paths:
+    - ./documentation.md
+    expire_in: 1 week
