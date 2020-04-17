@@ -1,5 +1,5 @@
 DELIMITER = '## ------------------------------------------------------- ##'
-OUTPUT_FILE = './documentation.md'
+OUTPUT_FILE = './devices.md'
 INPUT_FILE = './devices.cfg'
  
 devices = []
