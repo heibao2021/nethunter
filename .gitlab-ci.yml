@@ -9,5 +9,5 @@ pages:
   - python scripts/generate_documentation.py
   artifacts:
     paths:
-    - public/devices.md
+    - ./devices.md
     expire_in: 1 week
