@@ -3,7 +3,7 @@ image: "python:3.7"
 stages:
   - generate_documentation
   
-generate_documentation:
+pages:
   stage: generate_documentation
   script:
   - python scripts/generate_documentation.py
