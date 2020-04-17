@@ -9,5 +9,5 @@ generate_documentation:
   - python scripts/generate_documentation.py
   artifacts:
     paths:
-    - ./documentation.md
+    - ./devices.md
     expire_in: 1 week
