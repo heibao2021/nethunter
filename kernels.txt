@@ -40,8 +40,8 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # - Nexus 6P
 # git clone https://github.com/binkybear/AK-Angler.git -b ak-aosp-6.0.1-staging nexus6P-6
 # git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-7.1_2 nexus6P-7
-# git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-8.0 nexus6P-8
-# git clone https://github.com/kimocoder/android_kernel_huawei_angler -b nethunter-8.0 nexus6P-81
+# git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1
+# git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0
 
 # - Nexus 6
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release nexus6-6
@@ -54,18 +54,15 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # git clone https://github.com/kamarush/bullhead.git -b nethunter-8.1
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-n nexus5x-7
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow-mr1 nexus5x-6
+# git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1
 
 # - Nexus 5
 # git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-hammerhead-3.4-lollipop-release nexus5-5
-# git clone https://github.com/chrisk44/hammerhead_nkernel.git
+# git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1
 # CM
 # git clone https://github.com/jcadduono/nethunter_kernel_hammerhead.git nexus5-cm
-# git clone https://github.com/chrisk44/android_kernel_lge_hammerhead-lineageos.git -b cm-14.1
 # git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf
-# git clone https://github.com/AutinDroid/ElementalX_N5mon.git -b ElementalX-7.09mon
-# LineageOS 14.X
-# git clone https://github.com/mayankmetha/Nethunter-Hammerhead-Kernel.git -b master
 
 # - Nexus 4
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2 mako
