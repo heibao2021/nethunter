@@ -7,7 +7,9 @@ generate_documentation:
   stage: generate_documentation
   script:
   - python scripts/generate_documentation.py
+  - python scripts/generate_image_table.py
   artifacts:
     paths:
     - ./devices.md
+    - ./images.md
     expire_in: 1 week
