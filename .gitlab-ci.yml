@@ -3,9 +3,14 @@ image: "python:3.7"
 stages:
   - generate_documentation
   
+.setup_for_yaml: &setup_for_yaml |
+  pip install pyyaml
+
+
 generate_documentation:
   stage: generate_documentation
   script:
+  - *setup_for_yaml
   - python scripts/generate_documentation.py
   - python scripts/generate_image_table.py
   artifacts:
