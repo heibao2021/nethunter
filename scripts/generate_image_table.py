@@ -23,7 +23,7 @@ qty_images = 0
 ##*         status:  Latest
 ##*         note:    "** Warning: Android ten is very unstable at the moment. **"
 
-header = "This table was generated automatically from https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices  \n\n"
+header = "This table was generated automatically from [the NetHunter gitlab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)  \n\n"
 
 with open(INPUT_FILE) as f:
     data = f.read()
@@ -63,7 +63,7 @@ with open(OUTPUT_FILE, 'w') as f:
     meta += 'title: Official NetHunter Images\n'
     meta += '---\n'
     quantities = "The NetHunter repository contains kernels for ***" + str(qty_devices) + "*** devices.  \n"
-    quantities += "The next release cycle will include *" + str(qty_images) + "* NetHunter images.  \n\n" 
+    quantities += "The next release cycle will include ***" + str(qty_images) + "*** NetHunter images.  \n\n" 
     f.write(str(meta))
     f.write(str(header))
     f.write(str(quantities))

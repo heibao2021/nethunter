@@ -3,7 +3,7 @@ import os
 OUTPUT_FILE = './kernelstats.md'
 rootdir = './'
 total = 0
-header = "This table was generated automatically from https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices  \n\n"
+header = "This table was generated automatically from [the NetHunter gitlab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)  \n\n"
 qty_versions = {
                 'kitkat':      0,
                 'lollipop':    0,
