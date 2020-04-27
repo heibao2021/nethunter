@@ -12,6 +12,7 @@ stages:
 pages:
   stage: generate_documentation
   script:
+  - apt-get update
   - *setup_for_yaml
   - *setup_for_html
   - python scripts/generate_documentation.py
