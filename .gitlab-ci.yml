@@ -15,10 +15,11 @@ pages:
   - apt-get update
   - *setup_for_yaml
   - *setup_for_html
-  - python scripts/generate_documentation.py
   - python scripts/generate_image_table.py
+  - python scripts/generate_kernel_stats.py
   - mkdir -p public
   - pandoc -s images.md -o public/nethunter-images.html
+  - pandoc -s kernelstats.md -o public/nethunter-kernelstats.html
   artifacts:
     paths:
     - ./devices.md

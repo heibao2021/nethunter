@@ -62,7 +62,7 @@ with open(OUTPUT_FILE, 'w') as f:
     meta = '---\n'
     meta += 'title: Official NetHunter Images\n'
     meta += '---\n'
-    quantities = "The NetHunter repository contains kernels for *" + str(qty_devices) + "* devices.  \n"
+    quantities = "The NetHunter repository contains kernels for ***" + str(qty_devices) + "*** devices.  \n"
     quantities += "The next release cycle will include *" + str(qty_images) + "* NetHunter images.  \n\n" 
     f.write(str(meta))
     f.write(str(header))
