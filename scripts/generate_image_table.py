@@ -42,7 +42,8 @@ def generate_device_table(data):
     global qty_devices
     global qty_images
     default = ""
-    table = "| Device | Display Name | Kernel ID | Android Version | Status | Notes |\n|---|---|---|---|---|---|\n"
+    table = "| Device | Display Name | Kernel ID | Android Version | Status | Notes |\n"
+    table += "|:---|:----------|:---|:----|:--|:-------------------|\n"
     # iterate over all the devices
     for element in data:
         # iterate over all the versions
@@ -58,11 +59,17 @@ res = parse(data)
 generated_markdown = generate_device_table(res)
 
 with open(OUTPUT_FILE, 'w') as f:
+    meta = '---\n'
+    meta += 'title: Official NetHunter Images\n'
+    meta += '---\n'
     quantities = "The NetHunter repository contains kernels for *" + str(qty_devices) + "* devices.  \n"
     quantities += "The next release cycle will include *" + str(qty_images) + "* NetHunter images.  \n\n" 
+    f.write(str(meta))
     f.write(str(header))
     f.write(str(quantities))
     f.write(str(generated_markdown))
     f.close()
 
 print('File {} successfully written.'.format(OUTPUT_FILE))
+print('Devices: {}'.format(qty_devices))
+print('Images:  {}'.format(qty_images))

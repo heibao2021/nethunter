@@ -6,15 +6,22 @@ stages:
 .setup_for_yaml: &setup_for_yaml |
   pip install pyyaml
 
+.setup_for_html: &setup_for_html |
+  apt-get -y install pandoc
 
-generate_documentation:
+pages:
   stage: generate_documentation
   script:
   - *setup_for_yaml
+  - *setup_for_html
   - python scripts/generate_documentation.py
   - python scripts/generate_image_table.py
+  - mkdir -p public
+  - pandoc -s images.md -o public/nethunter-images.html
   artifacts:
     paths:
     - ./devices.md
     - ./images.md
+    - public
     expire_in: 1 week
+
