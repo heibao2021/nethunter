@@ -1,6 +1,6 @@
-Locations of all kernels used in Kali NetHunter.
+# Locations of all kernels used in Kali NetHunter.
 
-If you wish to add a kernel/new device, leave a link to source here and feel free to add your name if you wish:
+# If you wish to add a kernel/new device, leave a link to source here and feel free to add your name if you wish:
 
 #  - MiPad1 [mocha]
 # git clone -b nethunter-cm12.1 https://github.com/RahulTheVirus/mocha-kernels.git
@@ -78,30 +78,136 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # CM
 # git clone https://github.com/jcadduono/nethunter_kernel_onyx.git -b cm-13.0
 
-# - OnePlus 3 & OnePlus 3T
-# OXYGEN
-# git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX oneplus3
-# git clone https://github.com/jcadduono/android_kernel_oneplus_msm8996.git -b nethunter-7.0 oneplus3
 
-# - OnePlus 3 & OnePlus 3T
-# OXYGEN
-# git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_oos4_nethunter-V1_aa64u541
-# CM
-# git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541
+- oneplus2
+    model:   OnePlus 2
+    kernels:
+        - id:                oneplus2
+          description:       Oxygen OS
+          versions:
+             - android:      lollipop
+               kernel:       1.0
+               description:  Oxygen OS
+               author:       Binkybear
+               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b boeffla_oos3'
+               features:     [Injection]
+        - id:                oneplus2cm
+          description:       LineageOS
+          versions:
+             - android:      lollipop
+               kernel:       2.0
+               description:  CyanogenMod 12.1
+               author:       Binkybear
+               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1'
+               features:     [CD-ROM, HID, Injection]
+             - android:      marshmallow
+               kernel:       2.1
+               description:  CyanogenMod 13.0
+               author:       Binkybear
+               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0'
+               features:     [CD-ROM, HID, Injection]
+             - android:      nougat
+               kernel:       2.2
+               description:  LineageOS 14.1
+               author:       Re4son
+               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1'
+               features:     [CD-ROM, HID, Injection]
+             - android:      oreo
+               kernel:       2.2
+               description:  LineageOS 15.1
+               author:       Re4son
+               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-15.1'
+               features:     [CD-ROM, HID, Injection]
+             - android:      pie
+               kernel:       2.2
+               description:  LineageOS 16.0
+               author:       Re4son
+               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-16.0'
+               features:     [CD-ROM, HID, Injection]
+        - id:                oneplus2oos
+          description:       Oxygen OS
+          versions:
+             - android:      marshmallow
+               kernel:       2.2
+               description:  Oxygen OS
+               author:       Binkybear
+               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
+               features:     [CD-ROM, HID, Injection]
+- oneplus3
+    model:   OnePlus 3 & 3T
+    kernels:
+        - id:                oneplus3
+          description:       Oxygen OS
+          versions:
+             - android:      marshmallow
+               kernel:       1.3
+               description:  Oxygen OS
+               author:       Binkybear
+               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX'
+               features:     [CD-ROM, HID, Injection]
+             - android:      nougat
+               kernel:       3.1
+               description:  Oxygen OS
+               author:       jcadduono
+               source:       'git clone https://github.com/jcadduono/android_kernel_oneplus_msm8996.git -b nethunter-7.0'
+               features:     [CD-ROM, HID, Injection]
+        - id:                oneplus3-any
+          description:       Oxygen OS >=9.0 using anykernel flasher
+          versions:
+             - android:      pie
+               kernel:       9.1
+               description:  Oxygen OS 9.0
+               author:       Re4son
+               source:       'git clone https://github.com/re4son/android_kernel_oneplus_msm8996.git -b nethunter-9.0'
+               features:     [CD-ROM, HID, Injection, RTL8812-AU]
+        - id:                oneplus3-cm
+          description:       OnePlus 3 LineageOS
+          versions:
+             - android:      nougat
+               kernel:       1.0
+               description:  LineageOS
+               author:       zanezam
+               source:       'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features:     [Injection]
+        - id:                oneplus3-oos
+          description:       Oxygen OS
+          versions:
+             - android:      nougat
+               kernel:       1.0
+               description:  Oneplus 3 Oxygen OS
+               author:       zanezam
+               source:       'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features:     [Injection]
+        - id:                oneplus3t-cm
+          description:       OnePlus 3T LineageOS
+          versions:
+             - android:      nougat
+               kernel:       1.0
+               description:  LineageOS 14
+               author:       zanezam
+               source:       'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features:     [Injection]
+        - id:                oneplus3t-los
+          description:       OnePlus 3T LineageOS >= 15
+          versions:
+             - android:      oreo
+               kernel:       1.0
+               description:  Oneplus 3T LineageOs 15.1
+               author:       flypatriot
+               source:       'git clone https://github.com/flypatriot/boeffla-kernel-los-nethunter-oneplus3T.git -b t_boeffla_lineage15_nethunter'
+               features:     [CD-ROM, HID, Injection]
+        - id:                oneplus3t-oos
+          description:       Oxygen OS
+          versions:
+             - android:      nougat
+               kernel:       1.0
+               description:  Oxygen OS Oneplus 3T
+               author:       zanezam
+               source:       'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features:     [Injection]
 
-# - OnePlus 3T
-# LineageOS 15.1
-# git clone https://github.com/flypatriot/boeffla-kernel-los-nethunter-oneplus3T.git -b t_boeffla_lineage15_nethunter
 
-# - OnePlus Two
-# OXYGEN
-# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b OXYGEN
-# CM
-# git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b lineage-16.0
-# git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b lineage-15.1
-# git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1
-# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0
-# git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1
+
 
 # - OnePlus One
 # git clone https://github.com/binkybear/AK-OnePone.git -b cm-11.0 oneplus11
@@ -286,9 +392,18 @@ If you wish to add a kernel/new device, leave a link to source here and feel fre
 # Lineage OS 16.0 Based ROM's
 # git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0
 
-# - Xiaomi Mi 9T
-# MIUI Global 11.0.4
-# git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0
+- davinci
+    model:   Xiaomi Mi 9T
+    kernels:
+        - id:                davinci-miui
+          description:       Xiaomi Mi 9T Miui
+          versions:
+             - android:      Ten
+               kernel:       1.5
+               description:  Miui Global 11
+               author:       Re4son
+               source:       'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
+               features:     [CD-ROM, HID, Injection, QCACLD]
 
 
 # - Toolchains
