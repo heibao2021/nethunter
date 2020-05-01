@@ -19,7 +19,7 @@
 # AOSP/CM
 # git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L
 # git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-M
-# LineageOS 14.1 
+# LineageOS 14.1
 # git clone https://github.com/0x4E0x650x6F/android_kernel_samsung_msm8974.git -b cm-14.1
 
 # - Samsung Galaxy S4
@@ -117,7 +117,7 @@
 # LineageOS
 # git clone https://github.com/ariafan/ido_kernel-kali.git -b kali-new
 
-#- Lenovo K8 Note
+# - Lenovo K8 Note
 # git clone https://github.com/MotorolaMobilityLLC/kernel-mtk.git -b nougat-7.1.1-release-manning
 
 # - Yu Yunique
@@ -132,11 +132,11 @@
 # git clone https://github.com/DroidKali/santoni_kernel_nethunter.git
 
 # - Huawei P9 Plus
-# MIUI/Oreo 
+# MIUI/Oreo
 # git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git
 # MIUI/Nougat 
 # git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 7.x
-# MIUI/Marshmallow 
+# MIUI/Marshmallow
 # git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 6.x
 
 # - Xiaomi Redmi 4 Prime
@@ -430,7 +430,6 @@
                description  : Android 7.1
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
-               features     : [Injection]
                features     : [Injection]
         - id          : gemini4g_p3
           description : Gemini PDA boot from partition 3
