@@ -17,12 +17,15 @@ pages:
   - *setup_for_html
   - python scripts/generate_image_table.py
   - python scripts/generate_kernel_stats.py
+  - python scripts/generate_kernel_table.py
   - mkdir -p public
   - pandoc -s images.md -o public/nethunter-images.html
+  - pandoc -s kernels.md -o public/nethunter-kernels.html
   - pandoc -s kernelstats.md -o public/nethunter-kernelstats.html
   artifacts:
     paths:
     - ./devices.md
+    - ./kernels.md
     - ./images.md
     - public
     expire_in: 1 week
