@@ -9,9 +9,6 @@
 # - HTC 10
 # git clone https://github.com/S1CAR1US/nethunter_kernel_htc_pmewl.git
 
-# - Google Pixel C
-# git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1 pixelc-7
-
 # - nVidia Shield Tablet
 # git clone https://github.com/SecurityAddicted/android_kernel_nvidia_shieldtablet nethunter
 # git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0
@@ -47,12 +44,6 @@
 # git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-6.0
 # AOSP/LineageOS
 # git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1
-
-# - Samsung Galaxy S6, Galaxy S6 edge
-# AOSP/LineageOS
-# git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1
-# TouchWiz
-# git clone https://github.com/XXH3X/Ultimate-Kali
 
 # - Samsung Galaxy S7, Galaxy S7 edge, and Galaxy Note 7
 # Grace UI & TouchWiz
@@ -257,6 +248,18 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
                features     : [CD-ROM, HID, Injection, QCACLD, RTL8812-AU]
+- dragon:
+    model   :  Google Pixel C
+    kernels :
+        - id          : dragon
+          description : Stock Android
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.1
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1'
+               features     : [CDROM, HID, Injection]
 - flo:
     model   :  Nexus 7 (2013)
     kernels :
@@ -778,7 +781,7 @@
     model   :  LG V20 US Version
     kernels :
         - id          : us996
-          description : Android 7.0
+          description : Stock Android
           versions    :
              - android      : nougat
                kernel       : 1.0
@@ -786,3 +789,45 @@
                author       : jcadduono
                source       : 'git clone https://github.com/jcadduono/android_device_lge_us996 -b android-7.0'
                features     : [HID, Injection]
+- zeroflte:
+    model   :  Samsung Galaxy S6
+    kernels :
+        - id          : zeroflte
+          description : LineageOS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : LineageOS 14.1
+               author       : XXH3X
+               source       : 'git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1'
+               features     : []
+        - id          : zeroflte-tw
+          description : TouchWiz
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.0
+               author       : XXH3X
+               source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
+               features     : []
+- zerolte:
+    model   :  Samsung Galaxy S6 Edge
+    kernels :
+        - id          : zerolte
+          description : LineageOS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : LineageOS 14.1
+               author       : XXH3X
+               source       : 'git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1'
+               features     : []
+        - id          : zerolte-tw
+          description : TouchWiz
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.0
+               author       : XXH3X
+               source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
+               features     : []
