@@ -6,70 +6,15 @@
 # git clone -b nethunter-cm12.1 https://github.com/RahulTheVirus/mocha-kernels.git
 # git clone -b nethunter-cm11 https://github.com/RahulTheVirus/mocha-kernels.git
 
-# - ZTE Axon 7
-# MiFavor
-# git clone https://github.com/jcadduono/android_kernel_zte_msm8996.git -B nethunter-6.0
-
 # - HTC 10
 # git clone https://github.com/S1CAR1US/nethunter_kernel_htc_pmewl.git
 
 # - Google Pixel C
 # git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1 pixelc-7
 
-# - Nexus 10
-# git clone https://github.com/jmmmbnnn/kernel_samsung_manta.git -b thunderkat
-# git clone https://github.com/binkybear/kernel_samsung_manta.git -b thunderkat
-# git clone https://github.com/binkybear/nexus10-5.git -b android-exynos-manta-3.4-lollipop-release
-
-# - Nexus 9
-# git clone https://github.com/SecurityAddicted/ElementalX-N9-Nethunter.git nexus9-7
-# git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-marshmallow-release nexus 9-6
-# git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-lollipop-release  nexus9-5
-
-# - Nexus 7 (2012)
-# git clone https://github.com/binkybear/kangaroo.git -b kangaroo
-# git clone https://github.com/binkybear/android_kernel_asus_grouper.git -b android-tegra3-grouper-3.1-lollipop-release_tegra-l4t-r16-16.5 nexus7_2012-5
-
-# - Nexus 7 (2013)
-# git clone https://github.com/binkybear/flo.git -b ElementalX-5.00 nexus7_2013-6
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-flo-3.4-kitkat-mr2 flodeb
-# git clone https://github.com/binkybear/flo.git -b ElementalX-4.00 nexus7_2013-5
-# CM
-# git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0
-
-# - Nexus 4
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2 mako
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-lollipop-release nexus4-5
-# CM
-# git clone https://github.com/jcadduono/nethunter_kernel_mako.git -b cm-13.0
-
 # - nVidia Shield Tablet
 # git clone https://github.com/SecurityAddicted/android_kernel_nvidia_shieldtablet nethunter
 # git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0
-
-# - OnePlus X
-# CM
-# git clone https://github.com/jcadduono/nethunter_kernel_onyx.git -b cm-13.0
-
-
-
-# - OnePlus One
-# git clone https://github.com/binkybear/AK-OnePone.git -b cm-11.0 oneplus11
-# git clone https://github.com/binkybear/AK-OnePone.git -b cm-12.1 oneplus12
-# git clone https://github.com/yesimxev/AK-OnePone.git -b cm-13.0 oneplus13
-# git clone https://github.com/yesimxev/android_kernel_oneplus_msm8974.git -b cm-14.1 oneplus14
-# git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-15.1 oneplus15
-# git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16
-
-# - OnePlus 5
-# OOS 4.x
-# git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_oos4 oneplus5
-# LineageOS 14.X
-# git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_cm14 oneplus5
-
-# - LG G5 & LG V20
-# LG Stock
-# git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0
 
 # - Samsung Galaxy Note 3
 # TouchWiz
@@ -231,7 +176,19 @@
 
 
 ---
-- angler
+- ailsa_ii:
+    model   :  ZTE Axon 7
+    kernels :
+        - id          : ailsa_ii
+          description : MiFavor
+          versions    :
+             - android      : marshmallow
+               kernel       : 3.1
+               description  : Android 6
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_kernel_zte_msm8996.git -B nethunter-6.0'
+               features     : [CDROM, HID, Injection]
+- angler:
     model   :  Nexus 6P
     kernels :
         - id          : angler
@@ -264,7 +221,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-10.0'
                features     : [HID, Injection, Nexmon]
-- bullhead
+- bullhead:
     model   :  Nexus 5X
     kernels :
         - id          : bullhead
@@ -288,7 +245,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1'
                features     : [HID, Injection, RTL8812AU]
-- davinci
+- davinci:
     model   :  Xiaomi Mi 9T
     kernels :
         - id          : davinci-miui
@@ -300,8 +257,89 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
                features     : [CD-ROM, HID, Injection, QCACLD, RTL8812-AU]
-- h9**
-    model   :  LG V20 Int
+- flo:
+    model   :  Nexus 7 (2013)
+    kernels :
+        - id          : flo
+          description : Stock Android
+          versions    :
+             - android      : kitkat
+               kernel       : 2.1
+               description  : Android 4.4
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-flo-3.4-kitkat-mr2'
+               features     : []
+             - android      : lollipop
+               kernel       : 2.1
+               description  : Android 5
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-4.00'
+               features     : [CDROM, HID, Injection]
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 6
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-5.00'
+               features     : [CDROM, HID, Injection]
+        - id          : flocm
+          description : CyanogenMod
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.0
+               description  : CyanogenMod
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0'
+               features     : [CDROM, HID, Injection]
+- flounder:
+    model   :  Nexus 9
+    kernels :
+        - id          : flounder
+          description : Stock Android
+          versions    :
+             - android      : lollipop
+               kernel       : 2.1
+               description  : Android 5
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-lollipop-release'
+               features     : [CDROM, HID, Injection]
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 6
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-marshmallow-release'
+               features     : [CDROM, HID, Injection]
+             - android      : nougat
+               kernel       : 2.1
+               description  : Android 7.1
+               author       : SecurityAddicted
+               source       : 'git clone https://github.com/SecurityAddicted/ElementalX-N9-Nethunter.git'
+               features     : [CDROM, HID, Injection]
+- grouper:
+    model   :  Nexus 7 (2012)
+    kernels :
+        - id          : grouper
+          description : Stock Android
+          versions    :
+             - android      : kitkat
+               kernel       : 2.1
+               description  : Android 4.4
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_asus_grouper.git -b android-tegra3-grouper-3.1-lollipop-release_tegra-l4t-r16-16.5 nexus7_2012-5'
+               features     : []
+- h918:
+    model   :  LG V20 T-Online
+    kernels :
+        - id          : h918
+          description : LG stock Android
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.0
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
+               features     : [HID, Injection]
+- h990:
+    model   :  LG V20 International
     kernels :
         - id          : h990
           description : LG stock Android
@@ -318,7 +356,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0'
                features     : [HID, Injection]
-- hammerhead
+- hammerhead:
     model   :  Nexus 5
     kernels :
         - id          : hammerhead
@@ -357,7 +395,7 @@
                author       : chrisk44
                source       : 'git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf'
                features     : [HID, Injection]
-- honami
+- honami:
     model   :  Sony Xperia Z1
     kernels :
         - id          : honami
@@ -369,7 +407,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
                features     : [Injection]
-- gemini4g
+- gemini4g:
     model   :  Planet Computers Gemini PDA
     kernels :
         - id          : gemini4g_p1
@@ -400,7 +438,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
                features     : [Injection]
-- gts4llte
+- gts4llte:
     model   :  Samsung Galaxy Tab S4 LTE
     kernels :
         - id          : gts4llte
@@ -412,7 +450,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
                features     : [HID, Injection]
-- gts4lwifi
+- gts4lwifi:
     model   :  Samsung Galaxy Tab S4 WiFi
     kernels :
         - id          : gts4lwifi
@@ -424,7 +462,103 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
                features     : [HID, Injection]
-- oneplus2
+- mako:
+    model   :  Nexus 4
+    kernels :
+        - id          : mako
+          description : Stock Android
+          versions    :
+             - android      : kitkat
+               kernel       : 2.1
+               description  : Android 4
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2'
+               features     : [HID, Injection]
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 5
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-lollipop-release'
+               features     : [HID, Injection]
+        - id          : makocm
+          description : CyanogenMod
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.2
+               description  : CyanogenMod 13
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/nethunter_kernel_mako.git -b cm-13.0'
+               features     : [HID, Injection]
+- manta:
+    model   :  Nexus 10
+    kernels :
+        - id          : manta
+          description : Stock Android
+          versions    :
+             - android      : lollipop
+               kernel       : 2.3.2
+               description  : Android 5
+               author       : jmmmbnnn
+               source       : 'git clone https://github.com/jmmmbnnn/kernel_samsung_manta.git -b thunderkat'
+               features     : [CDROM, HID, Injection]
+- oneplus1:
+    model   :  OnePlus 1
+    kernels :
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : kitkat
+               kernel       : 2.2
+               description  : CyanogenMod 11
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-11.0'
+               features     : [Injection]
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : lollipop
+               kernel       : 2.2
+               description  : CyanogenMod 12.1
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-12.1'
+               features     : [HID, Injection]
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.2
+               description  : CyanogenMod 13
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-13.0'
+               features     : [HID, Injection]
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : nougat
+               kernel       : 2.2
+               description  : CyanogenMod 14.1
+               author       : yesimxev
+               source       : 'git clone https://github.com/yesimxev/android_kernel_oneplus_msm8974.git -b cm-14.1 oneplus14'
+               features     : [HID, Injection]
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : oreo
+               kernel       : 2.2
+               description  : CyanogenMod 15.1
+               author       : yesimxev
+               source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-15.1 oneplus15'
+               features     : [HID, Injection]
+        - id          : oneplus1
+          description : CyanogenMod
+          versions    :
+             - android      : nougat
+               kernel       : 2.2
+               description  : CyanogenMod 16
+               author       : yesimxev
+               source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16'
+               features     : [HID, Injection]
+- oneplus2:
     model   :  OnePlus 2
     kernels :
         - id          : oneplus2
@@ -478,7 +612,7 @@
                author       : Binkybear
                source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
                features     : [CD-ROM, HID, Injection]
-- oneplus3
+- oneplus3:
     model   :  OnePlus 3 & 3T
     kernels :
         - id          : oneplus3
@@ -550,7 +684,28 @@
                author       : zanezam
                source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
                features     : [Injection]
-- oneplus7
+- oneplus5:
+    model   :  OnePlus 5 / 5T
+    kernels :
+        - id          : oneplus5-oos
+          description : Oxygen OS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Oxygen OS 4
+               author       : Binkybear
+               source       : 'git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_oos4 oneplus5'
+               features     : [CDROM, HID, Injection]
+        - id          : oneplus5-cm
+          description : Oxygen OS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : CyanogenMod 14
+               author       : Binkybear
+               source       : 'git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_cm14 oneplus5'
+               features     : [CDROM, HID, Injection]
+- oneplus7:
     model   :  OnePlus 7 / 7 Pro / 7T / 7T Pro
     kernels :
         - id          : oneplus7-oos
@@ -568,7 +723,19 @@
                author       : Re4son
                source       : 'git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
                features     : [HID, Injection, QCACLD, RTL8812-AU]
-- shamu
+- oneplusx:
+    model   :  OnePlus X
+    kernels :
+        - id          : oneplusxcm
+          description : CyanogenMod
+          versions    :
+             - android      : marshmallow
+               kernel       : 1.1
+               description  :  CyanogenMod 13
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/nethunter_kernel_onyx.git -b cm-13.0'
+               features     : [CDROM, HID, Injection]
+- shamu:
     model   :  Nexus 6
     kernels :
         - id          : shamu
@@ -607,3 +774,15 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0'
                features     : [CDROM, HID, Injection]
+- us996:
+    model   :  LG V20 US Version
+    kernels :
+        - id          : us996
+          description : Android 7.0
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.0
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_device_lge_us996 -b android-7.0'
+               features     : [HID, Injection]
