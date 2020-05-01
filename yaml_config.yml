@@ -1,0 +1,8 @@
+extends: default
+
+rules:
+  # 80 chars should be enough, but don't fail if a line is longer
+  colons: disable
+  line-length:
+    max: 150
+    level: warning
