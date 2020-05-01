@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 import yaml
 
 OUTPUT_FILE = './kernels.md'
-INPUT_FILE = './kernels.txt' # fix with kernels.yml
+INPUT_FILE = './kernels.yml'
 
 def sanitize_content(content):
     result = ""
@@ -12,13 +13,21 @@ def sanitize_content(content):
     return result
 
 def generate_device_table(data):
+    default = ""
     table = "| Model | Kernel name | Android version | Kernel version | Description | Author | Features | Source |\n|---|---|---|---|---|---|---|---|\n"
     for element in data:
         for kernel_name in element.keys():
             model = element[kernel_name]['model']
             for kernel in element[kernel_name]['kernels']:
                 for version in kernel['versions']:
-                    table += "| {} | {} | {} | {} | {} | {} | `{}` | `{}` |\n".format(model, kernel['id'], version['android'], version['kernel'], version['description'], version['author'], version['features'], version['source'])
+                    features = ""
+                    i = 0
+                    for f in version.get('features', default):
+                        if i > 0:
+                            features += ", "
+                        features +=  f 
+                        i += 1
+                    table += "| {} | {} | {} | {} | {} | {} | {} | `{}` |\n".format(model, kernel.get('id', default), version.get('android', default), version.get('kernel', default), version.get('description', default), version.get('author', default), features, version.get('source', default))
     return table
 
 with open(INPUT_FILE) as f:
