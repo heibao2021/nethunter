@@ -23,12 +23,6 @@ qty_images = 0
 ##*         status:  Latest
 ##*         note:    "** Warning: Android ten is very unstable at the moment. **"
 
-header = "This table was generated automatically from [the NetHunter gitlab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)  \n\n"
-
-with open(INPUT_FILE) as f:
-    data = f.read()
-    f.close()
-
 def parse(content):
     result = ""
     lines = data.split('\n')
@@ -54,6 +48,12 @@ def generate_device_table(data):
                     qty_images += 1
                     table += "| {} | {} | {} | {} | {} | {} |\n".format(key, image.get('name', default), image.get('id', default), image.get('os', default), image.get('status', default), image.get('note', default))
     return table
+
+header = "This table was generated automatically from [the NetHunter gitlab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)  \n\n"
+
+with open(INPUT_FILE) as f:
+    data = f.read()
+    f.close()
 
 res = parse(data)
 generated_markdown = generate_device_table(res)
