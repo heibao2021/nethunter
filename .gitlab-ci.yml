@@ -1,27 +1,41 @@
 image: "python:3.7"
 
 stages:
+  - linting
   - generate_documentation
-  
-.setup_for_yaml: &setup_for_yaml |
-  pip install pyyaml
 
 .setup_for_html: &setup_for_html |
   apt-get -y install pandoc
 
+.install_prerequesites_pip: &install_prerequesites_pip |
+  pip install -r requirements.txt
+
+linting:
+  stage: linting
+  allow_failure: yes
+  rules:
+    - if: $CI_MERGE_REQUEST_ID             # Execute jobs in merge request context
+    - if: $CI_COMMIT_BRANCH == 'master'    # Execute jobs when a new commit is pushed to master branch
+  script:  
+  - *install_prerequesites_pip
+  - yamllint kernels.yml
+
 pages:
   stage: generate_documentation
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master'    # Execute jobs when a new commit is pushed to master branch
   script:
   - apt-get update
-  - *setup_for_yaml
+  - *install_prerequesites_pip
   - *setup_for_html
   - python scripts/generate_image_table.py
   - python scripts/generate_kernel_stats.py
   - python scripts/generate_kernel_table.py
   - mkdir -p public
-  - pandoc -s images.md -o public/nethunter-images.html
-  - pandoc -s kernels.md -o public/nethunter-kernels.html
-  - pandoc -s kernelstats.md -o public/nethunter-kernelstats.html
+  - mv css/public.css public/
+  - pandoc -s images.md -o public/nethunter-images.html -c public.css
+  - pandoc -s kernels.md -o public/nethunter-kernels.html -c public.css
+  - pandoc -s kernelstats.md -o public/nethunter-kernelstats.html -c public.css
   artifacts:
     paths:
     - ./devices.md
@@ -29,4 +43,3 @@ pages:
     - ./images.md
     - public
     expire_in: 1 week
-
