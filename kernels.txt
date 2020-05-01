@@ -231,7 +231,7 @@
 
 
 ---
-- angler
+- angler:
     model   :  Nexus 6P
     kernels :
         - id          : angler
@@ -264,7 +264,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-10.0'
                features     : [HID, Injection, Nexmon]
-- bullhead
+- bullhead:
     model   :  Nexus 5X
     kernels :
         - id          : bullhead
@@ -288,7 +288,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1'
                features     : [HID, Injection, RTL8812AU]
-- davinci
+- davinci:
     model   :  Xiaomi Mi 9T
     kernels :
         - id          : davinci-miui
@@ -300,7 +300,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
                features     : [CD-ROM, HID, Injection, QCACLD, RTL8812-AU]
-- h9**
+- h9**:
     model   :  LG V20 Int
     kernels :
         - id          : h990
@@ -318,7 +318,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0'
                features     : [HID, Injection]
-- hammerhead
+- hammerhead:
     model   :  Nexus 5
     kernels :
         - id          : hammerhead
@@ -357,7 +357,7 @@
                author       : chrisk44
                source       : 'git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf'
                features     : [HID, Injection]
-- honami
+- honami:
     model   :  Sony Xperia Z1
     kernels :
         - id          : honami
@@ -369,7 +369,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
                features     : [Injection]
-- gemini4g
+- gemini4g:
     model   :  Planet Computers Gemini PDA
     kernels :
         - id          : gemini4g_p1
@@ -400,7 +400,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
                features     : [Injection]
-- gts4llte
+- gts4llte:
     model   :  Samsung Galaxy Tab S4 LTE
     kernels :
         - id          : gts4llte
@@ -412,7 +412,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
                features     : [HID, Injection]
-- gts4lwifi
+- gts4lwifi:
     model   :  Samsung Galaxy Tab S4 WiFi
     kernels :
         - id          : gts4lwifi
@@ -424,7 +424,7 @@
                author       : Re4son
                source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
                features     : [HID, Injection]
-- oneplus2
+- oneplus2:
     model   :  OnePlus 2
     kernels :
         - id          : oneplus2
@@ -478,7 +478,7 @@
                author       : Binkybear
                source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
                features     : [CD-ROM, HID, Injection]
-- oneplus3
+- oneplus3:
     model   :  OnePlus 3 & 3T
     kernels :
         - id          : oneplus3
@@ -550,7 +550,7 @@
                author       : zanezam
                source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
                features     : [Injection]
-- oneplus7
+- oneplus7:
     model   :  OnePlus 7 / 7 Pro / 7T / 7T Pro
     kernels :
         - id          : oneplus7-oos
@@ -568,7 +568,7 @@
                author       : Re4son
                source       : 'git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
                features     : [HID, Injection, QCACLD, RTL8812-AU]
-- shamu
+- shamu:
     model   :  Nexus 6
     kernels :
         - id          : shamu
