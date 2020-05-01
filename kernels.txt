@@ -37,33 +37,6 @@
 # CM
 # git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0
 
-# - Nexus 6P
-# git clone https://github.com/binkybear/AK-Angler.git -b ak-aosp-6.0.1-staging nexus6P-6
-# git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-7.1_2 nexus6P-7
-# git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1
-# git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0
-
-# - Nexus 6
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release nexus6-6
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release nexus6-5
-# CM
-# git clone https://github.com/discipuloosho/android_kernel_moto_shamu.git -b nethunter_cm-14.1
-# git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0 
-
-# - Nexus 5X
-# git clone https://github.com/kamarush/bullhead.git -b nethunter-8.1
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-n nexus5x-7
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow-mr1 nexus5x-6
-# git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1
-
-# - Nexus 5
-# git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4
-# git clone https://github.com/binkybear/kernel_msm.git -b android-msm-hammerhead-3.4-lollipop-release nexus5-5
-# git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1
-# CM
-# git clone https://github.com/jcadduono/nethunter_kernel_hammerhead.git nexus5-cm
-# git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf
-
 # - Nexus 4
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2 mako
 # git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-lollipop-release nexus4-5
@@ -77,135 +50,6 @@
 # - OnePlus X
 # CM
 # git clone https://github.com/jcadduono/nethunter_kernel_onyx.git -b cm-13.0
-
-
-- oneplus2
-    model:   OnePlus 2
-    kernels:
-        - id:                oneplus2
-          description:       Oxygen OS
-          versions:
-             - android:      lollipop
-               kernel:       1.0
-               description:  Oxygen OS
-               author:       Binkybear
-               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b boeffla_oos3'
-               features:     [Injection]
-        - id:                oneplus2cm
-          description:       LineageOS
-          versions:
-             - android:      lollipop
-               kernel:       2.0
-               description:  CyanogenMod 12.1
-               author:       Binkybear
-               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1'
-               features:     [CD-ROM, HID, Injection]
-             - android:      marshmallow
-               kernel:       2.1
-               description:  CyanogenMod 13.0
-               author:       Binkybear
-               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0'
-               features:     [CD-ROM, HID, Injection]
-             - android:      nougat
-               kernel:       2.2
-               description:  LineageOS 14.1
-               author:       Re4son
-               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1'
-               features:     [CD-ROM, HID, Injection]
-             - android:      oreo
-               kernel:       2.2
-               description:  LineageOS 15.1
-               author:       Re4son
-               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-15.1'
-               features:     [CD-ROM, HID, Injection]
-             - android:      pie
-               kernel:       2.2
-               description:  LineageOS 16.0
-               author:       Re4son
-               source:       'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-16.0'
-               features:     [CD-ROM, HID, Injection]
-        - id:                oneplus2oos
-          description:       Oxygen OS
-          versions:
-             - android:      marshmallow
-               kernel:       2.2
-               description:  Oxygen OS
-               author:       Binkybear
-               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
-               features:     [CD-ROM, HID, Injection]
-- oneplus3
-    model:   OnePlus 3 & 3T
-    kernels:
-        - id:                oneplus3
-          description:       Oxygen OS
-          versions:
-             - android:      marshmallow
-               kernel:       1.3
-               description:  Oxygen OS
-               author:       Binkybear
-               source:       'git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX'
-               features:     [CD-ROM, HID, Injection]
-             - android:      nougat
-               kernel:       3.1
-               description:  Oxygen OS
-               author:       jcadduono
-               source:       'git clone https://github.com/jcadduono/android_kernel_oneplus_msm8996.git -b nethunter-7.0'
-               features:     [CD-ROM, HID, Injection]
-        - id:                oneplus3-any
-          description:       Oxygen OS >=9.0 using anykernel flasher
-          versions:
-             - android:      pie
-               kernel:       9.1
-               description:  Oxygen OS 9.0
-               author:       Re4son
-               source:       'git clone https://github.com/re4son/android_kernel_oneplus_msm8996.git -b nethunter-9.0'
-               features:     [CD-ROM, HID, Injection, RTL8812-AU]
-        - id:                oneplus3-cm
-          description:       OnePlus 3 LineageOS
-          versions:
-             - android:      nougat
-               kernel:       1.0
-               description:  LineageOS
-               author:       zanezam
-               source:       'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
-               features:     [Injection]
-        - id:                oneplus3-oos
-          description:       Oxygen OS
-          versions:
-             - android:      nougat
-               kernel:       1.0
-               description:  Oneplus 3 Oxygen OS
-               author:       zanezam
-               source:       'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
-               features:     [Injection]
-        - id:                oneplus3t-cm
-          description:       OnePlus 3T LineageOS
-          versions:
-             - android:      nougat
-               kernel:       1.0
-               description:  LineageOS 14
-               author:       zanezam
-               source:       'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
-               features:     [Injection]
-        - id:                oneplus3t-los
-          description:       OnePlus 3T LineageOS >= 15
-          versions:
-             - android:      oreo
-               kernel:       1.0
-               description:  Oneplus 3T LineageOs 15.1
-               author:       flypatriot
-               source:       'git clone https://github.com/flypatriot/boeffla-kernel-los-nethunter-oneplus3T.git -b t_boeffla_lineage15_nethunter'
-               features:     [CD-ROM, HID, Injection]
-        - id:                oneplus3t-oos
-          description:       Oxygen OS
-          versions:
-             - android:      nougat
-               kernel:       1.0
-               description:  Oxygen OS Oneplus 3T
-               author:       zanezam
-               source:       'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
-               features:     [Injection]
-
 
 
 
@@ -223,24 +67,9 @@
 # LineageOS 14.X
 # git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_cm14 oneplus5
 
-# - OnePlus 7
-# OOS 9.x
-# git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0
-# OOS 10.x
-# git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0
-
-# - Planet Computers Gemini PDA 4G
-# git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter
-
 # - LG G5 & LG V20
 # LG Stock
 # git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0
-
-# - LG V20 H990
-# LG Stock Nougat with dirtysanta patch
-# git clone https://github.com/Re4son/android_kernel_lge_msm8996 -b nethunter-7.0
-# LG Stock Oreo
-# git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0
 
 # - Samsung Galaxy Note 3
 # TouchWiz
@@ -294,16 +123,6 @@
 # git clone https://github.com/DeadSquirrel01/nethunter-kernel-a5ulte.git -b touchwiz-6.0
 # AOSP/CM
 # git clone https://github.com/DeadSquirrel01/nethunter-kernel-a5ulte.git -b cm-13.0
-
-# - Samsung Galaxy Tab S4
-# Samsung Experience 9.5 / Android 8.1 Oreo
-# defconfig WiFi: gts4lwifi_kali_defconfig
-# defconfig LTE: gts4llte_kali_defconfig
-# git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter
-
-# - Sony Xperia Z1
-# CM 13.0
-# git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master
 
 # - Sony Xperia Z
 # CM 13.0
@@ -392,20 +211,6 @@
 # Lineage OS 16.0 Based ROM's
 # git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0
 
-- davinci
-    model:   Xiaomi Mi 9T
-    kernels:
-        - id:                davinci-miui
-          description:       Xiaomi Mi 9T Miui
-          versions:
-             - android:      Ten
-               kernel:       1.5
-               description:  Miui Global 11
-               author:       Re4son
-               source:       'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
-               features:     [CD-ROM, HID, Injection, QCACLD]
-
-
 # - Toolchains
 #
 # For > 4.x kernels
@@ -423,3 +228,382 @@
 # ARMv8: wget https://releases.linaro.org/components/toolchain/binaries/4.9-2016.02/aarch64-linux-gnu/gcc-linaro-4.9-2016.02-x86_64_aarch64-linux-gnu.tar.xz
 # Uber Linaro
 # git clone https://bitbucket.org/UBERTC/arm-eabi-4.9.git
+
+
+---
+- angler
+    model   :  Nexus 6P
+    kernels :
+        - id          : angler
+          description : Stock Android
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 6
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/AK-Angler.git'
+               features     : [HID, Injection]
+             - android      : nougat
+               kernel       : 2.0
+               description  : Android 7.1
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-7.1_2'
+               features     : [CDROM, HID, Injection]
+             - android      : oreo
+               kernel       : 3.5
+               description  : Android 8.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
+               features     : [CDROM, HID, Injection, Nexmon]
+        - id          : angler-los
+          description : LineageOS
+          versions    :
+             - android      : ten
+               kernel       : 3.5
+               description  : LineageOS 17.1 & Pixel Experience 10
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-10.0'
+               features     : [HID, Injection, Nexmon]
+- bullhead
+    model   :  Nexus 5X
+    kernels :
+        - id          : bullhead
+          description : Stock Android
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 6
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow'
+               features     : [HID, Injection]
+             - android      : nougat
+               kernel       : 2.1
+               description  : Android 7.1
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git'
+               features     : [HID, Injection]
+             - android      : oreo
+               kernel       : 3.5
+               description  : Android 8.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1'
+               features     : [HID, Injection, RTL8812AU]
+- davinci
+    model   :  Xiaomi Mi 9T
+    kernels :
+        - id          : davinci-miui
+          description : Xiaomi Mi 9T Miui
+          versions    :
+             - android      : Ten
+               kernel       : 1.5
+               description  : Miui Global 11
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
+               features     : [CD-ROM, HID, Injection, QCACLD, RTL8812-AU]
+- h9**
+    model   :  LG V20 Int
+    kernels :
+        - id          : h990
+          description : LG stock Android
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Android 7.1 with dirtysanta patch
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_lge_msm8996 -b nethunter-7.0'
+               features     : [HID, Injection]
+             - android      : oreo
+               kernel       : 1.0
+               description  : Android 8
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0'
+               features     : [HID, Injection]
+- hammerhead
+    model   :  Nexus 5
+    kernels :
+        - id          : hammerhead
+          description : Stock Android
+          versions    :
+             - android      : kitkat
+               kernel       : 2.1
+               description  : Android 4.4
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4'
+               features     : [CDROM, HID, Injection]
+             - android      : lollipop
+               kernel       : 2.1
+               description  : Android 5
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-hammerhead-3.4-lollipop-release'
+               features     : [CDROM, HID, Injection]
+             - android      : marshmallow
+               kernel       : 3.5
+               description  : Android 6
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
+               features     : [HID, Injection, Nexmon]
+             - android      : nougat
+               kernel       : 3.5
+               description  : LineageOS 14.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
+               features     : [HID, Injection, Nexmon]
+        - id          : hammerheadcafcm
+          description : CAF Android
+          versions    :
+             - android      : nougat
+               kernel       : 1.11
+               description  : CAF CyanogenMod 14.1
+               author       : chrisk44
+               source       : 'git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf'
+               features     : [HID, Injection]
+- honami
+    model   :  Sony Xperia Z1
+    kernels :
+        - id          : honami
+          description : Oxygen OS
+          versions    :
+             - android      : marshmallow
+               kernel       : 1.1
+               description  : Android 5
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
+               features     : [Injection]
+- gemini4g
+    model   :  Planet Computers Gemini PDA
+    kernels :
+        - id          : gemini4g_p1
+          description : Gemini PDA boot from partition 1
+          versions    :
+             - android      : nougat
+               kernel       : 0.2
+               description  : Android 7.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+               features     : [Injection]
+        - id          : gemini4g_p2
+          description : Gemini PDA boot from partition 2
+          versions    :
+             - android      : nougat
+               kernel       : 0.2
+               description  : Android 7.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+               features     : [Injection]
+               features     : [Injection]
+        - id          : gemini4g_p3
+          description : Gemini PDA boot from partition 3
+          versions    :
+             - android      : nougat
+               kernel       : 0.2
+               description  : Android 7.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+               features     : [Injection]
+- gts4llte
+    model   :  Samsung Galaxy Tab S4 LTE
+    kernels :
+        - id          : gts4llte
+          description : Galaxy Tab S4 LTE
+          versions    :
+             - android      : oreo
+               kernel       : 1.1
+               description  : Android 8.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
+               features     : [HID, Injection]
+- gts4lwifi
+    model   :  Samsung Galaxy Tab S4 WiFi
+    kernels :
+        - id          : gts4lwifi
+          description : Galaxy Tab S4 WiFi
+          versions    :
+             - android      : oreo
+               kernel       : 1.1
+               description  : Android 8.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
+               features     : [HID, Injection]
+- oneplus2
+    model   :  OnePlus 2
+    kernels :
+        - id          : oneplus2
+          description : Oxygen OS
+          versions    :
+             - android      : lollipop
+               kernel       : 1.0
+               description  : Oxygen OS
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b boeffla_oos3'
+               features     : [Injection]
+        - id          : oneplus2cm
+          description : LineageOS
+          versions    :
+             - android      : lollipop
+               kernel       : 2.0
+               description  : CyanogenMod 12.1
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1'
+               features     : [CD-ROM, HID, Injection]
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : CyanogenMod 13.0
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0'
+               features     : [CD-ROM, HID, Injection]
+             - android      : nougat
+               kernel       : 2.2
+               description  : LineageOS 14.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1'
+               features     : [CD-ROM, HID, Injection]
+             - android      : oreo
+               kernel       : 2.2
+               description  : LineageOS 15.1
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-15.1'
+               features     : [CD-ROM, HID, Injection]
+             - android      : pie
+               kernel       : 2.2
+               description  : LineageOS 16.0
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-16.0'
+               features     : [CD-ROM, HID, Injection]
+        - id          : oneplus2oos
+          description : Oxygen OS
+          versions    :
+             - android      : marshmallow
+               kernel       : 2.2
+               description  : Oxygen OS
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
+               features     : [CD-ROM, HID, Injection]
+- oneplus3
+    model   :  OnePlus 3 & 3T
+    kernels :
+        - id          : oneplus3
+          description : Oxygen OS
+          versions    :
+             - android      : marshmallow
+               kernel       : 1.3
+               description  : Oxygen OS
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX'
+               features     : [CD-ROM, HID, Injection]
+             - android      : nougat
+               kernel       : 3.1
+               description  : Oxygen OS
+               author       : jcadduono
+               source       : 'git clone https://github.com/jcadduono/android_kernel_oneplus_msm8996.git -b nethunter-7.0'
+               features     : [CD-ROM, HID, Injection]
+        - id          : oneplus3-any
+          description : Oxygen OS >=9.0 using anykernel flasher
+          versions    :
+             - android      : pie
+               kernel       : 9.1
+               description  : Oxygen OS 9.0
+               author       : Re4son
+               source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996.git -b nethunter-9.0'
+               features     : [CD-ROM, HID, Injection, RTL8812-AU]
+        - id          : oneplus3-cm
+          description : OnePlus 3 LineageOS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : LineageOS
+               author       : zanezam
+               source       : 'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features     : [Injection]
+        - id          : oneplus3-oos
+          description : Oxygen OS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Oneplus 3 Oxygen OS
+               author       : zanezam
+               source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features     : [Injection]
+        - id          : oneplus3t-cm
+          description : OnePlus 3T LineageOS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : LineageOS 14
+               author       : zanezam
+               source       : 'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features     : [Injection]
+        - id          : oneplus3t-los
+          description : OnePlus 3T LineageOS >= 15
+          versions    :
+             - android      : oreo
+               kernel       : 1.0
+               description  : Oneplus 3T LineageOs 15.1
+               author       : flypatriot
+               source       : 'git clone https://github.com/flypatriot/boeffla-kernel-los-nethunter-oneplus3T.git -b t_boeffla_lineage15_nethunter'
+               features     : [CD-ROM, HID, Injection]
+        - id          : oneplus3t-oos
+          description : Oxygen OS
+          versions    :
+             - android      : nougat
+               kernel       : 1.0
+               description  : Oxygen OS Oneplus 3T
+               author       : zanezam
+               source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
+               features     : [Injection]
+- oneplus7
+    model   :  OnePlus 7 / 7 Pro / 7T / 7T Pro
+    kernels :
+        - id          : oneplus7-oos
+          description : Oxygen OS
+          versions    :
+             - android      : pie
+               kernel       : 1.1
+               description  : Oxygen OS 10
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0'
+               features     : [HID, Injection]
+             - android      : ten
+               kernel       : 1.1
+               description  : Oxygen OS 11
+               author       : Re4son
+               source       : 'git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
+               features     : [HID, Injection, QCACLD, RTL8812-AU]
+- shamu
+    model   :  Nexus 6
+    kernels :
+        - id          : shamu
+          description : Stock Android
+          versions    :
+             - android      : lollipop
+               kernel       : 2.1
+               description  : Android 5
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release'
+               features     : [CDROM, HID, Injection]
+             - android      : marshmallow
+               kernel       : 2.1
+               description  : Android 6
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release'
+               features     : [CDROM, HID, Injection]
+             - android      : nougat
+               kernel       : 2.1
+               description  : Android 7.1
+               author       : Binkybear
+               source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-n'
+               features     : [CDROM, HID, Injection]
+        - id          : shamu-cm
+          description : LineageOS
+          versions    :
+             - android      : nougat
+               kernel       : 4.4
+               description  : LineageOS 14.1
+               author       : discipuloosho
+               source       : 'git clone https://github.com/discipuloosho/android_kernel_moto_shamu.git -b nethunter_cm-14.1'
+               features     : []
+             - android      : pie
+               kernel       : 4.4
+               description  : Android 16.0
+               author       : Re4son
+               source       : 'git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0'
+               features     : [CDROM, HID, Injection]
