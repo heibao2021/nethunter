@@ -14,7 +14,7 @@ def sanitize_content(content):
 
 def generate_device_table(data):
     default = ""
-    table = "| Model | Kernel name | Android version | Kernel version | Description | Author | Features | Source |\n|---|---|---|---|---|---|---|---|\n"
+    table = "| Model | Kernel ID | Android version | Kernel version | Description | Author | Features | Source |\n|----|--|---|-|----|---|---|----------|\n"
     for element in data:
         for kernel_name in element.keys():
             model = element[kernel_name]['model']

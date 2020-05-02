@@ -1,8 +1,10 @@
 extends: default
 
 rules:
-  # 80 chars should be enough, but don't fail if a line is longer
-  colons: disable
+  # 250 chars should be enough, but don't fail if a line is longer
   line-length:
-    max: 150
+    max: 250
     level: warning
+  # We use spaces before colons for better readability of the source file. It's legal according to the yaml spec
+  colons:
+    max-spaces-before: -1
