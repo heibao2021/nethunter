@@ -76,6 +76,18 @@
             author       : DeadSquirrel01
             source       : 'git clone https://github.com/DeadSquirrel01/nethunter-kernel-a5ulte.git -b touchwiz-6.0'
             features     : []
+- a5xelte:
+    model   : Samsung Galaxy A5 (2016)
+    kernels :
+      - id          : a5xelte
+        description : Galaxy A5 (2016) for TouchWiz
+        versions    :
+          - android      : nougat
+            kernel       : 1.0
+            description  : TouchWiz Grace
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/android_kernel_samsung-a5xelte -b nethunter-7.0'
+            features     : [HID, Injection, RTL8812AU]
 - ailsa_ii:
     model   : ZTE Axon 7
     kernels :
@@ -121,18 +133,6 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-10.0'
             features     : [HID, Injection, Nexmon]
-- a5xelte:
-    model   : Samsung Galaxy A5 (2016)
-    kernels :
-      - id          : a5xelte
-        description : Galaxy A5 (2016) for TouchWiz
-        versions    :
-          - android      : nougat
-            kernel       : 1.0
-            description  : TouchWiz Grace
-            author       : Re4son
-            source       : 'git clone https://github.com/Re4son/android_kernel_samsung-a5xelte -b nethunter-7.0'
-            features     : [HID, Injection, RTL8812AU]
 - bullhead:
     model   : Nexus 5X
     kernels :
@@ -288,27 +288,45 @@
         versions    :
           - android      : nougat
             kernel       : 0.2
-            description  : Android 7.1
+            description  : Android 7.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+            features     : [Injection]
+          - android      : oreo
+            kernel       : 0.2
+            description  : Android 8.1 Boot Partition 1
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
             features     : [Injection]
       - id          : gemini4g_p2
         description : Gemini PDA boot from partition 2
         versions    :
           - android      : nougat
             kernel       : 0.2
-            description  : Android 7.1
+            description  : Android 7.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+            features     : [Injection]
+          - android      : oreo
+            kernel       : 0.2
+            description  : Android 8.1 Boot Partition 2
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
             features     : [Injection]
       - id          : gemini4g_p3
         description : Gemini PDA boot from partition 3
         versions    :
           - android      : nougat
             kernel       : 0.2
-            description  : Android 7.1
+            description  : Android 7.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
+            features     : [Injection]
+          - android      : oreo
+            kernel       : 0.2
+            description  : Android 8.1 Boot Partition 3
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
             features     : [Injection]
 - grouper:
     model   : Nexus 7 (2012)
@@ -366,6 +384,30 @@
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
+            features     : [HID, Injection]
+- h830:
+    model   : LG G5 T-Online
+    kernels :
+      - id          : h830
+        description : LG stock Android
+        versions    :
+          - android      : nougat
+            kernel       : 1.2
+            description  : Android 7.1 (T-Online)
+            author       : jcadduono
+            source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
+            features     : [HID, Injection]
+- h850:
+    model   : LG G5 T-Online
+    kernels :
+      - id          : h830
+        description : LG stock Android
+        versions    :
+          - android      : nougat
+            kernel       : 1.2
+            description  : Android 7.1 (T-Online)
+            author       : jcadduono
+            source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
             features     : [HID, Injection]
 - h918:
     model   : LG V20 T-Online
@@ -1072,7 +1114,7 @@
       - id          : oneplus1
         description : CyanogenMod
         versions    :
-          - android      : nougat
+          - android      : pie
             kernel       : 2.2
             description  : CyanogenMod 16
             author       : yesimxev
