@@ -15,6 +15,7 @@
 #         description : Stock Android
 #         versions    :
 #           - android      : marshmallow
+#             linux        : '3.10'
 #             kernel       : 2.1
 #             description  : Android 6
 #             author       : Binkybear
@@ -62,6 +63,7 @@
         description : Galaxy A5 (2015) for CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 1.3
             description  : CyanogenMod 13
             author       : DeadSquirrel01
@@ -71,6 +73,7 @@
         description : Galaxy A5 (2015) for TouchWiz (Europe)
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 1.3
             description  : TouchWiz 6
             author       : DeadSquirrel01
@@ -83,6 +86,7 @@
         description : Galaxy A5 (2016) for TouchWiz
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : TouchWiz Grace
             author       : Re4son
@@ -95,6 +99,7 @@
         description : MiFavor
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 3.1
             description  : Android 6
             author       : jcadduono
@@ -107,18 +112,21 @@
         description : Stock Android
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-Angler.git'
             features     : [HID, Injection]
           - android      : nougat
+            linux        : '3.10'
             kernel       : 2.0
             description  : Android 7.1
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-7.1_2'
             features     : [CDROM, HID, Injection]
           - android      : oreo
+            linux        : '3.10'
             kernel       : 3.5
             description  : Android 8.1
             author       : Re4son
@@ -128,6 +136,7 @@
         description : LineageOS
         versions    :
           - android      : ten
+            linux        : '3.10'
             kernel       : 3.5
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
@@ -140,18 +149,21 @@
         description : Stock Android
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow'
             features     : [HID, Injection]
           - android      : nougat
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 7.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git'
             features     : [HID, Injection]
           - android      : oreo
+            linux        : '3.04'
             kernel       : 3.5
             description  : Android 8.1
             author       : Re4son
@@ -164,6 +176,7 @@
         description : Xiaomi Mi 3 & Mi 4 for CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.0
             description  : CyanogenMod 13
             author       : Binkybear
@@ -176,12 +189,14 @@
         description : Motorola Moto G5 for LineageOs
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.2
             description  : LineageOS 14.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/android_kernel_motorola_msm8937 -b cm-14.1'
             features     : [HID]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.1
             description  : LineageOS 15.1
             author       : rajeshdubey293
@@ -194,6 +209,7 @@
         description : Xiaomi Mi 9T MIUI
         versions    :
           - android      : ten
+            linux        : '4.14'
             kernel       : 1.5
             description  : MIUI Global 11
             author       : Re4son
@@ -206,6 +222,7 @@
         description : Xperia ZR for CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.0
             description  : CyanogenMod 13
             author       : Daedroza
@@ -218,6 +235,7 @@
         description : Stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 7.1
             author       : jcadduono
@@ -230,18 +248,21 @@
         description : Stock Android
         versions    :
           - android      : kitkat
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-flo-3.4-kitkat-mr2'
             features     : []
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-4.00'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 6
             author       : Binkybear
@@ -251,6 +272,7 @@
         description : CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.0
             description  : CyanogenMod
             author       : jcadduono
@@ -263,18 +285,21 @@
         description : Stock Android
         versions    :
           - android      : lollipop
+            linux        : '3.10'
             kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-marshmallow-release'
             features     : [CDROM, HID, Injection]
           - android      : nougat
+            linux        : '3.10'
             kernel       : 2.1
             description  : Android 7.1
             author       : SecurityAddicted
@@ -287,12 +312,14 @@
         description : Gemini PDA boot from partition 1
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 7.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 1
             author       : Re4son
@@ -302,12 +329,14 @@
         description : Gemini PDA boot from partition 2
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 7.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 2
             author       : Re4son
@@ -317,12 +346,14 @@
         description : Gemini PDA boot from partition 3
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 7.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 3
             author       : Re4son
@@ -335,6 +366,7 @@
         description : Stock Android
         versions    :
           - android      : kitkat
+            linux        : 3.01
             kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
@@ -347,15 +379,17 @@
         description : Samsung Galaxy Note 7 for Grace UI
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : Grace UI
             author       : jcadduono
-            source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890/commits -b nethunter-6.0'
+            source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890.git -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
       - id          : graceltekor
         description : Samsung Galaxy Note 7 for Grace UI (Korean)
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : Grace UI
             author       : jcadduono
@@ -368,6 +402,7 @@
         description : Galaxy Tab S4 LTE
         versions    :
           - android      : oreo
+            linux        : '4.04'
             kernel       : 1.1
             description  : Android 8.1
             author       : Re4son
@@ -380,6 +415,7 @@
         description : Galaxy Tab S4 WiFi
         versions    :
           - android      : oreo
+            linux        : '4.04'
             kernel       : 1.1
             description  : Android 8.1
             author       : Re4son
@@ -392,6 +428,7 @@
         description : LG stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.2
             description  : Android 7.1 (T-Online)
             author       : jcadduono
@@ -400,10 +437,11 @@
 - h850:
     model   : LG G5 T-Online
     kernels :
-      - id          : h830
+      - id          : h850
         description : LG stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.2
             description  : Android 7.1 (T-Online)
             author       : jcadduono
@@ -416,6 +454,7 @@
         description : LG stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 7.0
             author       : jcadduono
@@ -428,12 +467,14 @@
         description : LG stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 7.1 with dirtysanta patch
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_msm8996 -b nethunter-7.0'
             features     : [HID, Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 8
             author       : Re4son
@@ -446,24 +487,28 @@
         description : Stock Android
         versions    :
           - android      : kitkat
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4'
             features     : [CDROM, HID, Injection]
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-hammerhead-3.4-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 3.5
             description  : Android 6
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
             features     : [HID, Injection, Nexmon]
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.5
             description  : LineageOS 14.1
             author       : Re4son
@@ -473,6 +518,7 @@
         description : CAF Android
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 1.11
             description  : CAF CyanogenMod 14.1
             author       : chrisk44
@@ -485,12 +531,14 @@
         description : Galaxy S7 Edge for TouchWiz (International & Canadian Exynos)
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.2
             description  : TouchWiz Grace
             author       : Svirusx
@@ -500,12 +548,14 @@
         description : Galaxy S7 Edge for LineageOS (International & Canadian Exynos)
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.4
             description  : LineageOS 14.1
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-LineageOS14.1.git -b cm-14.1'
             features     : [CDROM, HID, Injection]
           - android      : pie
+            linux        : '3.18'
             kernel       : 1.1
             description  : LineageOS 16.0
             author       : Svirusx
@@ -515,6 +565,7 @@
         description : Galaxy S7 Edge for TouchWiz (Korean Exynos)
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
@@ -527,12 +578,14 @@
         description : Galaxy S7 for TouchWiz (International & Canadian Exynos)
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.2
             description  : TouchWiz Grace
             author       : Svirusx
@@ -542,12 +595,14 @@
         description : Galaxy S7 for LineageOS (International & Canadian Exynos)
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.4
             description  : LineageOS 14.1
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-LineageOS14.1.git -b cm-14.1'
             features     : [CDROM, HID, Injection]
           - android      : pie
+            linux        : '3.18'
             kernel       : 1.1
             description  : LineageOS 16.0
             author       : Svirusx
@@ -557,6 +612,7 @@
         description : Galaxy S7 for TouchWiz (Korean Exynos)
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
@@ -569,12 +625,14 @@
         description : Galaxy Note 3 for CyanogenMod (Canada, Mexico, and T-Mobile)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 12 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 13 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
@@ -584,6 +642,7 @@
         description : Galaxy Note 3 for TouchWiz (Canada, Mexico, and T-Mobile)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
@@ -593,6 +652,7 @@
         description : Galaxy Note 3 for TouchWiz (Japanese NTT Docomo)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Japanese NTT Docomo)
             author       : jcadduono
@@ -602,12 +662,14 @@
         description : Galaxy Note 3 for CyanogenMod (International / European)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 12 (International / European)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 13 (International / European)
             author       : jcadduono
@@ -617,6 +679,7 @@
         description : Galaxy Note 3 for TouchWiz (International / European)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (International / European)
             author       : jcadduono
@@ -626,6 +689,7 @@
         description : Galaxy Note 3 for LineageOS (International / European)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 1.0
             description  : LineageOS 14.1 (International / European)
             author       : 4E656F
@@ -635,6 +699,7 @@
         description : Galaxy Note 3 for TouchWiz (Japanese Au by KDDI)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Japanese NTT Docomo)
             author       : jcadduono
@@ -644,12 +709,14 @@
         description : Galaxy Note 3 for CyanogenMod (Korean)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 12 (Korean)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 13 (Korean)
             author       : jcadduono
@@ -659,6 +726,7 @@
         description : Galaxy Note 3 for TouchWiz (Korean)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Korean)
             author       : jcadduono
@@ -668,12 +736,14 @@
         description : Galaxy Note 3 for CyanogenMod (Sprint)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 12 (Sprint)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : Cyanogenmod 13 (Sprint)
             author       : jcadduono
@@ -683,6 +753,7 @@
         description : Galaxy Note 3 for TouchWiz (Sprint)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Sprint)
             author       : jcadduono
@@ -692,6 +763,7 @@
         description : Galaxy Note 3 for TouchWiz (US Verizon)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 7.1.1
             description  : TouchWiz 5.0 (Verizon)
             author       : jcadduono
@@ -704,11 +776,19 @@
         description : Oxygen OS
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.1
-            description  : Android 5
+            description  : LineageOS 13.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
-            features     : [Injection]
+            features     : [HID, Injection]
+          - android      : pie
+            linux        : '3.04'
+            kernel       : 2.1
+            description  : LineageOS 16
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
+            features     : [HID, Injection]
 - htc_pmewl:
     model   : HTC 10
     kernels :
@@ -716,6 +796,7 @@
         description : HTC 10 Sense
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.0a
             description  : HTC 10 Sense 8.0
             author       : S1CAR1US
@@ -728,6 +809,7 @@
         description : Xiaomi Redmi 3/3 Pro for LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.3
             description  : LineageOS 14.1
             author       : ariafan
@@ -740,6 +822,7 @@
         description : Yu Yunique for LineageOs
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : LineageOS 14.1
             author       : Satyabrat Sahoo
@@ -752,12 +835,14 @@
         description : Galaxy S4 for Cyanogenmod (International LTE, GSM)
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.0
             description  : Cyanogenmod 13
             author       : semsevens
             source       : 'git clone https://github.com/semsevens/nethunter_kernel_jfltexx.git -b cm-13.0'
             features     : []
           - android      : nougat
+            linux        : '3.04'
             kernel       : 1.0
             description  : Cyanogenmod 14.1
             author       : fasheng
@@ -770,6 +855,7 @@
         description : Jiayu S3 Advanced
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 1.0
             description  : Stock Android
             author       : DKingCN
@@ -782,6 +868,7 @@
         description : Huawei Honor 5x for CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 1.1
             description  : CyanogenMod 13
             author       : DeadSquirrel01
@@ -794,6 +881,7 @@
         description : Galaxy S5 for LineageOS (GSM)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (GSM)
             author       : jcadduono
@@ -803,12 +891,14 @@
         description : Galaxy S5 for TouchWiz (GSM)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : TouchWiz 5.1 (GSM)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 3.0
             description  : TouchWiz 6.0 (GSM)
             author       : jcadduono
@@ -818,6 +908,7 @@
         description : Galaxy S5 for LineageOS (China)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (China)
             author       : jcadduono
@@ -827,6 +918,7 @@
         description : Galaxy S5 for LineageOS (China Duos)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (China Duos)
             author       : jcadduono
@@ -836,6 +928,7 @@
         description : Galaxy S5 for LineageOS (LTE Duos)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (LTE Duos)
             author       : jcadduono
@@ -845,6 +938,7 @@
         description : Galaxy S5 for TouchWiz (LTE Duos)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : TouchWiz 5.1 (LTE Duos)
             author       : jcadduono
@@ -854,6 +948,7 @@
         description : Galaxy S5 for LineageOS (Japan)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (Japan)
             author       : jcadduono
@@ -863,6 +958,7 @@
         description : Galaxy S5 for TouchWiz (Japan)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : TouchWiz 5.1 (Japan)
             author       : jcadduono
@@ -872,6 +968,7 @@
         description : Galaxy S5 for LineageOS (Korea)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : LineageOS 14.1 (Korea)
             author       : jcadduono
@@ -881,12 +978,14 @@
         description : Galaxy S5 for TouchWiz (Korea)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : TouchWiz 5.1 (Korea)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 3.0
             description  : TouchWiz 6.0 (Korea)
             author       : jcadduono
@@ -896,6 +995,7 @@
         description : Galaxy S5 for LineageOS (US Sprint, UK Vodafone, and Oceanic)
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 1.4
             description  : LineageOS 14.1 (US Sprint, UK Vodafone, and Oceanic)
             author       : jcadduono
@@ -905,6 +1005,7 @@
         description : Galaxy S5 for TouchWiz (US Sprint, UK Vodafone, and Oceanic)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : TouchWiz 5.1 (US Sprint, UK Vodafone, and Oceanic)
             author       : jcadduono
@@ -914,6 +1015,7 @@
         description : Galaxy S5 for TouchWiz (US Cellular)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 3.0
             description  : TouchWiz 5.1 (US Cellular)
             author       : jcadduono
@@ -923,6 +1025,7 @@
         description : Galaxy S5 for TouchWiz (US Verizon)
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 3.0
             description  : TouchWiz 5.1 (US Verizon)
             author       : jcadduono
@@ -935,18 +1038,21 @@
         description : Galaxy S5 Mini for LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 1.0
             description  : LineageOS 14.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b N'
             features     : [CDROM, HID, Injection]
           - android      : oreo
+            linux        : '3.04'
             kernel       : 1.0
             description  : LineageOS 15.0
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b O'
             features     : [CDROM, HID, Injection]
           - android      : pie
+            linux        : '3.04'
             kernel       : 1.0
             description  : LineageOS 16.0
             author       : yesimxev
@@ -959,12 +1065,14 @@
         description : Stock Android
         versions    :
           - android      : kitkat
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2'
             features     : [HID, Injection]
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 5
             author       : Binkybear
@@ -974,6 +1082,7 @@
         description : CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 13
             author       : jcadduono
@@ -986,6 +1095,7 @@
         description : Stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 7.1
             author       : Byom Dwivedi
@@ -998,6 +1108,7 @@
         description : Stock Android
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.3.2
             description  : Android 5
             author       : jmmmbnnn
@@ -1010,12 +1121,14 @@
         description : Xiaomi Redmi 4 Prime for LineageOS
         versions    :
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS 15.1
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_msm8953_markw -b Nosgoth'
             features     : [HID, Injection]
           - android      : pie
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS 16
             author       : fasheng
@@ -1028,12 +1141,14 @@
         description : Xiaomi MiPad 1 CyanogenMod
         versions    :
           - android      : kitkat
+            linux        : '3.10'
             kernel       : 3.1
             description  : CyanogenMod 11
             author       : RahulTheVirus!
             source       : 'git clone https://github.com/RahulTheVirus/mocha-kernels.git -b nethunter-cm11'
             features     : [CDROM, Injection]
           - android      : lollipop
+            linux        : '3.10'
             kernel       : 3.1
             description  : CyanogenMod 12.1
             author       : RahulTheVirus!
@@ -1046,6 +1161,7 @@
         description : HTC One M7 Google Play Edition
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 1.4
             description  : Google Play Edition 5.1
             author       : Lavanoid
@@ -1058,6 +1174,7 @@
         description : HTC One M8 Google Play Edition
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.4
             description  : Google Play Edition 6
             author       : Lavanoid
@@ -1070,6 +1187,7 @@
         description : CyanogenMod
         versions    :
           - android      : kitkat
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 11
             author       : Binkybear
@@ -1079,6 +1197,7 @@
         description : CyanogenMod
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 12.1
             author       : Binkybear
@@ -1088,6 +1207,7 @@
         description : CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 13
             author       : Binkybear
@@ -1097,6 +1217,7 @@
         description : CyanogenMod
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 14.1
             author       : yesimxev
@@ -1106,6 +1227,7 @@
         description : CyanogenMod
         versions    :
           - android      : oreo
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 15.1
             author       : yesimxev
@@ -1115,6 +1237,7 @@
         description : CyanogenMod
         versions    :
           - android      : pie
+            linux        : '3.04'
             kernel       : 2.2
             description  : CyanogenMod 16
             author       : yesimxev
@@ -1127,6 +1250,7 @@
         description : Oxygen OS
         versions    :
           - android      : lollipop
+            linux        : '3.10'
             kernel       : 1.0
             description  : Oxygen OS
             author       : Binkybear
@@ -1136,30 +1260,35 @@
         description : LineageOS
         versions    :
           - android      : lollipop
+            linux        : '3.10'
             kernel       : 2.0
             description  : CyanogenMod 12.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1'
             features     : [CD-ROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 2.1
             description  : CyanogenMod 13.0
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0'
             features     : [CD-ROM, HID, Injection]
           - android      : nougat
+            linux        : '3.10'
             kernel       : 2.2
             description  : LineageOS 14.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1'
             features     : [CD-ROM, HID, Injection]
           - android      : oreo
+            linux        : '3.10'
             kernel       : 2.2
             description  : LineageOS 15.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-15.1'
             features     : [CD-ROM, HID, Injection]
           - android      : pie
+            linux        : '3.10'
             kernel       : 2.2
             description  : LineageOS 16.0
             author       : Re4son
@@ -1169,6 +1298,7 @@
         description : Oxygen OS
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 2.2
             description  : Oxygen OS
             author       : Binkybear
@@ -1181,12 +1311,14 @@
         description : Oxygen OS
         versions    :
           - android      : marshmallow
+            linux        : '3.18'
             kernel       : 1.3
             description  : Oxygen OS
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX'
             features     : [CD-ROM, HID, Injection]
           - android      : nougat
+            linux        : '3.18'
             kernel       : 3.1
             description  : Oxygen OS
             author       : jcadduono
@@ -1196,6 +1328,7 @@
         description : Oxygen OS >=9.0 using anykernel flasher
         versions    :
           - android      : pie
+            linux        : '3.18'
             kernel       : 9.1
             description  : Oxygen OS 9.0
             author       : Re4son
@@ -1205,6 +1338,7 @@
         description : OnePlus 3 LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS
             author       : zanezam
@@ -1214,6 +1348,7 @@
         description : Oxygen OS
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Oneplus 3 Oxygen OS
             author       : zanezam
@@ -1223,6 +1358,7 @@
         description : OnePlus 3T LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS 14
             author       : zanezam
@@ -1241,6 +1377,7 @@
         description : Oxygen OS
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Oxygen OS Oneplus 3T
             author       : zanezam
@@ -1253,6 +1390,7 @@
         description : Oxygen OS
         versions    :
           - android      : nougat
+            linux        : '4.04'
             kernel       : 1.0
             description  : Oxygen OS 4
             author       : Binkybear
@@ -1262,6 +1400,7 @@
         description : Oxygen OS
         versions    :
           - android      : nougat
+            linux        : '4.04'
             kernel       : 1.0
             description  : CyanogenMod 14
             author       : Binkybear
@@ -1274,16 +1413,18 @@
         description : Oxygen OS
         versions    :
           - android      : pie
+            linux        : '4.14'
             kernel       : 1.1
             description  : Oxygen OS 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0'
             features     : [HID, Injection]
           - android      : ten
+            linux        : '4.14'
             kernel       : 1.1
             description  : Oxygen OS 11
             author       : Re4son
-            source       : 'git clone android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
+            source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
             features     : [HID-4, Injection, QCACLD, RTL8812AU]
 - oneplusx:
     model   : OnePlus X
@@ -1292,6 +1433,7 @@
         description : CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.1
             description  : CyanogenMod 13
             author       : jcadduono
@@ -1304,12 +1446,14 @@
         description : Moto G 2015 for LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.1
             description  : LineageOS 14.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-cm-14.1 -b cm-14.1'
             features     : [HID]
           - android      : oreo
+            linux        : '3.10'
             kernel       : 1.2
             description  : LineageOS 15.1
             author       : rajeshdubey293
@@ -1322,12 +1466,14 @@
         description : Motorola Moto G5 Plus for LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS 14.1
             author       : chankruze
             source       : 'git clone https://github.com/chankruze/potter_kali_kernel -b cm-14.1'
             features     : []
           - android      : pie
+            linux        : '3.18'
             kernel       : 1.0
             description  : LineageOS 16
             author       : rajeshdubey293
@@ -1340,6 +1486,7 @@
         description : LeEco Le 2 for CyanogenMod
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : CyanogenMod 14.1
             author       : Rishabh Rao
@@ -1352,6 +1499,7 @@
         description : Xiaomi Redmi 4X for MIUI
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : MIUI 9.0
             author       : santoni
@@ -1364,18 +1512,21 @@
         description : Stock Android
         versions    :
           - android      : lollipop
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release'
             features     : [CDROM, HID, Injection]
           - android      : nougat
+            linux        : '3.04'
             kernel       : 2.1
             description  : Android 7.1
             author       : Binkybear
@@ -1385,13 +1536,15 @@
         description : LineageOS
         versions    :
           - android      : nougat
-            kernel       : 4.4
+            linux        : '3.04'
+            kernel       : '4.04'
             description  : LineageOS 14.1
             author       : discipuloosho
             source       : 'git clone https://github.com/discipuloosho/android_kernel_moto_shamu.git -b nethunter_cm-14.1'
             features     : []
           - android      : pie
-            kernel       : 4.4
+            linux        : '3.04'
+            kernel       : '4.04'
             description  : Android 16.0
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0'
@@ -1403,23 +1556,39 @@
         description : nVidea Shield Tablet
         versions    :
           - android      : marshmallow
+            linux        : '3.10'
             kernel       : 1.2
             description  : Android 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.2
             description  : Android 7.1
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.3
             description  : Android 7.1
             author       : SecurityAddicted
             source       : 'git clone https://github.com/SecurityAddicted/android_kernel_nvidia_shieldtablet nethunter'
             features     : [CDROM, HID, Injection]
+- suzuran:
+    model   : Sony Xperia Z5 Compact
+    kernels :
+      - id          : suzuran
+        description : Xperia Z5 Compact for LineageOS
+        versions    :
+          - android      : nougat
+            linux        : '3.10'
+            kernel       : 1.1
+            description  : LineageOS 14.1
+            author       : Re4son
+            source       : 'git clone https://github.com/Re4son/android_kernel_sony_msm8994 android-14.1'
+            features     : [HID, Injection, Nexmon, RTL8812AU]
 - us996:
     model   : LG V20 US Version
     kernels :
@@ -1427,10 +1596,11 @@
         description : Stock Android
         versions    :
           - android      : nougat
+            linux        : '3.18'
             kernel       : 1.0
             description  : Android 7.0
             author       : jcadduono
-            source       : 'git clone https://github.com/jcadduono/android_device_lge_us996 -b android-7.0'
+            source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996 -b android-7.0'
             features     : [HID, Injection]
 - victara:
     model   : Motorola Moto X2 (2014)
@@ -1439,6 +1609,7 @@
         description : Moto X2 for CyanogenMod
         versions    :
           - android      : nougat
+            linux        : '3.04'
             kernel       : 3.0
             description  : CyanogenMod 14.1
             author       : DSR!
@@ -1451,18 +1622,21 @@
         description : Huawei P9 Plus for MIUI
         versions    :
           - android      : marshmallow
+            linux        : '4.04'
             kernel       : 1.0
             description  : MIUI 8
             author       : 5h4d0wb0y
             source       : 'git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 6.x'
             features     : [HID, Injection]
           - android      : nougat
+            linux        : '4.04'
             kernel       : 1.0
             description  : MIUI 9
             author       : 5h4d0wb0y
             source       : 'git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 7.x'
             features     : [Injection]
           - android      : oreo
+            linux        : '4.04'
             kernel       : 1.0
             description  : MIUI 10
             author       : 5h4d0wb0y
@@ -1475,10 +1649,24 @@
         description : Sony Xperia Z for CyanogenMod
         versions    :
           - android      : marshmallow
+            linux        : '3.04'
             kernel       : 1.0
             description  : CyanogenMod 13
             author       : Daedroza
             source       : 'git clone https://github.com/daedroza/nethunter_kernel_apq8064.git -b master'
+            features     : [HID, Injection]
+- Z00E:
+    model   : Asus Zenfone 2 Laser
+    kernels :
+      - id          : Z00E
+        description : LineageOS
+        versions    :
+          - android      : marshmallow
+            linux        : '3.10'
+            kernel       : 6.0.1
+            description  : LineageOS 13.0
+            author       : adrenogamer
+            source       : 'git clone https://github.com/adrenogamer/android_kernel_asus_msm8916 -b cm-13.0'
             features     : [HID, Injection]
 - zeroflte:
     model   : Samsung Galaxy S6
@@ -1487,6 +1675,7 @@
         description : LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : LineageOS 14.1
             author       : XXH3X
@@ -1496,23 +1685,12 @@
         description : TouchWiz
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : Android 7.0
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
             features     : []
-- Z00E:
-    model   : Asus Zenfone 2 Laser
-    kernels :
-      - id          : Z00E
-        description : LineageOS
-        versions    :
-          - android      : marshmallow
-            kernel       : 6.0.1
-            description  : LineageOS 13.0
-            author       : adrenogamer
-            source       : 'git clone https://github.com/adrenogamer/android_kernel_asus_msm8916 -b cm-13.0'
-            features     : [HID, Injection]
 - zerolte:
     model   : Samsung Galaxy S6 Edge
     kernels :
@@ -1520,6 +1698,7 @@
         description : LineageOS
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : LineageOS 14.1
             author       : XXH3X
@@ -1529,6 +1708,7 @@
         description : TouchWiz
         versions    :
           - android      : nougat
+            linux        : '3.10'
             kernel       : 1.0
             description  : Android 7.0
             author       : XXH3X

@@ -14,7 +14,7 @@ def sanitize_content(content):
 
 def generate_device_table(data):
     default = ""
-    table = "| Model | Kernel ID | Android version | Kernel version | Description | Author | Features | Source |\n|----|--|---|-|----|---|---|----------|\n"
+    table = "| Model | Kernel ID | Android version | Linux version | Kernel version | Description | Author | Features | Source |\n|----|--|---|-|-|----|---|---|----------|\n"
     for element in data:
         for kernel_name in element.keys():
             model = element[kernel_name]['model']
@@ -27,7 +27,7 @@ def generate_device_table(data):
                             features += ", "
                         features +=  f 
                         i += 1
-                    table += "| {} | {} | {} | {} | {} | {} | {} | `{}` |\n".format(model, kernel.get('id', default), version.get('android', default), version.get('kernel', default), version.get('description', default), version.get('author', default), features, version.get('source', default))
+                    table += "| {} | {} | {} | {} | {} | {} | {} | {} | `{}` |\n".format(model, kernel.get('id', default), version.get('android', default), version.get('linux', default), version.get('kernel', default), version.get('description', default), version.get('author', default), features, version.get('source', default))
     return table
 
 with open(INPUT_FILE) as f:
