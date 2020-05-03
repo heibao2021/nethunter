@@ -1347,6 +1347,13 @@
             author       : Re4son
             source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996.git -b nethunter-9.0'
             features     : [CD-ROM, HID, Injection, RTL8812AU]
+          - android      : ten
+            linux        : '3.18'
+            kernel       : 17.1-2
+            description  : LineageOS 17.1
+            author       : Re4son
+            source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996_lineageos.git -b nethunter-17.1'
+            features     : [CD-ROM, HID, Injection, RTL8812AU]
       - id          : oneplus3-cm
         description : OnePlus 3 LineageOS
         versions    :
@@ -1381,6 +1388,7 @@
         description : OnePlus 3T LineageOS >= 15
         versions    :
           - android      : oreo
+            linux        : '3.18'
             kernel       : 1.0
             description  : Oneplus 3T LineageOs 15.1
             author       : flypatriot
