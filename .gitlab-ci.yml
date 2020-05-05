@@ -44,7 +44,7 @@ pages:
     - ./images.md
     - public
     expire_in: 1 week
-=======
+
   - generate_documentation
   
 generate_documentation:
@@ -55,4 +55,3 @@ generate_documentation:
     paths:
     - ./devices.md
     expire_in: 1 week
->>>>>>> aa05cf5e56c9bdc346d594a5dc71a27ba156961d
