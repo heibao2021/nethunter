@@ -45,3 +45,16 @@ pages:
     - public
     expire_in: 1 week
 
+<<<<<<< HEAD
+=======
+  - generate_documentation
+  
+generate_documentation:
+  stage: generate_documentation
+  script:
+  - python scripts/generate_documentation.py
+  artifacts:
+    paths:
+    - ./devices.md
+    expire_in: 1 week
+>>>>>>> master
