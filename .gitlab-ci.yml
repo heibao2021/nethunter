@@ -1,7 +1,7 @@
 image: "python:3.7"
 
 stages:
-<<<<<<< HEAD
+
   - linting
   - generate_documentation
 
