@@ -828,6 +828,19 @@
             author       : S133PY
             source       : 'git clone https://github.com/Thiviyan/KRAKEN_7870_Nethunter -b nethunter'
             features     : [CDROM, HID, Injection, RTL8812AU]
+- on7xlte:
+    model   : Samsung Galaxy J7Prime
+    kernels :
+      - id          : j7y17lte
+        description : Galaxy J7Pro for One UI Roms
+        versions    :
+          - android      : pie
+            linux        : '3.18'
+            kernel       : N16
+            description  : One UI
+            author       : S133PY
+            source       : 'git clone https://github.com/Thiviyan/KRAKEN_7870_Nethunter -b nethunter'
+            features     : [CDROM, HID, Injection, RTL8812AU]
 - jalebi:
     model   : Yu Yunique
     kernels :
