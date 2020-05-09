@@ -5,8 +5,4 @@ nexutil -m0
 nexutil -m2
 
 # Set ioctl intercept
-<<<<<<< HEAD
 export LD_PRELOAD=/system/lib64/kalilibnexmon.so
-=======
-export LD_PRELOAD=/system/lib/libfakeioctlkali.so
->>>>>>> aa05cf5e56c9bdc346d594a5dc71a27ba156961d

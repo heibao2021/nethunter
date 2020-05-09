@@ -1,7 +1,6 @@
 image: "python:3.7"
 
 stages:
-
   - linting
   - generate_documentation
 
@@ -44,5 +43,3 @@ pages:
     - ./images.md
     - public
     expire_in: 1 week
-
-
