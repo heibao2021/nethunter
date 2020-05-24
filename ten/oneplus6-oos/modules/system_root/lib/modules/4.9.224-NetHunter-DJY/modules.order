@@ -1,4 +1,0 @@
-kernel/drivers/aircrack/rtl8188eus/8188eu.ko
-kernel/drivers/usb/phy/phy-isp1301.ko
-kernel/drivers/media/usb/ttusb-dec/ttusb_dec.ko
-kernel/drivers/media/usb/ttusb-dec/ttusbdecfe.ko

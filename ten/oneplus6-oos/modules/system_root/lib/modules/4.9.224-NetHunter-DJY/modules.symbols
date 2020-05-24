@@ -1,4 +1,0 @@
-# Aliases for symbols, used by symbol_request().
-alias symbol:ttusbdecfe_dvbt_attach ttusbdecfe
-alias symbol:isp1301_get_client phy_isp1301
-alias symbol:ttusbdecfe_dvbs_attach ttusbdecfe
