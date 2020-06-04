@@ -1,13 +1,34 @@
 # The brain service causes major battery drain on OnePlus 7 devices without apparent benefits
 # Let's disable it
-ui_print "mounting /vendor";
-$BB mount /vendor;
-$BB mount -o remount,rw /vendor;
+# Note: We always exit with exit code "0" to ensure that the installation continues
+is_mounted() { $BB mount | $BB grep -q " $1 "; }
+
+if ! is_mounted /vendor; then
+  ui_print "/vendor not mounted, mounting it now";
+  $BB mount -w -t auto /vendor;
+else
+  ui_print "/vendor mounted already, remounting it as rw now";
+  $BB mount -o remount,rw /vendor;
+fi;
+if ! is_mounted /vendor; then
+  ui_print "Error: Failed to mount /vendor";
+  exit;
+fi;
+
 ui_print "checking if patch had been applied previously";
 if [ ! "$(grep "disabled" /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc)" ]; then
   ui_print "patch has not been applied previously, applying now";
-  echo "    disabled" >> /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc;
-  ui_print "patch has been applied succesfully";
+  $BB echo "    disabled" >> /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc;
 else
   ui_print "patch was already applied, nothing else to do";
+  exit;
 fi;
+
+if [ ! "$(grep "disabled" /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc)" ]; then
+  ui_print "Error: Failed to apply patch";
+  exit;
+else
+  ui_print "patch has been applied succesfully";
+fi;
+
+exit;
