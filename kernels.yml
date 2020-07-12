@@ -24,17 +24,19 @@
 #
 # Legend:
 #         Features:
-#                   CDROM:     DriveDroid patch to mount image as a cdrom, generally not used anymore,
-#                              as modern OS can be booted from usb devices.
-#                   HID:       Patch to permanently enable keyboard and mouse gadgets for HID attacks.
-#                              Only used for 3.x kernels.
-#                   HID-4:     Kernel config to enable all gadget modes and configfs support.
-#                              Used for 4.x kernels and above.
-#                   Injection: Patch(es) to enable wifi injection (at least for mac8011 based chipsets).
-#                   Nexmon:    The kernel package supports Nexmon and installs nexmon utilities.
-#                              Only available for Nexus 5 & 6P, Xperia 5C, one or two Galaxy phones.
-#                   QCACLD:    Qcacld-2.0 and -3.0 drivers from CAF that support monitor mode.
-#                   RTL8812AU: Patch to add support for rtl8812au drivers from the aircrack-ng repo.
+#                   BT_RFCOMM:   Kernel config with BT_RFCOMM and BT_RFCOMM_TTY enabled for BT-Arsenal support
+#                   CDROM:       DriveDroid patch to mount image as a cdrom, generally not used anymore,
+#                                as modern OS can be booted from usb devices.
+#                   HID:         Patch to permanently enable keyboard and mouse gadgets for HID attacks.
+#                                Only used for 3.x kernels.
+#                   HID-4:       Kernel config to enable all gadget modes and configfs support.
+#                                Used for 4.x kernels and above.
+#                   Injection:   Patch(es) to enable wifi injection (at least for mac8011 based chipsets).
+#                   Nexmon:      The kernel package supports Nexmon and installs nexmon utilities.
+#                                Only available for Nexus 5 & 6P, Xperia 5C, one or two Galaxy phones.
+#                   QCACLD:      Qcacld-2.0 and -3.0 drivers from CAF that support monitor mode.
+#                   RTL8188EUS:  Patch to add support for rtl8188eus drivers from the aircrack-ng repo.
+#                   RTL8812AU:   Patch to add support for rtl8812au drivers from the aircrack-ng repo.
 
 # - Toolchains
 #
@@ -131,7 +133,7 @@
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
-            features     : [CDROM, HID, Injection, Nexmon]
+            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon]
       - id          : angler-los
         description : LineageOS
         versions    :
@@ -140,7 +142,7 @@
             kernel       : 3.5
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
-            source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-10.0'
+            source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
             features     : [HID, Injection, Nexmon]
 - bullhead:
     model   : Nexus 5X
@@ -267,7 +269,7 @@
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-5.00'
-            features     : [CDROM, HID, Injection]
+            features     : [BT_RFCOMM, CDROM, HID, Injection]
       - id          : flocm
         description : CyanogenMod
         versions    :
@@ -277,7 +279,7 @@
             description  : CyanogenMod
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0'
-            features     : [CDROM, HID, Injection]
+            features     : [BT_RFCOMM, CDROM, HID, Injection]
 - flounder:
     model   : Nexus 9
     kernels :
@@ -317,14 +319,14 @@
             description  : Android 7.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
       - id          : gemini4g_p2
         description : Gemini PDA boot from partition 2
         versions    :
@@ -334,14 +336,14 @@
             description  : Android 7.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
       - id          : gemini4g_p3
         description : Gemini PDA boot from partition 3
         versions    :
@@ -351,14 +353,14 @@
             description  : Android 7.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
             kernel       : 0.2
             description  : Android 8.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
-            features     : [Injection]
+            features     : [BT_RFCOMM, Injection]
 - grouper:
     model   : Nexus 7 (2012)
     kernels :
@@ -506,14 +508,14 @@
             description  : Android 6
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
-            features     : [HID, Injection, Nexmon]
+            features     : [BT_RFCOMM, HID, Injection, Nexmon]
           - android      : nougat
             linux        : '3.04'
             kernel       : 3.5
             description  : LineageOS 14.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
-            features     : [HID, Injection, Nexmon]
+            features     : [BT_RFCOMM, HID, Injection, Nexmon]
       - id          : hammerheadcafcm
         description : CAF Android
         versions    :
@@ -781,14 +783,14 @@
             description  : LineageOS 13.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
-            features     : [HID, Injection]
+            features     : [BT_RFCOMM, HID, Injection]
           - android      : pie
             linux        : '3.04'
             kernel       : 2.1
             description  : LineageOS 16
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
-            features     : [HID, Injection]
+            features     : [BT_RFCOMM, HID, Injection]
 - htc_pmewl:
     model   : HTC 10
     kernels :
@@ -1126,7 +1128,7 @@
             description  : Android 5
             author       : jmmmbnnn
             source       : 'git clone https://github.com/jmmmbnnn/kernel_samsung_manta.git -b thunderkat'
-            features     : [CDROM, HID, Injection]
+            features     : [BT_RFCOMM, CDROM, HID, Injection]
 - markw:
     model   : Xiaomi Redmi 4 Prime
     kernels :
@@ -1238,7 +1240,7 @@
             description  : CyanogenMod 13
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-13.0'
-            features     : [HID, Injection]
+            features     : [BT_RFCOMM, HID, Injection]
       - id          : oneplus1
         description : CyanogenMod
         versions    :
@@ -1268,7 +1270,7 @@
             description  : CyanogenMod 16
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16'
-            features     : [HID, Injection]
+            features     : [BT_RFCOMM, HID, Injection]
 - oneplus2:
     model   : OnePlus 2
     kernels :
