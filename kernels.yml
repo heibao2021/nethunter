@@ -228,6 +228,8 @@
             kernel       : 1.0
             description  : CyanogenMod 13
             author       : Daedroza
+            source       : 'git clone https://github.com/daedroza/nethunter_kernel_apq8064.git -b master'
+            features     : [HID, Injection]
 - dragon:
     model   : Google Pixel C
     kernels :
@@ -241,8 +243,6 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1'
             features     : [CDROM, HID, Injection]
-            source       : 'git clone https://github.com/daedroza/nethunter_kernel_apq8064.git -b master'
-            features     : [HID, Injection]
 - es2:
     model   : Nokia 3.1
     kernels :
