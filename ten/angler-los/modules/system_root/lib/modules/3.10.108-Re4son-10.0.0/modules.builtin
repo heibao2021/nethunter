@@ -449,6 +449,7 @@ kernel/net/802/stp.ko
 kernel/net/bluetooth/bluetooth.ko
 kernel/net/bluetooth/bnep/bnep.ko
 kernel/net/bluetooth/hidp/hidp.ko
+kernel/net/bluetooth/rfcomm/rfcomm.ko
 kernel/net/bridge/bridge.ko
 kernel/net/bridge/netfilter/ebtables.ko
 kernel/net/bridge/netfilter/ebtable_broute.ko

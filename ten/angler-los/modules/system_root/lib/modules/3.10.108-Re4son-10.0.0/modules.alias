@@ -53,4 +53,3 @@ alias usb:v0B3Bp1612d*dc*dsc*dp*ic*isc*ip*in* at76c50x_usb
 alias usb:v0864p4100d*dc*dsc*dp*ic*isc*ip*in* at76c50x_usb
 alias usb:v066Bp2211d*dc*dsc*dp*ic*isc*ip*in* at76c50x_usb
 alias usb:v03EBp7603d*dc*dsc*dp*ic*isc*ip*in* at76c50x_usb
-alias bt-proto-3 rfcomm
