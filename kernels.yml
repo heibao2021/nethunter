@@ -143,7 +143,7 @@
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
-            features     : [HID, Injection, Nexmon]
+            features     : [BT_RFCOMM, HID, Injection, Nexmon]
 - bullhead:
     model   : Nexus 5X
     kernels :
@@ -255,7 +255,7 @@
             description  : Android 9.0
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_es2.git -b Pie-v3.180'
-            features     : [CDROM, HID, Injection, RTL8812AU]
+            features     : [BT_RFCOMM, CDROM, HID, Injection, RTL8812AU]
 - flo:
     model   : Nexus 7 (2013)
     kernels :
@@ -1381,7 +1381,7 @@
             description  : LineageOS 17.1
             author       : Re4son
             source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996_lineageos.git -b nethunter-17.1'
-            features     : [CD-ROM, HID, Injection, RTL8812AU]
+            features     : [BT_RFCOMM, CD-ROM, HID, Injection, RTL8812AU]
       - id          : oneplus3-cm
         description : OnePlus 3 LineageOS
         versions    :
@@ -1487,7 +1487,7 @@
             description  : Oxygen OS 11
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
-            features     : [HID-4, Injection, QCACLD, RTL8812AU]
+            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
 - oneplusx:
     model   : OnePlus X
     kernels :
@@ -1533,7 +1533,7 @@
             description  : LineageOS 17.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660'
-            features     : [HID-4, Injection]
+            features     : [BT_RFCOMM, HID-4, Injection]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
