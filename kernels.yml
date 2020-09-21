@@ -576,6 +576,13 @@
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
+          - android      : pie
+            linux        : '3.18'
+            kernel       : 2.2
+            description  : OneUI 1.0
+            author       : Svirusx
+            source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
+            features     : [CDROM, HID, Injection, RTL8812AU, RTL8188EU]
       - id          : hero2ltekor
         description : Galaxy S7 Edge for TouchWiz (Korean Exynos)
         versions    :
@@ -623,6 +630,13 @@
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
+          - android      : pie
+            linux        : '3.18'
+            kernel       : 2.2
+            description  : OneUI 1.0
+            author       : Svirusx
+            source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
+            features     : [CDROM, HID, Injection, RTL8812AU, RTL8188EU]
       - id          : heroltekor
         description : Galaxy S7 for TouchWiz (Korean Exynos)
         versions    :
