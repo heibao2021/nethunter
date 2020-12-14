@@ -58,6 +58,28 @@
 
 
 ---
+[payton-los]
+author = "ciropom"
+kernelstring = "NetHunter ciro-Kernel LOS"
+version = "1.0"
+arch = arm64
+ramdisk = gzip
+block = /dev/block/bootdevice/by-name/boot
+devicenames = payton
+- payton:
+    model   : Motorola Moto X4
+    kernels :
+      - id          : payton
+        description : Motorola Moto X4 for LineageOS
+        versions    :
+          - android      : ten
+            linux        : '4.4'
+            kernel       : 1.3
+            description  : LineageOS 17.1
+            author       : ciropom
+            source       : 'git clone https://github.com/ciropom/android_nethunter_kernel_motorola_msm8998.git -b lineage-17.1'
+            features     : [HID Injection RTL8812AU BT_RFCOMM]
+
 - a5uelte:
     model   : Samsung Galaxy A5 (2015)
     kernels :
