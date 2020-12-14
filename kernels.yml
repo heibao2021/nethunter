@@ -58,14 +58,6 @@
 
 
 ---
-[payton-los]
-author = "ciropom"
-kernelstring = "NetHunter ciro-Kernel LOS"
-version = "1.0"
-arch = arm64
-ramdisk = gzip
-block = /dev/block/bootdevice/by-name/boot
-devicenames = payton
 - payton:
     model   : Motorola Moto X4
     kernels :
