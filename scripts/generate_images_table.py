@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import yaml # python3 -m pip install pyyaml --user
-from datetime import date
+from datetime import datetime
 
-OUTPUT_FILE = './image.md'
+OUTPUT_FILE = './images.md'
 INPUT_FILE = './devices.cfg'
-repo_msg = "This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)\n".format(today.strftime("%Y-%B-%d"))
+repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_devices = 0
 qty_images = 0
 
@@ -38,8 +38,8 @@ def generate_device_table(data):
     global qty_devices
     global qty_images
     default = ""
-    table = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Status | Notes |\n"
-    table += "|--------------------------|--------|-----------|-----------------|--------|-------|\n"
+    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Status | Notes |\n"
+    table += "|---------------------------|--------|-----------|-----------------|--------|-------|\n"
     # iterate over all the devices
     for element in data:
         # iterate over all the versions
@@ -48,7 +48,12 @@ def generate_device_table(data):
             if 'images' in element[key]:
                 for image in element[key]['images']:
                     qty_images += 1
-                    table += "| {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default), key, image.get('id', default), image.get('os', default), image.get('status', default), image.get('note', default))
+                    table += "| {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
+                                                                                  key,
+                                                                                  image.get('id', default),
+                                                                                  image.get('os', default),
+                                                                                  image.get('status', default),
+                                                                                  image.get('note', default))
     return table
 
 def get_versions():
@@ -59,11 +64,11 @@ def get_versions():
 
 def write_markdown():
     with open(OUTPUT_FILE, 'w') as f:
-        meta = '---\n'
+        meta  = '---\n'
         meta += 'title: Official Kali NetHunter Images\n'
         meta += '---\n\n'
-        stats = "The Kali NetHunter repository contains kernels for [**{}** devices](nethunter-imagestats.html)\n".format(str(qty_devices))
-        stats += "The next release cycle will include **{}** [Kali NetHunter images](https://www.offensive-security.com/kali-linux-nethunter-download/)\n".format(str(qty_images))
+        stats  = "The Kali NetHunter repository contains kernels for [**{}** devices](nethunter-imagestats.html)\n".format(str(qty_devices))
+        stats += "The next release cycle will include **{}** [Kali NetHunter images](https://www.offensive-security.com/kali-linux-nethunter-download/)\n\n".format(str(qty_images))
         f.write(str(meta))
         f.write(str(stats))
         f.write(str(generated_markdown))

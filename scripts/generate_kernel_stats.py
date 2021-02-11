@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import os
-from datetime import date
+from datetime import datetime
 
 OUTPUT_FILE = './kernelstats.md'
 rootdir = './'
-repo_msg = "This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)\n".format(today.strftime("%Y-%B-%d"))
+repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 total = 0
 qty_versions = {
                 'kitkat':      0,
@@ -28,11 +28,12 @@ def calc_total():
 
 def generate_table():
     global total
-    table = "| Android Version | Qty |\n"
-    table += "|----------------|-----|\n"
+    table  = "| Android Version | Qty |\n"
+    table += "|-----------------|-----|\n"
     # iterate over all the devices
     for v in qty_versions:
-        table += "| {} | {} |\n".format(v.capitalize(), str(qty_versions[v]))
+        table += "| {} | {} |\n".format(v.capitalize(),
+                                        str(qty_versions[v]))
     return table
 
 def get_versions():
@@ -43,10 +44,10 @@ def get_versions():
 def write_markdown():
     global total
     with open(OUTPUT_FILE, 'w') as f:
-        meta = '---\n'
+        meta  = '---\n'
         meta += 'title: Kali NetHunter Kernel Statistics\n'
         meta += '---\n\n'
-        stats = "The Kali NetHunter repository contains a total of [**{}** kernels](nethunter-kernels.html)\n".format(str(total))
+        stats = "The Kali NetHunter repository contains a total of [**{}** kernels](nethunter-kernels.html)\n\n".format(str(total))
         f.write(str(meta))
         f.write(str(stats))
         f.write(str(generated_markdown))
@@ -65,7 +66,7 @@ def print_text():
     #
     #print("=====================================")
     #print("TOTAL:\t\t" + str(total) + "\n")
-    print('File: {} successfully written\n'.format(OUTPUT_FILE))
+    print('File: {} successfully written'.format(OUTPUT_FILE))
     print('Kernels: {}'.format(total))
 
 get_versions()
