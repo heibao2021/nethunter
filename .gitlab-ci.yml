@@ -16,7 +16,7 @@ linting:
   rules:
     - if: $CI_MERGE_REQUEST_ID             # Execute jobs in merge request context
     - if: $CI_COMMIT_BRANCH == 'master'    # Execute jobs when a new commit is pushed to master branch
-  script:  
+  script:
   - *install_prerequesites_pip
   - yamllint kernels.yml
 
@@ -28,18 +28,18 @@ pages:
   - apt-get update
   - *install_prerequesites_pip
   - *setup_for_html
-  - python scripts/generate_image_table.py
-  - python scripts/generate_kernel_stats.py
-  - python scripts/generate_kernel_table.py
-  - mkdir -p public
+  - python scripts/generate_images_stats.py
+  - python scripts/generate_images_table.py
+  - python scripts/generate_kernels_stats.py
+  - python scripts/generate_kernels_table.py
+  - mkdir -p public/
   - mv css/public.css public/
+  - pandoc -s .gitlab/www.md -o public/index.html -c public.css
+  - pandoc -s imagestats.md -o public/nethunter-imagestats.html -c public.css
   - pandoc -s images.md -o public/nethunter-images.html -c public.css
-  - pandoc -s kernels.md -o public/nethunter-kernels.html -c public.css
   - pandoc -s kernelstats.md -o public/nethunter-kernelstats.html -c public.css
+  - pandoc -s kernels.md -o public/nethunter-kernels.html -c public.css
   artifacts:
     paths:
-    - ./devices.md
-    - ./kernels.md
-    - ./images.md
     - public
     expire_in: 1 week

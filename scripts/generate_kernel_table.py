@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-import yaml
+import yaml # python3 -m pip install pyyaml --user
+from datetime import date
 
 OUTPUT_FILE = './kernels.md'
 INPUT_FILE = './kernels.yml'
+repo_msg = "This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)\n".format(today.strftime("%Y-%B-%d"))
+kernels_number = 0
 
-def sanitize_content(content):
+def sanitize_content(data):
     result = ""
     lines = data.split('\n')
     for line in lines:
@@ -13,8 +16,10 @@ def sanitize_content(content):
     return result
 
 def generate_device_table(data):
+    global kernels_number
     default = ""
-    table = "| Model | Kernel ID | Android version | Linux version | Kernel version | Description | Author | Features | Source |\n|----|--|---|-|-|----|---|---|----------|\n"
+    table = "| Display Name | Kernel ID | Android Version | Linux Version | Kernel Version | Description | Features | Author | Source |\n"
+    table += "|-------------|-----------|-----------------|---------------|----------------|-------------|----------|--------|--------|\n"
     for element in data:
         for kernel_name in element.keys():
             model = element[kernel_name]['model']
@@ -25,29 +30,37 @@ def generate_device_table(data):
                     for f in version.get('features', default):
                         if i > 0:
                             features += ", "
-                        features +=  f 
+                        features += f
                         i += 1
-                    table += "| {} | {} | {} | {} | {} | {} | {} | {} | `{}` |\n".format(model, kernel.get('id', default), version.get('android', default), version.get('linux', default), version.get('kernel', default), version.get('description', default), version.get('author', default), features, version.get('source', default))
+                    table += "| {} | {} | {} | {} | {} | {} | {} | {} | `{}` |\n".format(model, kernel.get('id', default), version.get('android', default), version.get('linux', default), version.get('kernel', default), version.get('description', default), features, version.get('author', default), version.get('source', default))
+    kernels_number = len(table.split('\n'))-3
     return table
 
-with open(INPUT_FILE) as f:
-    data = f.read()
-    content = sanitize_content(data)
-    res = yaml.load(content, Loader=yaml.FullLoader)
-    table = generate_device_table(res)
+def get_versions():
+    with open(INPUT_FILE) as f:
+        data = f.read()
+        content = sanitize_content(data)
+        return yaml.load(content, Loader=yaml.FullLoader)
 
+def write_markdown():
+    global kernels_number
     with open(OUTPUT_FILE, 'w') as g:
-        kernels_number = len(table.split('\n'))-3
-        header = "This table was generated automatically from [the NetHunter gitlab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)  \n\n"
         meta = '---\n'
-        meta += 'title: Official NetHunter Kernels\n'
-        meta += '---\n'
-        quantities = "The NetHunter repository contains ***{}*** kernels for Nethunter\n\n".format(str(kernels_number))
+        meta += 'title: Official Kali NetHunter Kernels\n'
+        meta += '---\n\n'
+        stats = "The Kali NetHunter repository contains [**{}** kernels](nethunter-kernelstats.html)\n".format(str(kernels_number))
         g.write(str(meta))
-        g.write(str(header))
-        g.write(str(quantities))
-        g.write(table)
+        g.write(str(stats))
+        g.write(generated_markdown)
+        g.write(str(repo_msg))
         g.close()
 
-        print('File {} successfully written.'.format(OUTPUT_FILE))
-        print('Kernels:  {}'.format(kernels_number))
+def print_text():
+    global kernels_number
+    print('File: {} successfully written\n'.format(OUTPUT_FILE))
+    print('Kernels: {}'.format(kernels_number))
+
+res = get_versions()
+generated_markdown = generate_device_table(res)
+write_markdown()
+print_text()
