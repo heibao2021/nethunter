@@ -1,18 +1,16 @@
---
-title: Kali NetHunter Stats
+---
+title: Kali NetHunter Statistics
 ---
 
 ## Images
 
-[Images](nethunter-images.html)
-
-[Images Stats](nethunter-imagestats.html)
+- [Images](nethunter-images.html)
+- [Images Stats](nethunter-imagestats.html)
 
 ## Kernel
 
-[Kernel](nethunter-kernels.html)
-
-[Kernel Stats](nethunter-kernelstats.html)
+- [Kernel](nethunter-kernels.html)
+- [Kernel Stats](nethunter-kernelstats.html)
 
 - - -
 

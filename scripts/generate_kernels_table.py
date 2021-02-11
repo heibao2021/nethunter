@@ -55,7 +55,7 @@ def write_markdown():
         meta  = '---\n'
         meta += 'title: Official Kali NetHunter Kernels\n'
         meta += '---\n\n'
-        stats = "The Kali NetHunter repository contains [**{}** kernels](nethunter-kernelstats.html)\n\n".format(str(kernels_number))
+        stats = "- The Kali NetHunter repository contains [**{}** kernels](nethunter-kernelstats.html)\n\n".format(str(kernels_number))
         g.write(str(meta))
         g.write(str(stats))
         g.write(generated_markdown)

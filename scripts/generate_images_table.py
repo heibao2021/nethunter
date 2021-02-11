@@ -67,8 +67,8 @@ def write_markdown():
         meta  = '---\n'
         meta += 'title: Official Kali NetHunter Images\n'
         meta += '---\n\n'
-        stats  = "The Kali NetHunter repository contains kernels for [**{}** devices](nethunter-imagestats.html)\n".format(str(qty_devices))
-        stats += "The next release cycle will include **{}** [Kali NetHunter images](https://www.offensive-security.com/kali-linux-nethunter-download/)\n\n".format(str(qty_images))
+        stats  = "- The Kali NetHunter repository contains kernels for [**{}** devices](nethunter-imagestats.html)\n".format(str(qty_devices))
+        stats += "- The next release cycle will include **{}** [Kali NetHunter images](https://www.offensive-security.com/kali-linux-nethunter-download/)\n\n".format(str(qty_images))
         f.write(str(meta))
         f.write(str(stats))
         f.write(str(generated_markdown))

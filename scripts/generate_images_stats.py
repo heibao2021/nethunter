@@ -64,7 +64,7 @@ def write_markdown():
         meta  = '---\n'
         meta += 'title: Kali NetHunter Image Statistics\n'
         meta += '---\n\n'
-        stats = "The next release cycle will include **{}** [Kali NetHunter images](nethunter-images.html)\n\n".format(str(qty_images))
+        stats = "- The next release cycle will include **{}** [Kali NetHunter images](nethunter-images.html)\n\n".format(str(qty_images))
         f.write(str(meta))
         f.write(str(stats))
         f.write(str(generated_markdown))
