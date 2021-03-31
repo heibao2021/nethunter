@@ -90,6 +90,7 @@ kernel/crypto/asymmetric_keys/x509_key_parser.ko
 kernel/crypto/asymmetric_keys/pkcs7_message.ko
 kernel/block/deadline-iosched.ko
 kernel/block/cfq-iosched.ko
+kernel/drivers/aircrack/rtl8812au/88XXau.ko
 kernel/drivers/base/firmware_class.ko
 kernel/drivers/base/regmap/regmap-i2c.ko
 kernel/drivers/base/regmap/regmap-spi.ko
