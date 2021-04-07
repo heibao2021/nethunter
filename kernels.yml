@@ -1115,6 +1115,19 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b P'
             features     : [CDROM, HID, Injection]
+- laurel_sprout:
+    model   : Xiaomi Mi A3
+    kernels :
+      - id          : laurel_sprout
+        description : LineageOS
+        versions    :
+          - android      : eleven
+            linux        : '4.4'
+            kernel       : 3.5
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL8812AU, QCACLD]
 - mako:
     model   : Nexus 4
     kernels :
