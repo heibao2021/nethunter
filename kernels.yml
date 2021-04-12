@@ -1589,15 +1589,15 @@
     model   : Nokia 6.1
     kernels :
       - id          : pl2
-        description : Nokia 3.1 for LineageOS
+        description : Nokia 6.1 for LineageOS 18.1
         versions    :
-          - android      : ten
+          - android      : eleven
             linux        : '4.4'
-            kernel       : 1.1
-            description  : LineageOS 17.1
+            kernel       : 3.5
+            description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660'
-            features     : [BT_RFCOMM, HID-4, Injection]
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
