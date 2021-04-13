@@ -654,7 +654,7 @@
     model   : Samsung Galaxy S20 FE 5G (Snapdragon)
     kernels :
       - id          : r8q
-        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5
+        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0
         versions    :
           - android      : ten
             linux        : '4.19'
@@ -663,6 +663,14 @@
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : eleven
+            linux        : '4.19'
+            kernel       : 2.1
+            description  : OneUI 3.0
+            author       : Svirusx
+            source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-11.0'
+            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+
 
 - hlte:
     model   : Samsung Galaxy Note 3
@@ -1585,6 +1593,19 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-oreo -b oreo-mr1'
             features     : [HID]
+- payton:
+    model   : Motorola Moto X4
+    kernels :
+      - id          : payton
+        description : Motorola Moto X4 for LineageOS
+        versions    :
+          - android      : ten
+            linux        : '4.4'
+            kernel       : 1.3
+            description  : LineageOS 17.1
+            author       : ciropom
+            source       : 'git clone https://github.com/ciropom/android_nethunter_kernel_motorola_msm8998.git -b lineage-17.1'
+            features     : [HID Injection RTL8812AU BT_RFCOMM]
 - pl2:
     model   : Nokia 6.1
     kernels :
