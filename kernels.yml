@@ -37,6 +37,8 @@
 #                   QCACLD:      Qcacld-2.0 and -3.0 drivers from CAF that support monitor mode.
 #                   RTL8188EUS:  Patch to add support for rtl8188eus drivers from the aircrack-ng repo.
 #                   RTL8812AU:   Patch to add support for rtl8812au drivers from the aircrack-ng repo.
+#                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
+
 
 # - Toolchains
 #
@@ -1123,6 +1125,19 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b P'
             features     : [CDROM, HID, Injection]
+- laurel_sprout:
+    model   : Xiaomi Mi A3
+    kernels :
+      - id          : laurel_sprout
+        description : LineageOS
+        versions    :
+          - android      : eleven
+            linux        : '4.4'
+            kernel       : 3.5
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD]
 - mako:
     model   : Nexus 4
     kernels :
@@ -1321,6 +1336,26 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16'
             features     : [BT_RFCOMM, HID, Injection]
+      - id          : oneplus1
+        description : CyanogenMod
+        versions    :
+          - android      : ten
+            linux        : '3.04'
+            kernel       : 3.0
+            description  : LineageOS 17.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-17.1 oneplus17.1'
+            features     : [BT_RFCOMM, HID, Injection, CDROM]
+      - id          : oneplus1
+        description : CyanogenMod
+        versions    :
+          - android      : eleven
+            linux        : '3.04'
+            kernel       : 3.5
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-18.1 oneplus18.1'
+            features     : [BT_RFCOMM, HID, Injection, RTL88XXAU, CDROM]
 - oneplus2:
     model   : OnePlus 2
     kernels :
@@ -1575,15 +1610,15 @@
     model   : Nokia 6.1
     kernels :
       - id          : pl2
-        description : Nokia 3.1 for LineageOS
+        description : Nokia 6.1 for LineageOS 18.1
         versions    :
-          - android      : ten
+          - android      : eleven
             linux        : '4.4'
-            kernel       : 1.1
-            description  : LineageOS 17.1
+            kernel       : 3.5
+            description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660'
-            features     : [BT_RFCOMM, HID-4, Injection]
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
