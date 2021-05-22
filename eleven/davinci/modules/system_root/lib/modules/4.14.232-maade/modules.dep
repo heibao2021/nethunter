@@ -1,0 +1,7 @@
+kernel/drivers/net/wireless/realtek/rtl8812au/88XXau.ko:
+kernel/drivers/net/wireless/realtek/rtl8188eus/8188eu.ko:
+kernel/drivers/media/dvb-frontends/si2168.ko:
+kernel/drivers/media/dvb-frontends/rtl2830.ko:
+kernel/drivers/media/dvb-frontends/rtl2832.ko:
+kernel/drivers/media/dvb-frontends/rtl2832_sdr.ko:
+kernel/drivers/media/dvb-frontends/zd1301_demod.ko:
