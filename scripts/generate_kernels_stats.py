@@ -13,7 +13,8 @@ qty_versions = {
                 'nougat':      0,
                 'oreo':        0,
                 'pie':         0,
-                'ten':         0
+                'ten':         0,
+                'eleven':      0
 }
 
 def dcount(path):
