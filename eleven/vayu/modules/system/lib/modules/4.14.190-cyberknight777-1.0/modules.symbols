@@ -1,0 +1,9 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:lib80211_crypt_delayed_deinit lib80211
+alias symbol:lib80211_get_crypto_ops lib80211
+alias symbol:rtl_halmac_get_ops_pointer r8822be
+alias symbol:lib80211_crypt_info_init lib80211
+alias symbol:lib80211_unregister_crypto_ops lib80211
+alias symbol:lib80211_crypt_info_free lib80211
+alias symbol:rtl_phydm_get_ops_pointer r8822be
+alias symbol:lib80211_register_crypto_ops lib80211
