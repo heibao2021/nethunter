@@ -1,0 +1,8 @@
+kernel/drivers/net/wireless/mac80211_hwsim.ko:
+kernel/drivers/staging/rtl8192e/rtllib.ko:
+kernel/drivers/staging/rtl8192e/rtllib_crypt_ccmp.ko:
+kernel/drivers/staging/rtl8192e/rtl8192e/r8192e_pci.ko: kernel/drivers/staging/rtl8192e/rtllib.ko
+kernel/drivers/staging/rtl8712/r8712u.ko:
+kernel/drivers/staging/rtl8188eu/r8188eu.ko:
+kernel/drivers/staging/rtlwifi/r8822be.ko:
+kernel/drivers/staging/rts5208/rts5208.ko:
