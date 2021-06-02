@@ -1,0 +1,6 @@
+kernel/drivers/../extra_tools/drivers/rtl8812au/88XXau.ko
+kernel/drivers/../extra_tools/drivers/rtl8814au/8814au.ko
+kernel/drivers/../extra_tools/drivers/rtl8188eus/8188eu.ko
+kernel/drivers/../extra_tools/drivers/rtl8192eu-linux-driver/8192eu.ko
+kernel/drivers/../extra_tools/drivers/rtl8188fu-aircrack/rtl8188fu.ko
+kernel/drivers/../extra_tools/drivers/rtl8192fu/8192fu.ko

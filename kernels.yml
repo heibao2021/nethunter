@@ -295,6 +295,19 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0'
             features     : [BT_RFCOMM, CDROM, HID, Injection]
+- vince
+    model   : Xiaomi Redmi 5 Plus                                                      kernels :
+      - id          : vince
+        description : DerpFest
+        versions    :
+          - android      : eleven
+            linux        : '4.9'
+            kernel       : 5.0
+            description  : AOSiP DerpFest
+            author       : Dark Light Neron
+            source       : 'git clone https://github.com/OLEG-XEP/immortal_kernel_vince -b storm_breaker'
+            features     : [HID, PRIMA, CDROM, Injection, BT_RFCOMM, VHCI, HCI_SMD, RTL8188EU/EUS/ETV, RTL8812/14/21AU]
+
 - flounder:
     model   : Nexus 9
     kernels :
