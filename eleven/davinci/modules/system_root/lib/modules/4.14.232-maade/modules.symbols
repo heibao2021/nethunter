@@ -1,0 +1,3 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:zd1301_demod_get_i2c_adapter zd1301_demod
+alias symbol:zd1301_demod_get_dvb_frontend zd1301_demod
