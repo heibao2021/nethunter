@@ -1549,14 +1549,14 @@
           - android      : pie
             linux        : '4.14'
             kernel       : 1.1
-            description  : Oxygen OS 10
+            description  : Oxygen OS 9
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0'
             features     : [HID, Injection]
           - android      : ten
             linux        : '4.14'
             kernel       : 1.1
-            description  : Oxygen OS 11
+            description  : Oxygen OS 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
