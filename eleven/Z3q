@@ -1,0 +1,30 @@
+Android 11 / R / API 30
+Baseband Version: G988USQU1CTKH
+Build Number: SamPWND.R.Official-G988U
+Build Fingerprint: samsung/z3qsqw/z3q:11/RP1A.200720.012/G988USQU1CTKH:user/release-keys
+Linux Kernel Version: 4.19.113-20290031
+Http User Agent: Dalvik/2.1.0 (Linux; U; Android 11; SM-G988U Build/RP1A.200720.012) 
+
+Model: SM-G988U
+Manufacturer: samsung
+Board: kona
+Device: z3q
+Product: z3qsqw
+CPU Cores: 8
+CPU Bit: 64-Bit
+CPU Model: Qualcomm Technologies, Inc KONA
+Memory: Total 10.29 GB, Avail 2.69 GB
+Storage: Total 107.57 GB, Avail 72.93 GB
+Resolution: 1080 * 2400 px / 240 dp
+Screen Size: 2.8" * 6.3" / 6.9 Inches 
+
+ABIs: arm64-v8a, armeabi-v7a, armeabi
+CPU Cores: 8
+CPU Bit: 64-Bit
+CPU Model: Qualcomm Technologies, Inc KONA 
+
+Density: 240 dp / hdpi / 1.5x
+Exact Density: 386.36548 * 383.3955 dp
+Resolution: 1080 * 2400 px
+Available Resolution: 1080 * 2254 px
+Screen Size: 2.8" * 6.3" / 6.9 Inches
