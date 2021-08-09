@@ -186,6 +186,19 @@
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_xiaomi_cancro.git -b cm-13.0'
             features     : [CDROM, HID, Injection]
+- catfish:
+    model   : TicWatch Pro
+    kernels :
+      - id          : catfish
+        description : TicWatch Pro for WearOS
+        versions    :
+          - android      : wearos
+            linux        : '3.18'
+            kernel       : 2.0
+            description  : WearOS 2.29
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/msm-catfish-9.0-wear-os'
+            features     : [HID]
 - cedric:
     model   : Motorola Moto G5
     kernels :
