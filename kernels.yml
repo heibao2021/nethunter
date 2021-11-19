@@ -37,8 +37,6 @@
 #                   QCACLD:      Qcacld-2.0 and -3.0 drivers from CAF that support monitor mode.
 #                   RTL8188EUS:  Patch to add support for rtl8188eus drivers from the aircrack-ng repo.
 #                   RTL8812AU:   Patch to add support for rtl8812au drivers from the aircrack-ng repo.
-#                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
-
 
 # - Toolchains
 #
@@ -135,7 +133,7 @@
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
-            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon, RTL8812AU]
+            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon]
       - id          : angler-los
         description : LineageOS
         versions    :
@@ -145,7 +143,7 @@
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
-            features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU]
+            features     : [BT_RFCOMM, HID, Injection, Nexmon]
 - bullhead:
     model   : Nexus 5X
     kernels :
@@ -186,19 +184,6 @@
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_xiaomi_cancro.git -b cm-13.0'
             features     : [CDROM, HID, Injection]
-- catfish:
-    model   : TicWatch Pro
-    kernels :
-      - id          : catfish
-        description : TicWatch Pro for WearOS
-        versions    :
-          - android      : wearos
-            linux        : '3.18'
-            kernel       : 2.0
-            description  : WearOS 2.29
-            author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/msm-catfish-9.0-wear-os'
-            features     : [HID]
 - cedric:
     model   : Motorola Moto G5
     kernels :
@@ -591,13 +576,6 @@
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
-          - android      : pie
-            linux        : '3.18'
-            kernel       : 2.2
-            description  : OneUI 1.0
-            author       : Svirusx
-            source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
-            features     : [CDROM, HID, Injection, RTL8812AU, RTL8188EU]
       - id          : hero2ltekor
         description : Galaxy S7 Edge for TouchWiz (Korean Exynos)
         versions    :
@@ -645,13 +623,6 @@
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
-          - android      : pie
-            linux        : '3.18'
-            kernel       : 2.2
-            description  : OneUI 1.0
-            author       : Svirusx
-            source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
-            features     : [CDROM, HID, Injection, RTL8812AU, RTL8188EU]
       - id          : heroltekor
         description : Galaxy S7 for TouchWiz (Korean Exynos)
         versions    :
@@ -662,29 +633,6 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
-
-- r8q:
-    model   : Samsung Galaxy S20 FE 5G (Snapdragon)
-    kernels :
-      - id          : r8q
-        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0
-        versions    :
-          - android      : ten
-            linux        : '4.19'
-            kernel       : 1.2
-            description  : OneUI 2.5
-            author       : Svirusx
-            source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-10.0'
-            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
-          - android      : eleven
-            linux        : '4.19'
-            kernel       : 2.1
-            description  : OneUI 3.0
-            author       : Svirusx
-            source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-11.0'
-            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
-
-
 - hlte:
     model   : Samsung Galaxy Note 3
     kernels :
@@ -1138,19 +1086,6 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b P'
             features     : [CDROM, HID, Injection]
-- laurel_sprout:
-    model   : Xiaomi Mi A3
-    kernels :
-      - id          : laurel_sprout
-        description : LineageOS
-        versions    :
-          - android      : eleven
-            linux        : '4.4'
-            kernel       : 3.5
-            description  : LineageOS 18.1
-            author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
-            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD]
 - mako:
     model   : Nexus 4
     kernels :
@@ -1349,26 +1284,6 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16'
             features     : [BT_RFCOMM, HID, Injection]
-      - id          : oneplus1
-        description : CyanogenMod
-        versions    :
-          - android      : ten
-            linux        : '3.04'
-            kernel       : 3.0
-            description  : LineageOS 17.1
-            author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-17.1 oneplus17.1'
-            features     : [BT_RFCOMM, HID, Injection, CDROM]
-      - id          : oneplus1
-        description : CyanogenMod
-        versions    :
-          - android      : eleven
-            linux        : '3.04'
-            kernel       : 3.5
-            description  : LineageOS 18.1
-            author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-18.1 oneplus18.1'
-            features     : [BT_RFCOMM, HID, Injection, RTL88XXAU, CDROM]
 - oneplus2:
     model   : OnePlus 2
     kernels :
@@ -1562,14 +1477,14 @@
           - android      : pie
             linux        : '4.14'
             kernel       : 1.1
-            description  : Oxygen OS 9
+            description  : Oxygen OS 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0'
             features     : [HID, Injection]
           - android      : ten
             linux        : '4.14'
             kernel       : 1.1
-            description  : Oxygen OS 10
+            description  : Oxygen OS 11
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
@@ -1606,32 +1521,19 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-oreo -b oreo-mr1'
             features     : [HID]
-- payton:
-    model   : Motorola Moto X4
-    kernels :
-      - id          : payton
-        description : Motorola Moto X4 for LineageOS
-        versions    :
-          - android      : ten
-            linux        : '4.4'
-            kernel       : 1.3
-            description  : LineageOS 17.1
-            author       : ciropom
-            source       : 'git clone https://github.com/ciropom/android_nethunter_kernel_motorola_msm8998.git -b lineage-17.1'
-            features     : [HID Injection RTL8812AU BT_RFCOMM]
 - pl2:
     model   : Nokia 6.1
     kernels :
       - id          : pl2
-        description : Nokia 6.1 for LineageOS 18.1
+        description : Nokia 3.1 for LineageOS
         versions    :
-          - android      : eleven
+          - android      : ten
             linux        : '4.4'
-            kernel       : 3.5
-            description  : LineageOS 18.1
+            kernel       : 1.1
+            description  : LineageOS 17.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM]
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660'
+            features     : [BT_RFCOMM, HID-4, Injection]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
@@ -1665,6 +1567,24 @@
             author       : Rishabh Rao
             source       : 'git clone https://github.com/nethunter-s2/android_kernel_leeco_s2.git -b cm-14.1'
             features     : []
+- sakura:
+    model   : Xiaomi Redmi 6 Pro
+    kernels :
+      - id          : sakura
+        description : Xiaomi Redmi 6 Pro
+        versions    :
+          - android      : ten
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_xiaomi_msm8953.git'
+            features     : [Injection]
+          - android      : eleven
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_xiaomi_msm8953.git'
+            features     : [Injection]
 - santoni:
     model   : Xiaomi Redmi 4X
     kernels :
