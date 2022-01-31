@@ -258,6 +258,19 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1'
             features     : [CDROM, HID, Injection]
+- drg:
+    model   : Nokia 6.1 Plus
+    kernels :
+      - id          : drg
+        description : Nokia 6.1 Plus for LineageOS 18.1
+        versions    :
+          - android      : eleven
+            linux        : '4.4'
+            kernel       : 3.5
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM]
 - es2:
     model   : Nokia 3.1
     kernels :
