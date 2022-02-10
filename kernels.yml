@@ -1573,6 +1573,13 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
+          - android      : eleven
+            linux        : '4.14'
+            kernel       : 1.1
+            description  : Oxygen OS 11
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/nethunter_kernel_oneplus7 -b nethunter-11.0'
+            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
 - oneplusx:
     model   : OnePlus X
     kernels :
