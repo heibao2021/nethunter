@@ -1164,6 +1164,21 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD]
+
+- tissot:
+    model   : Xiaomi Mi A1
+    kernels :
+      - id          : tissot
+        description : Pixel Expirience, LineageOS
+        versions    :
+          - android      : eleven
+            linux        : '4.9'
+            kernel       : 4
+            description  : Pixel Expirience, LineageOS
+            author       : JIaxyga
+            source       : 'git clone https://github.com/JIaxyga/nethunter_kernel_xiaomi_tissot -b nethunter_eleven'
+            features     : [BT_RFCOMM, BT_SMD, HID-4, Injection, CD-ROM, RTL8812AU, RTL8812BU, RTL8814AU, RTL8188EUS, RTL8188FU, RTL8192EUS, RTL8192FU]
+
 - mako:
     model   : Nexus 4
     kernels :
