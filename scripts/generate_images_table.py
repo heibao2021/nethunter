@@ -52,7 +52,7 @@ def generate_device_table(data):
             if 'images' in element[key]:
                 for image in element[key]['images']:
                     qty_images += 1
-                    table += "| {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
+                    table += "| {} | {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
                                                                                   key,
                                                                                   image.get('id', default),
                                                                                   image.get('os', default),
