@@ -18,11 +18,15 @@ qty_images = 0
 ##*         id:      xangler
 ##*         os:      oreo
 ##*         status:  Stable
+##*         rootfs : full
+##*         doco   : ""
 ##*         note:    "** Our preferred low end device **"
 ##*       - name:    Nexus 6P (LineageOS 17.1)
 ##*         id:      angler-los
 ##*         os:      ten
 ##*         status:  Latest
+##*         rootfs : full
+##*         doco   : ""
 ##*         note:    "** Warning: Android ten is very unstable at the moment. **"
 
 def parse(data):
@@ -38,8 +42,8 @@ def generate_device_table(data):
     global qty_devices
     global qty_images
     default = ""
-    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Status | Notes |\n"
-    table += "|---------------------------|--------|-----------|-----------------|--------|-------|\n"
+    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Status | Documentation Link | Notes |\n"
+    table += "|---------------------------|--------|-----------|-----------------|--------|--------------------|-------|\n"
     # iterate over all the devices
     for element in data:
         # iterate over all the versions
@@ -53,6 +57,7 @@ def generate_device_table(data):
                                                                                   image.get('id', default),
                                                                                   image.get('os', default),
                                                                                   image.get('status', default),
+                                                                                  image.get('doco', default),
                                                                                   image.get('note', default))
     return table
 
