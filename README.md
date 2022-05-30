@@ -1,6 +1,6 @@
 # Kali NetHunter Devices
 
-This repository contains all the precompiled kernels, kernel modules, and installation scripts
+This repository contains all the pre-compiled kernels, kernel modules, and installation scripts
 necessary for building an installer tailored for a supported device.
 
 It should be cloned by `./bootstrap.sh` in the nethunter-installer directory of the main Kali NetHunter repository.  
