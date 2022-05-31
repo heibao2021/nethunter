@@ -42,8 +42,8 @@ def generate_device_table(data):
     global qty_devices
     global qty_images
     default = ""
-    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Status | Documentation Link | Notes |\n"
-    table += "|---------------------------|--------|-----------|-----------------|--------|--------------------|-------|\n"
+    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Rootfs | Status | Documentation Link | Notes |\n"
+    table += "|---------------------------|--------|-----------|-----------------|--------|--------|--------------------|-------|\n"
     # iterate over all the devices
     for element in data:
         # iterate over all the versions
@@ -52,10 +52,11 @@ def generate_device_table(data):
             if 'images' in element[key]:
                 for image in element[key]['images']:
                     qty_images += 1
-                    table += "| {} | {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
+                    table += "| {} | {} | {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
                                                                                   key,
                                                                                   image.get('id', default),
                                                                                   image.get('os', default),
+                                                                                  image.get('rootfs', default),
                                                                                   image.get('status', default),
                                                                                   image.get('doco', default),
                                                                                   image.get('note', default))
