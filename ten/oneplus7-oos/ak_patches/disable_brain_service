@@ -1,34 +1,33 @@
 # The brain service causes major battery drain on OnePlus 7 devices without apparent benefits
 # Let's disable it
-# Note: We always exit with exit code "0" to ensure that the installation continues
 is_mounted() { $BB mount | $BB grep -q " $1 "; }
 
 if ! is_mounted /vendor; then
-  ui_print "/vendor not mounted, mounting it now";
+  ui_print "  - /vendor not mounted, mounting it now"
   $BB mount -w -t auto /vendor;
 else
-  ui_print "/vendor mounted already, remounting it as rw now";
+  ui_print "  - /vendor mounted already, remounting it as rw now"
   $BB mount -o remount,rw /vendor;
 fi;
 if ! is_mounted /vendor; then
-  ui_print "Error: Failed to mount /vendor";
-  exit;
+  ui_print "  - Error: Failed to mount /vendor"
+  return 1;
 fi;
 
-ui_print "checking if patch had been applied previously";
+ui_print "  - checking if patch had been applied previously"
 if [ ! "$(grep "disabled" /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc)" ]; then
-  ui_print "patch has not been applied previously, applying now";
+  ui_print "  - patch has not been applied previously, applying now"
   $BB echo "    disabled" >> /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc;
 else
-  ui_print "patch was already applied, nothing else to do";
-  exit;
+  ui_print "  - patch was already applied, nothing else to do"
+  return;
 fi;
 
 if [ ! "$(grep "disabled" /vendor/etc/init/vendor.oneplus.hardware.brain@1.0-service.rc)" ]; then
-  ui_print "Error: Failed to apply patch";
-  exit;
+  ui_print "  - Error: Failed to apply patch"
+  return 1;
 else
-  ui_print "patch has been applied succesfully";
+  ui_print "  - patch has been applied succesfully"
 fi;
 
-exit;
+return;
