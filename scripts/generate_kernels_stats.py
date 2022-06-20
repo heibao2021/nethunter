@@ -50,7 +50,6 @@ def generate_table():
     return table
 
 def write_file(data, file):
-    global repo_msg, qty_kernels
     try:
         with open(file, 'w') as f:
             meta  = '---\n'
@@ -69,7 +68,6 @@ def write_file(data, file):
     return 0
 
 def print_summary():
-    global qty_kernels
     #print("\nKali NetHunter Kernel Statistics\n")
     #for v in qty_versions:
     #    if len(v) < 8:

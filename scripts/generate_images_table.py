@@ -76,7 +76,6 @@ def read_file(file):
     return data
 
 def write_file(data, file):
-    global repo_msg, qty_devices, qty_images
     try:
         with open(file, 'w') as f:
             meta  = '---\n'
@@ -96,7 +95,6 @@ def write_file(data, file):
     return 0
 
 def print_summary():
-    global qty_devices, qty_images
     print('Devices: {}'.format(qty_devices))
     print('Images : {}'.format(qty_images))
 

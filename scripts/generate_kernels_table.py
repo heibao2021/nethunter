@@ -85,7 +85,6 @@ def read_file(file):
     return data
 
 def write_file(data, file):
-    global repo_msg,qty_kernels
     try:
         with open(file, 'w') as f:
             meta  = '---\n'
@@ -105,7 +104,6 @@ def write_file(data, file):
     return 0
 
 def print_summary():
-    global qty_kernels, qty_models
     print('Kernels: {}'.format(qty_kernels))
     print('Models : {}'.format(qty_models))
 

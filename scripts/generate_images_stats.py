@@ -66,7 +66,6 @@ def read_file(file):
     return data
 
 def write_file(data, file):
-    global repo_msg
     try:
         with open(file, 'w') as f:
             meta  = '---\n'
@@ -85,7 +84,6 @@ def write_file(data, file):
     return 0
 
 def print_summary():
-    global qty_images
     print('Images: {}'.format(qty_images))
 
 def main(argv):
