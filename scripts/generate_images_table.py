@@ -42,8 +42,8 @@ def yaml_parse(content):
 def generate_table(data):
     global qty_devices, qty_images
     default = ""
-    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Rootfs | Status | Documentation Link | Notes |\n"
-    table += "|---------------------------|--------|-----------|-----------------|--------|--------|--------------------|-------|\n"
+    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Rootfs | Status | Documentation | Notes |\n"
+    table += "|---------------------------|--------|-----------|-----------------|--------|--------|---------------|-------|\n"
 
     # iterate over all the devices
     for element in data:
