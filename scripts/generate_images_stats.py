@@ -73,7 +73,7 @@ def write_file(data, file):
             meta  = '---\n'
             meta += 'title: Kali NetHunter Image Statistics\n'
             meta += '---\n\n'
-            stats  = "- The [next release](https://www.kali.org/releases/) cycle will include **{}** [Kali NetHunter images](images.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_\n".format(str(qty_images))
+            stats  = "- The [next release](https://www.kali.org/releases/) cycle will include [**{}** Kali NetHunter images](images.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_\n".format(str(qty_images))
             stats += "- [Kali NetHunter Statistics](index.html)\n\n"
             f.write(str(meta))
             f.write(str(stats))
