@@ -64,6 +64,8 @@ def generate_table(data):
                                                                                   image.get('status', default),
                                                                                   doco,
                                                                                   image.get('note', default))
+        if not 'images' in element.keys():
+            print("[i] Possible issue with: " + element.get('model', default) + " (no images)")
     return table
 
 def read_file(file):

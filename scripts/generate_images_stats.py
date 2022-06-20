@@ -48,6 +48,8 @@ def generate_table(data):
                 for image in element[key]['images']:
                     qty_images += 1
                     devices.append(image.get('name', default))
+        if not 'images' in element.keys():
+            print("[i] Possible issue with: " + element.get('model', default) + " (no images)")
 
     table  = "| Display Name (Android OS) |\n"
     table += "|---------------------------|\n"
