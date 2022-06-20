@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Todo:
+# - Would be nice to auto populate `qty_versions`, rather than hardcoding values
 from datetime import datetime
 import os
 import sys
