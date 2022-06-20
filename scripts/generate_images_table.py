@@ -53,7 +53,7 @@ def generate_table(data):
             if 'images' in element[key]:
                 for image in element[key]['images']:
                     qty_images += 1
-                    doco=image.get('doco', default)
+                    doco = image.get('doco', default)
                     if doco:
                         doco = "<" + doco + ">"
                     table += "| {} | {} | {} | {} | {} | {} | {} | {} |\n".format(image.get('name', default),
