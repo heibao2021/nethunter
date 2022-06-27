@@ -5,7 +5,7 @@ import yaml # python3 -m pip install pyyaml --user
 
 OUTPUT_FILE = './image-stats.md'
 INPUT_FILE = './devices.cfg'
-repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
+repo_msg = "\n_This table was [generated automatically](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg) on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_images = 0
 
 ## Input:
@@ -73,7 +73,7 @@ def write_file(data, file):
             meta  = '---\n'
             meta += 'title: Kali NetHunter Image Statistics\n'
             meta += '---\n\n'
-            stats  = "- The [next release](https://www.kali.org/releases/) cycle will include [**{}** Kali NetHunter images](images.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_\n".format(str(qty_images))
+            stats  = "- The [next release](https://www.kali.org/releases/) cycle will include [**{}** Kali NetHunter images](images.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_ _([config](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg))_\n".format(str(qty_images))
             stats += "- [Kali NetHunter Statistics](index.html)\n\n"
             f.write(str(meta))
             f.write(str(stats))

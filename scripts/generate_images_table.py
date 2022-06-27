@@ -5,7 +5,7 @@ import yaml # python3 -m pip install pyyaml --user
 
 OUTPUT_FILE = './images.md'
 INPUT_FILE = './devices.cfg'
-repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
+repo_msg = "\n_This table was [generated automatically](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg) on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_devices = 0
 qty_images = 0
 
@@ -42,8 +42,8 @@ def yaml_parse(content):
 def generate_table(data):
     global qty_devices, qty_images
     default = ""
-    table  = "| Display Name (Android OS) | Device | Kernel ID | Android Version | Rootfs | Status | Documentation | Notes |\n"
-    table += "|---------------------------|--------|-----------|-----------------|--------|--------|---------------|-------|\n"
+    table  = "| Display Name (Android OS) | Device | Kernel ID | [Android Version](kernel-stats.html) | Rootfs | Status | [Documentation](https://www.kali.org/docs/nethunter/) | Notes |\n"
+    table += "|---------------------------|--------|-----------|--------------------------------------|--------|--------|-------------------------------------------------------|-------|\n"
 
     # iterate over all the devices
     for element in data:
@@ -84,7 +84,7 @@ def write_file(data, file):
             meta += 'title: Kali NetHunter Images\n'
             meta += '---\n\n'
             stats  = "- The [next release](https://www.kali.org/releases/) cycle will include [**{}** Kali NetHunter images](image-stats.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_\n".format(str(qty_images))
-            stats += "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) contains [kernels](kernels.html) for [**{}** devices](image-stats.html) _([here](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg))_\n".format(str(qty_devices))
+            stats += "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) contains [kernels](kernels.html) for [**{}** devices](image-stats.html) _([config](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg))_\n".format(str(qty_devices))
             stats += "- [Kali NetHunter Statistics](index.html)\n\n"
             f.write(str(meta))
             f.write(str(stats))

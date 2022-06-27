@@ -5,7 +5,7 @@ import yaml # python3 -m pip install pyyaml --user
 
 OUTPUT_FILE = './kernels.md'
 INPUT_FILE = './kernels.yml'
-repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
+repo_msg = "\n_This table was [generated automatically](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/kernels.yml) on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_models = 0
 qty_kernels = 0
 
@@ -46,8 +46,8 @@ def yaml_parse(data):
 def generate_table(data):
     global qty_kernels, qty_models
     default = ""
-    table  = "| Display Name | Kernel ID | Android Version | Linux Version | Kernel Version | Description | Features | Author | Source |\n"
-    table += "|--------------|-----------|-----------------|---------------|----------------|-------------|----------|--------|--------|\n"
+    table  = "| Display Name | Kernel ID | [Android Version](kernel-stats.html) | Linux Version | Kernel Version | Description | Features | Author | Source |\n"
+    table += "|--------------|-----------|--------------------------------------|---------------|----------------|-------------|----------|--------|--------|\n"
 
     for element in data:
         for kernel_name in element.keys():
@@ -90,7 +90,7 @@ def write_file(data, file):
             meta  = '---\n'
             meta += 'title: Kali NetHunter Kernels\n'
             meta += '---\n\n'
-            stats  = "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) is using [**{}** kernels](kernel-stats.html) _([here](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/kernels.yml))_\n".format(str(qty_kernels))
+            stats  = "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) is using [**{}** kernels](kernel-stats.html) _([config](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/kernels.yml))_\n".format(str(qty_kernels))
             stats += "- These kernels can be used on **{}** models\n".format(str(qty_models))
             stats += "- [Kali NetHunter Statistics](index.html)\n\n"
             f.write(str(meta))

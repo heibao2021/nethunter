@@ -7,7 +7,7 @@ import sys
 
 OUTPUT_FILE = './kernel-stats.md'
 rootdir = './'
-repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
+repo_msg = "\n_This table was [generated automatically](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/tree/master) on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_kernels = 0
 qty_versions = {
                 'kitkat':      0,
@@ -57,7 +57,7 @@ def write_file(data, file):
             meta  = '---\n'
             meta += 'title: Kali NetHunter Kernel Statistics\n'
             meta += '---\n\n'
-            stats  = "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) has a total of [**{}** kernels](kernels.html) directories\n".format(str(qty_kernels))
+            stats  = "- The official [Kali NetHunter repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices) has a total of [**{}** kernels](kernels.html) directories _([here](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel))_\n".format(str(qty_kernels))
             stats += "- [Kali NetHunter Statistics](index.html)\n\n"
             f.write(str(meta))
             f.write(str(stats))
