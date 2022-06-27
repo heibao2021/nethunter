@@ -34,6 +34,7 @@ pages:
     - ./scripts/generate_kernels_stats.py
     - ./scripts/generate_kernels_table.py
     - mkdir -p ./public/
+    - cp ./.gitlab/404.html   ./public/
     - cp ./.gitlab/public.css ./public/
     - pandoc -s ./.gitlab/www.md  -o ./public/index.html        -c public.css
     - pandoc -s ./image-stats.md  -o ./public/image-stats.html  -c public.css
