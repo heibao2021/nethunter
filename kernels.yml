@@ -172,6 +172,21 @@
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
             features     : [HID, Injection]    
+
+- sunfish:
+    model   : Google Pixel 4a
+    kernels :
+      - id          : sunfish
+        description : Google Pixel 4a Stock Android 12L
+        versions    :
+          - android      : Snow Cone Android 12
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Android 12L
+            author       : Alynx
+            source       : 'git clone https://github.com/V3rB0se/Alynx-nethunter-sunfish'
+            features     : [HID, Injection]  
+    
 - bullhead:
     model   : Nexus 5X
     kernels :
