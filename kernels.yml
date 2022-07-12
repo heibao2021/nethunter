@@ -1649,6 +1649,29 @@
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/nethunter_kernel_oneplus7 -b nethunter-11.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
+- oneplus8:
+    model   : OnePlus 8 / 8T / 8 Pro
+    kernels :
+      - id          : oneplus8-all
+        description : OnePlus 8 series for OxygenOS/Custom A11
+        versions    :
+          - android      : eleven
+            linux        : '4.19'
+            kernel       : 1.0
+            description  : OxygenOS/Custom A11
+            author       : flyP@TR!0T
+            source       : 'git clone https://github.com/flypatriot/neutrino_kernel_oneplus_sm8250.git -b neutrino-nethunter'
+            features     : [BT_RFCOMM, HID, Injection, QCACLD, RTL8812AU, Internal WLAN monitor mode]
+      - id          : oneplus8-all
+        description : OnePlus 8 series for OxygenOS/Custom A12
+        versions    :
+          - android      : twelve
+            linux        : '4.19'
+            kernel       : 1.0
+            description  : OxygenOS/Custom A12
+            author       : flyP@TR!0T
+            source       : 'git clone https://github.com/flypatriot/crdroid_12_kernel.git -b 12.0-nethunter'
+            features     : [BT_RFCOMM, HID, Injection, QCACLD, RTL8812AU, Internal WLAN monitor mode]
 - oneplusx:
     model   : OnePlus X
     kernels :
