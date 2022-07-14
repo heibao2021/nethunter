@@ -1296,6 +1296,19 @@
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_msm8953_markw -b Nosgoth'
             features     : [HID, Injection]
+- mido:
+    model   : Xiaomi Redmi Note 4X
+    kernels :
+      - id          : mido-pe11
+        description : Xiaomi Redmi Note 4X for PixelExperience
+        versions    :
+          - android      : eleven
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Pixel Experience kernel with nethunter features enabled
+            author       : linlinger
+            source       : 'git clone https://github.com/linlinger/kernel_xiaomi_mido.git -b nethunter-pe'
+            features     : [HID, Injection,RTL88XAU]
 - mocha:
     model   : Xiaomi MiPad 1
     kernels :
