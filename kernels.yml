@@ -1622,6 +1622,13 @@
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/DJY-Nethunter-Andrax-Kernel-Source -b nethunter-10.0'
             features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : eleven
+            linux        : '4.09'
+            kernel       : 1.1
+            description  : Oxygen OS 11
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_oneplus6 -b nethunter-11.0'
+            features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
 - oneplus7:
     model   : OnePlus 7 / 7 Pro / 7T / 7T Pro
     kernels :
