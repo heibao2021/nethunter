@@ -147,7 +147,7 @@
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
             features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU]
 - blueline:
-    model   : Google Pixel 3 
+    model   : Google Pixel 3
     kernels :
       - id          : blueline
         description : Google Pixel 3 Stock/PixelDust Rom Android 12
@@ -171,7 +171,7 @@
             description  : Android 12
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
-            features     : [HID, Injection]    
+            features     : [HID, Injection]
 
 - sunfish:
     model   : Google Pixel 4a
@@ -185,8 +185,8 @@
             description  : Android 12L
             author       : Alynx
             source       : 'git clone https://github.com/V3rB0se/Alynx-nethunter-sunfish'
-            features     : [HID, Injection]  
-    
+            features     : [HID, Injection]
+
 - bullhead:
     model   : Nexus 5X
     kernels :
