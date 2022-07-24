@@ -1798,6 +1798,24 @@
             author       : Rishabh Rao
             source       : 'git clone https://github.com/nethunter-s2/android_kernel_leeco_s2.git -b cm-14.1'
             features     : []
+- sakura:
+    model   : Xiaomi Redmi 6 Pro
+    kernels :
+      - id          : sakura
+        description : Xiaomi Redmi 6 Pro
+        versions    :
+          - android      : ten
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
+            features     : [Injection]
+          - android      : eleven
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
+            features     : [Injection]
 - santoni:
     model   : Xiaomi Redmi 4X
     kernels :
