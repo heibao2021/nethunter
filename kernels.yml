@@ -1308,7 +1308,7 @@
             description  : Pixel Experience kernel with nethunter features enabled
             author       : linlinger
             source       : 'git clone https://github.com/linlinger/kernel_xiaomi_mido.git -b nethunter-pe'
-            features     : [HID, Injection,RTL88XAU]
+            features     : [HID, Injection, RTL88XAU]
 - mocha:
     model   : Xiaomi MiPad 1
     kernels :
