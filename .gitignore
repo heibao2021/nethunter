@@ -1,0 +1,5 @@
+# GitLab pages
+public/
+# Generated documentation
+kernel*.md
+image*.md

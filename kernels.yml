@@ -146,6 +146,47 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
             features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU]
+- blueline:
+    model   : Google Pixel 3
+    kernels :
+      - id          : blueline
+        description : Google Pixel 3 Stock/PixelDust Rom Android 12
+        versions    :
+          - android      : Snow Cone Android 12
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Android 12
+            author       : Alynx
+            source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
+            features     : [HID, Injection]
+- crosshatch:
+    model   : Google Pixel 3xl
+    kernels :
+      - id          : crosshatch
+        description : Google Pixel 3xl Stock/PixelDust Rom Android 12
+        versions    :
+          - android      : Snow Cone Android 12
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Android 12
+            author       : Alynx
+            source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
+            features     : [HID, Injection]
+
+- sunfish:
+    model   : Google Pixel 4a
+    kernels :
+      - id          : sunfish
+        description : Google Pixel 4a Stock Android 12L
+        versions    :
+          - android      : Snow Cone Android 12
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Android 12L
+            author       : Alynx
+            source       : 'git clone https://github.com/V3rB0se/Alynx-nethunter-sunfish'
+            features     : [HID, Injection]
+
 - bullhead:
     model   : Nexus 5X
     kernels :
@@ -680,7 +721,7 @@
     model   : Samsung Galaxy S20 FE 5G (Snapdragon)
     kernels :
       - id          : r8q
-        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0
+        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0 & OneUI 4.0
         versions    :
           - android      : ten
             linux        : '4.19'
@@ -695,6 +736,13 @@
             description  : OneUI 3.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-11.0'
+            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : twelve
+            linux        : '4.19'
+            kernel       : 3.0
+            description  : OneUI 4.0
+            author       : Svirusx
+            source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-12.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
 
 
@@ -1255,6 +1303,19 @@
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_msm8953_markw -b Nosgoth'
             features     : [HID, Injection]
+- mido:
+    model   : Xiaomi Redmi Note 4X
+    kernels :
+      - id          : mido-pe11
+        description : Xiaomi Redmi Note 4X for PixelExperience
+        versions    :
+          - android      : eleven
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Pixel Experience kernel with nethunter features enabled
+            author       : linlinger
+            source       : 'git clone https://github.com/linlinger/kernel_xiaomi_mido.git -b nethunter-pe'
+            features     : [HID, Injection, RTL88XAU]
 - mocha:
     model   : Xiaomi MiPad 1
     kernels :
@@ -1571,15 +1632,29 @@
 - oneplus6:
     model   : OnePlus 6 / 6T
     kernels :
-      - id          : oneplus6-oos
+      - id          : oneplus6
         description : Oxygen OS
         versions    :
           - android      : ten
             linux        : '4.09'
-            kernel       : 1.3
+            kernel       : 3.0
             description  : Oxygen OS 10
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/DJY-Nethunter-Andrax-Kernel-Source -b nethunter-10.0'
+            features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : eleven
+            linux        : '4.09'
+            kernel       : 1.1
+            description  : Oxygen OS 11
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_oneplus6 -b nethunter'
+            features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : twelve
+            linux        : '4.09'
+            kernel       : 1.1
+            description  : Lineageos 19.1
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_oneplus6 -b nethunter'
             features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
 - oneplus7:
     model   : OnePlus 7 / 7 Pro / 7T / 7T Pro
@@ -1608,6 +1683,29 @@
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/nethunter_kernel_oneplus7 -b nethunter-11.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
+- oneplus8:
+    model   : OnePlus 8 / 8T / 8 Pro
+    kernels :
+      - id          : oneplus8-all
+        description : OnePlus 8 series for OxygenOS/Custom A11
+        versions    :
+          - android      : eleven
+            linux        : '4.19'
+            kernel       : 1.0
+            description  : OxygenOS/Custom A11
+            author       : flyP@TR!0T
+            source       : 'git clone https://github.com/flypatriot/neutrino_kernel_oneplus_sm8250.git -b neutrino-nethunter'
+            features     : [BT_RFCOMM, HID, Injection, QCACLD, RTL8812AU, Internal WLAN monitor mode]
+      - id          : oneplus8-all
+        description : OnePlus 8 series for OxygenOS/Custom A12
+        versions    :
+          - android      : twelve
+            linux        : '4.19'
+            kernel       : 1.0
+            description  : OxygenOS/Custom A12
+            author       : flyP@TR!0T
+            source       : 'git clone https://github.com/flypatriot/crdroid_12_kernel.git -b 12.0-nethunter'
+            features     : [BT_RFCOMM, HID, Injection, QCACLD, RTL8812AU, Internal WLAN monitor mode]
 - oneplusx:
     model   : OnePlus X
     kernels :
@@ -1700,6 +1798,24 @@
             author       : Rishabh Rao
             source       : 'git clone https://github.com/nethunter-s2/android_kernel_leeco_s2.git -b cm-14.1'
             features     : []
+- sakura:
+    model   : Xiaomi Redmi 6 Pro
+    kernels :
+      - id          : sakura
+        description : Xiaomi Redmi 6 Pro
+        versions    :
+          - android      : ten
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
+            features     : [Injection]
+          - android      : eleven
+            linux        : '4.09'
+            kernel       : 1.0
+            author       : dek0der
+            source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
+            features     : [Injection]
 - santoni:
     model   : Xiaomi Redmi 4X
     kernels :

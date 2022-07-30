@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-import yaml # python3 -m pip install pyyaml --user
 from datetime import datetime
+import sys
+import yaml # python3 -m pip install pyyaml --user
 
-OUTPUT_FILE = './imagestats.md'
+OUTPUT_FILE = './image-stats.md'
 INPUT_FILE = './devices.cfg'
-repo_msg = "\n_This table was generated automatically on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
+repo_msg = "\n_This table was [generated automatically](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg) on {} from the [Kali NetHunter GitLab repository](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices)_\n".format(datetime.now().strftime("%Y-%B-%d %H:%M:%S"))
 qty_images = 0
 
 ## Input:
@@ -24,58 +25,85 @@ qty_images = 0
 ##*         status:  Latest
 ##*         note:    "** Warning: Android ten is very unstable at the moment. **"
 
-def parse(data):
-    global qty_images
+def yaml_parse(content):
     result = ""
-    default = ""
-    lines = data.split('\n')
+    lines = content.split('\n')
     for line in lines:
         if line.startswith('##*'):
             ## yaml doesn't like tabs so let's replace them with four spaces
             result += line.replace('\t', '    ')[3:] + "\n"
-    ctg = yaml.load(result, Loader=yaml.FullLoader)
+    return yaml.safe_load(result)
+
+def generate_table(data):
+    global qty_images
+    devices = []
+    default = ""
+
     # iterate over all the devices
     devices = []
-    for element in ctg:
+    for element in data:
         # iterate over all the versions
         for key in element.keys():
             if 'images' in element[key]:
                 for image in element[key]['images']:
                     qty_images += 1
                     devices.append(image.get('name', default))
-    return devices
+        if not 'images' in element.keys():
+            print("[i] Possible issue with: " + element.get('model', default) + " (no images)")
 
-def generate_device_table(data):
     table  = "| Display Name (Android OS) |\n"
     table += "|---------------------------|\n"
     # iterate over all the devices
-    for device in sorted(data):
+    for device in sorted(devices):
         table += "| {} |\n".format(device)
     return table
 
-def get_versions():
-    with open(INPUT_FILE) as f:
-        data = f.read()
-        f.close()
-        return parse(data)
+def read_file(file):
+    try:
+        with open(file) as f:
+            data = f.read()
+            f.close()
+    except Exception as e:
+        print("[-] Cannot open input file: {} - {}".format(file, e))
+    return data
 
-def write_markdown():
-    with open(OUTPUT_FILE, 'w') as f:
-        meta  = '---\n'
-        meta += 'title: Kali NetHunter Image Statistics\n'
-        meta += '---\n\n'
-        stats = "- The next release cycle will include **{}** [Kali NetHunter images](nethunter-images.html)\n\n".format(str(qty_images))
-        f.write(str(meta))
-        f.write(str(stats))
-        f.write(str(generated_markdown))
-        f.write(str(repo_msg))
-        f.close()
+def write_file(data, file):
+    try:
+        with open(file, 'w') as f:
+            meta  = '---\n'
+            meta += 'title: Kali NetHunter Image Statistics\n'
+            meta += '---\n\n'
+            stats  = "- The [next release](https://www.kali.org/releases/) cycle will include [**{}** Kali NetHunter images](images.html) _([ready to download](https://www.kali.org/get-kali/#kali-mobile))_ _([config](https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-devices/-/blob/master/devices.cfg))_\n".format(str(qty_images))
+            stats += "- [Kali NetHunter Statistics](index.html)\n\n"
+            f.write(str(meta))
+            f.write(str(stats))
+            f.write(str(data))
+            f.write(str(repo_msg))
+            f.close()
+            print('[+] File: {} successfully written'.format(OUTPUT_FILE))
+    except Exception as e:
+        print("[-] Cannot write to output file: {} - {}".format(file, e))
+    return 0
 
-def print_text():
-    print('File: {} successfully written'.format(OUTPUT_FILE))
-    print('Images : {}'.format(qty_images))
+def print_summary():
+    print('Images: {}'.format(qty_images))
 
-res = get_versions()
-generated_markdown = generate_device_table(res)
-write_markdown()
-print_text()
+def main(argv):
+    # Assign variables
+    data = read_file(INPUT_FILE)
+
+    # Get data
+    res = yaml_parse(data)
+    generated_markdown = generate_table(res)
+
+    # Create markdown file
+    write_file(generated_markdown, OUTPUT_FILE)
+
+    # Print result
+    print_summary()
+
+    # Exit
+    exit(0)
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
