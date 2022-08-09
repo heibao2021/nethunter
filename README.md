@@ -48,8 +48,9 @@ Keep in mind that each name is space delimited, and you can't quote them, so don
 
 If porting for something other than sock, it is recommended to append to the `codename` in `[]`:
 
+- CyanogenMod -> `-cm` (e.g. `[codename-cm]`)
 - LineageOS -> `-los` (e.g. `[codename-los]`)
-
+- OxygenOS -> `-oos` (e.g. `[codename-oos]`)
 
 Once you have a device added to `devices.cfg`, you need to add a pre-built kernel to the device's folder. It should be formatted as:
 
