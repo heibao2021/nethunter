@@ -18,10 +18,10 @@
 ###################### CONFIG ######################
 
 # default device name (change this!)
-DEFAULT_DEVICE=yourdevice
+DEFAULT_DEVICE=redfin
 
 # default target name
-DEFAULT_TARGET=nethunter
+DEFAULT_TARGET=freddy5 Nethunter Kernel
 
 # directory containing cross-compile arm64 toolchain (change this!)
 TOOLCHAIN=/opt/toolchain/gcc-linaro-5.5.0-2017.10-x86_64_aarch64-linux-gnu

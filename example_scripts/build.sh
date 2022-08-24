@@ -18,10 +18,10 @@
 ###################### CONFIG ######################
 
 # default device name (change this!)
-DEFAULT_DEVICE=yourdevice
+DEFAULT_DEVICE=redfin
 
 # default target name
-DEFAULT_TARGET=nethunter
+DEFAULT_TARGET=freddy5 Nethunter Kernel
 
 # release version (increment this with new releases)
 RELEASE_VERSION=1.0
