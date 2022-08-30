@@ -1785,6 +1785,19 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0'
             features     : [HID]
+- rmx1971:
+    model   : Realme 5 Pro
+    kernels :
+      - id          : rmx1971
+        description : Alynx Nethunter Custom Android [12] / Stock Android 10 Rom
+        versions    :
+          - android      : snow cone
+            linux        : '4.9'
+            kernel       : 1.0
+            description  : Android 12
+            author       : Alynx
+            source       : 'git clone https://github.com/V3rB0se/Alynx-RMX1971'
+            features     : [HID, Injection]
 - s2:
     model   : LeEco Le 2
     kernels :
