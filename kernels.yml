@@ -2065,3 +2065,7 @@
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
             features     : []
+
+
+        Redmi Note 4
+        'git clone https://github.com/linlinger/kernel_xiaomi_mido.git -b nethunter-pe'
