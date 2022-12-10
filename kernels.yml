@@ -735,7 +735,7 @@
     model   : Samsung Galaxy S20 FE 5G (Snapdragon)
     kernels :
       - id          : r8q
-        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0 & OneUI 4.0
+        description : Samsung Galaxy S20 FE 5G (Snapdragon) for OneUI 2.5 & OneUI 3.0 & OneUI 4.0 & OneUI 5.0
         versions    :
           - android      : ten
             linux        : '4.19'
@@ -757,6 +757,13 @@
             description  : OneUI 4.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-12.0'
+            features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
+          - android      : twelve
+            linux        : '4.19'
+            kernel       : 4.0
+            description  : OneUI 5.0
+            author       : Svirusx
+            source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-13.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
 
 
