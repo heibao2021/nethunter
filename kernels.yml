@@ -1807,10 +1807,10 @@
             source       : 'git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0'
             features     : [HID]
 - rmx1911:
-    model   : Realme 5/5i/5s/5NFC
+    model   : Realme 5/5i/5s
     kernels :
       - id          : rmx1911
-        description : Realme 5/5i/5s/5NFC for CorvusOS
+        description : Realme 5/5i/5s for CorvusOS
         versions    :
           - android      : twelve
             linux        : '4.14'
