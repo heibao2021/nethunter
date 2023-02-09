@@ -38,7 +38,8 @@
 #                   RTL8188EUS:  Patch to add support for rtl8188eus drivers from the aircrack-ng repo.
 #                   RTL8812AU:   Patch to add support for rtl8812au drivers from the aircrack-ng repo.
 #                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
-
+#                   Internal BT: Patch to add support for internal bluetooth, kernel config
+#                                with BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
 
 # - Toolchains
 #
@@ -1760,10 +1761,10 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-oreo -b oreo-mr1'
             features     : [HID]
-- payton:
+- payton-los:
     model   : Motorola Moto X4
     kernels :
-      - id          : payton
+      - id          : payton-los
         description : Motorola Moto X4 for LineageOS
         versions    :
           - android      : ten
@@ -1773,6 +1774,13 @@
             author       : ciropom
             source       : 'git clone https://github.com/ciropom/android_nethunter_kernel_motorola_msm8998.git -b lineage-17.1'
             features     : [HID Injection RTL8812AU BT_RFCOMM]
+          - android      : thirteen
+            linux        : '4.4'
+            kernel       : 3.5
+            description  : LineageOS 20
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_motorola_msm8998 -b lineage-20'
+            features     : [HID-4, Injection, RTL88XXAU, BT_RFCOMM, Internal BT]
 - pl2:
     model   : Nokia 6.1
     kernels :
