@@ -16,7 +16,6 @@
 #         versions    :
 #           - android      : marshmallow
 #             linux        : '3.10'
-#             kernel       : 2.1
 #             description  : Android 6
 #             author       : Binkybear
 #             source       : 'git clone https://github.com/binkybear/AK-Angler.git'
@@ -69,7 +68,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 1.3
             description  : CyanogenMod 13
             author       : DeadSquirrel01
             source       : 'git clone https://github.com/DeadSquirrel01/nethunter-kernel-a5ulte.git -b cm-13.0'
@@ -79,7 +77,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 1.3
             description  : TouchWiz 6
             author       : DeadSquirrel01
             source       : 'git clone https://github.com/DeadSquirrel01/nethunter-kernel-a5ulte.git -b touchwiz-6.0'
@@ -92,7 +89,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : TouchWiz Grace
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_samsung-a5xelte -b nethunter-7.0'
@@ -105,7 +101,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 3.1
             description  : Android 6
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_zte_msm8996.git -B nethunter-6.0'
@@ -118,21 +113,18 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-Angler.git'
             features     : [HID, Injection]
           - android      : nougat
             linux        : '3.10'
-            kernel       : 2.0
             description  : Android 7.1
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_huawei_angler -b nethunter-7.1_2'
             features     : [CDROM, HID, Injection]
           - android      : oreo
             linux        : '3.10'
-            kernel       : 3.5
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
@@ -142,7 +134,6 @@
         versions    :
           - android      : ten
             linux        : '3.10'
-            kernel       : 3.5
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
@@ -155,7 +146,6 @@
         versions    :
           - android      : Snow Cone Android 12
             linux        : '4.9'
-            kernel       : 1.0
             description  : Android 12
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
@@ -168,7 +158,6 @@
         versions    :
           - android      : Snow Cone Android 12
             linux        : '4.9'
-            kernel       : 1.0
             description  : Android 12
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
@@ -182,7 +171,6 @@
         versions    :
           - android      : Snow Cone Android 12
             linux        : '4.9'
-            kernel       : 1.0
             description  : Android 12L
             author       : Alynx
             source       : 'git clone https://github.com/V3rB0se/Alynx-nethunter-sunfish'
@@ -196,7 +184,6 @@
         versions    :
           - android      : Snow Cone Android 12
             linux        : '4.9'
-            kernel       : 1.0
             description  : Android 12L
             author       : Alynx
             source       : 'git clone https://github.com/V3rB0se/redbull'
@@ -210,21 +197,18 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-bullhead-3.10-marshmallow'
             features     : [HID, Injection]
           - android      : nougat
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 7.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git'
             features     : [HID, Injection]
           - android      : oreo
             linux        : '3.04'
-            kernel       : 3.5
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_bullhead -b nethunter-8.1'
@@ -237,7 +221,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.0
             description  : CyanogenMod 13
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_xiaomi_cancro.git -b cm-13.0'
@@ -250,7 +233,6 @@
         versions    :
           - android      : wearos
             linux        : '3.18'
-            kernel       : 2.0
             description  : WearOS 2.29
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/msm-catfish-9.0-wear-os'
@@ -263,14 +245,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.2
             description  : LineageOS 14.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/android_kernel_motorola_msm8937 -b cm-14.1'
             features     : [HID]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.1
             description  : LineageOS 15.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/al-ice_cedric.git -b working'
@@ -283,7 +263,6 @@
         versions    :
           - android      : ten
             linux        : '4.14'
-            kernel       : 1.5
             description  : MIUI Global 11
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_xiaomi_davinci_hasty -b nethunter-10.0'
@@ -296,7 +275,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.0
             description  : CyanogenMod 13
             author       : Daedroza
             source       : 'git clone https://github.com/daedroza/nethunter_kernel_apq8064.git -b master'
@@ -309,7 +287,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 7.1
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_google_chromeos.git -b nethunter-7.1'
@@ -322,7 +299,6 @@
         versions    :
           - android      : eleven
             linux        : '4.4'
-            kernel       : 3.5
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
@@ -335,7 +311,6 @@
         versions    :
           - android      : pie
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 9.0
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_es2.git -b Pie-v3.180'
@@ -348,21 +323,18 @@
         versions    :
           - android      : kitkat
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-flo-3.4-kitkat-mr2'
             features     : []
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-4.00'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flo.git -b ElementalX-5.00'
@@ -372,7 +344,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.0
             description  : CyanogenMod
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_flo.git -b cm-13.0'
@@ -385,21 +356,18 @@
         versions    :
           - android      : lollipop
             linux        : '3.10'
-            kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/flounder.git -b android-tegra-flounder-3.10-marshmallow-release'
             features     : [CDROM, HID, Injection]
           - android      : nougat
             linux        : '3.10'
-            kernel       : 2.1
             description  : Android 7.1
             author       : SecurityAddicted
             source       : 'git clone https://github.com/SecurityAddicted/ElementalX-N9-Nethunter.git'
@@ -412,14 +380,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 7.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 8.1 Boot Partition 1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
@@ -429,14 +395,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 7.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 8.1 Boot Partition 2
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
@@ -446,14 +410,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 7.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter'
             features     : [BT_RFCOMM, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 0.2
             description  : Android 8.1 Boot Partition 3
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gemini-kali-linux-kernel-3.18 -b nethunter-8.1'
@@ -466,7 +428,6 @@
         versions    :
           - android      : kitkat
             linux        : 3.01
-            kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_asus_grouper.git -b android-tegra3-grouper-3.1-lollipop-release_tegra-l4t-r16-16.5 nexus7_2012-5'
@@ -479,7 +440,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : Grace UI
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890.git -b nethunter-6.0'
@@ -489,7 +449,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : Grace UI
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890/commits -b nethunter-6.0'
@@ -502,7 +461,6 @@
         versions    :
           - android      : oreo
             linux        : '4.04'
-            kernel       : 1.1
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
@@ -515,7 +473,6 @@
         versions    :
           - android      : oreo
             linux        : '4.04'
-            kernel       : 1.1
             description  : Android 8.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/gts4lwifi -b 8.1-nethunter'
@@ -528,7 +485,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.2
             description  : Android 7.1 (T-Online)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
@@ -541,7 +497,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.2
             description  : Android 7.1 (T-Online)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
@@ -554,7 +509,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 7.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996.git -b nethunter-7.0'
@@ -567,14 +521,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 7.1 with dirtysanta patch
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_msm8996 -b nethunter-7.0'
             features     : [HID, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 8
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0'
@@ -587,28 +539,24 @@
         versions    :
           - android      : kitkat
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 4.4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/furnace_kernel_lge_hammerhead.git -b android-4.4'
             features     : [CDROM, HID, Injection]
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-hammerhead-3.4-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 3.5
             description  : Android 6
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
             features     : [BT_RFCOMM, HID, Injection, Nexmon]
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.5
             description  : LineageOS 14.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lge_hammerhead -b nethunter-7.1'
@@ -618,7 +566,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 1.11
             description  : CAF CyanogenMod 14.1
             author       : chrisk44
             source       : 'git clone https://github.com/chrisk44/android_kernel_lge_hammerhead.git -b cm-14.1-caf'
@@ -631,14 +578,12 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.2
             description  : TouchWiz Grace
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-StockOreo.git -b nethunter-8.0'
@@ -648,21 +593,18 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.4
             description  : LineageOS 14.1
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-LineageOS14.1.git -b cm-14.1'
             features     : [CDROM, HID, Injection]
           - android      : pie
             linux        : '3.18'
-            kernel       : 1.1
             description  : LineageOS 16.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
           - android      : pie
             linux        : '3.18'
-            kernel       : 2.2
             description  : OneUI 1.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
@@ -672,7 +614,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
@@ -685,14 +626,12 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.2
             description  : TouchWiz Grace
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-StockOreo.git -b nethunter-8.0'
@@ -702,21 +641,18 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.4
             description  : LineageOS 14.1
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/NetHunter-s7-kernel-LineageOS14.1.git -b cm-14.1'
             features     : [CDROM, HID, Injection]
           - android      : pie
             linux        : '3.18'
-            kernel       : 1.1
             description  : LineageOS 16.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-LineageOS16.0.git -b lineage-16.0'
             features     : [CDROM, HID, Injection]
           - android      : pie
             linux        : '3.18'
-            kernel       : 2.2
             description  : OneUI 1.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-s7-kernel-WirusMOD-AiO.git -b aio-mkv8'
@@ -726,7 +662,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.5
             description  : TouchWiz 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_universal8890 -b nethunter-6.0'
@@ -740,28 +675,24 @@
         versions    :
           - android      : ten
             linux        : '4.19'
-            kernel       : 1.2
             description  : OneUI 2.5
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
           - android      : eleven
             linux        : '4.19'
-            kernel       : 2.1
             description  : OneUI 3.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-11.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
           - android      : twelve
             linux        : '4.19'
-            kernel       : 3.0
             description  : OneUI 4.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-12.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
           - android      : twelve
             linux        : '4.19'
-            kernel       : 4.0
             description  : OneUI 5.0
             author       : Svirusx
             source       : 'git clone https://github.com/Svirusx/Nethunter-Kernel-S20_FE_5G.git -b nethunter-13.0'
@@ -776,14 +707,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 12 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 13 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-M'
@@ -793,7 +722,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Canada, Mexico, and T-Mobile)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -803,7 +731,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Japanese NTT Docomo)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -813,14 +740,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 12 (International / European)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 13 (International / European)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-M'
@@ -830,7 +755,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (International / European)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -840,7 +764,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 1.0
             description  : LineageOS 14.1 (International / European)
             author       : 4E656F
             source       : 'git clone https://github.com/0x4E0x650x6F/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -850,7 +773,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Japanese NTT Docomo)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -860,14 +782,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 12 (Korean)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 13 (Korean)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-M'
@@ -877,7 +797,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Korean)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -887,14 +806,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 12 (Sprint)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-L'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : Cyanogenmod 13 (Sprint)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-M'
@@ -904,7 +821,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Sprint)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -914,7 +830,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 7.1.1
             description  : TouchWiz 5.0 (Verizon)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/idleKernel-note3.git -b ik-nethunter-touchwiz'
@@ -927,14 +842,12 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.1
             description  : LineageOS 13.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
             features     : [BT_RFCOMM, HID, Injection]
           - android      : pie
             linux        : '3.04'
-            kernel       : 2.1
             description  : LineageOS 16
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_Hanomi.git -b master'
@@ -947,7 +860,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.0a
             description  : HTC 10 Sense 8.0
             author       : S1CAR1US
             source       : 'git clone https://github.com/S1CAR1US/nethunter_kernel_htc_pmewl.git'
@@ -960,7 +872,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.3
             description  : LineageOS 14.1
             author       : ariafan
             source       : 'git clone https://github.com/ariafan/ido_kernel-kali.git -b kali-new'
@@ -973,7 +884,6 @@
         versions    :
           - android      : pie
             linux        : '3.18'
-            kernel       : N16
             description  : One UI
             author       : S133PY
             source       : 'git clone https://github.com/Thiviyan/KRAKEN_7870_Nethunter -b nethunter'
@@ -986,7 +896,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : LineageOS 14.1
             author       : Satyabrat Sahoo
             source       : 'git clone https://github.com/thelazyindian/kernel_8916.git -b cm-14.1-nethunter'
@@ -999,14 +908,12 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.0
             description  : Cyanogenmod 13
             author       : semsevens
             source       : 'git clone https://github.com/semsevens/nethunter_kernel_jfltexx.git -b cm-13.0'
             features     : []
           - android      : nougat
             linux        : '3.04'
-            kernel       : 1.0
             description  : Cyanogenmod 14.1
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_jfltexx.git -b cm-14.1'
@@ -1019,7 +926,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 1.0
             description  : Stock Android
             author       : DKingCN
             source       : 'git clone https://github.com/DKingCN/android_kernel_jiayu_s3_h560.git -b nethunter-6.0'
@@ -1032,7 +938,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 1.1
             description  : CyanogenMod 13
             author       : DeadSquirrel01
             source       : 'git clone https://github.com/DeadSquirrel01/android_kernel_huawei_kiwi.git -b cm-13.0'
@@ -1045,7 +950,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (GSM)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1055,14 +959,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : TouchWiz 5.1 (GSM)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 3.0
             description  : TouchWiz 6.0 (GSM)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-6.0'
@@ -1072,7 +974,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (China)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1082,7 +983,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (China Duos)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1092,7 +992,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (LTE Duos)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1102,7 +1001,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : TouchWiz 5.1 (LTE Duos)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
@@ -1112,7 +1010,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (Japan)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1122,7 +1019,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : TouchWiz 5.1 (Japan)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
@@ -1132,7 +1028,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 14.1 (Korea)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1142,14 +1037,12 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : TouchWiz 5.1 (Korea)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 3.0
             description  : TouchWiz 6.0 (Korea)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-6.0'
@@ -1159,7 +1052,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 1.4
             description  : LineageOS 14.1 (US Sprint, UK Vodafone, and Oceanic)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_samsung_msm8974.git -b cm-14.1'
@@ -1169,7 +1061,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : TouchWiz 5.1 (US Sprint, UK Vodafone, and Oceanic)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
@@ -1179,7 +1070,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 3.0
             description  : TouchWiz 5.1 (US Cellular)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
@@ -1189,7 +1079,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 3.0
             description  : TouchWiz 5.1 (US Verizon)
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_klte.git -b touchwiz-5.1'
@@ -1202,21 +1091,18 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 1.0
             description  : LineageOS 14.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b N'
             features     : [CDROM, HID, Injection]
           - android      : oreo
             linux        : '3.04'
-            kernel       : 1.0
             description  : LineageOS 15.0
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b O'
             features     : [CDROM, HID, Injection]
           - android      : pie
             linux        : '3.04'
-            kernel       : 1.0
             description  : LineageOS 16.0
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_kminilte.git -b P'
@@ -1229,7 +1115,6 @@
         versions    :
           - android      : eleven
             linux        : '4.4'
-            kernel       : 3.5
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
@@ -1243,7 +1128,6 @@
         versions    :
           - android      : eleven
             linux        : '4.9'
-            kernel       : 4
             description  : Pixel Expirience, LineageOS
             author       : JIaxyga
             source       : 'git clone https://github.com/JIaxyga/nethunter_kernel_xiaomi_tissot -b nethunter_eleven'
@@ -1257,14 +1141,12 @@
         versions    :
           - android      : kitkat
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 4
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-kitkat-mr2'
             features     : [HID, Injection]
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-mako-3.4-lollipop-release'
@@ -1274,7 +1156,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 13
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_mako.git -b cm-13.0'
@@ -1287,7 +1168,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 7.1
             author       : Byom Dwivedi
             source       : 'git clone https://github.com/MotorolaMobilityLLC/kernel-mtk.git -b nougat-7.1.1-release-manning'
@@ -1300,7 +1180,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.3.2
             description  : Android 5
             author       : jmmmbnnn
             source       : 'git clone https://github.com/jmmmbnnn/kernel_samsung_manta.git -b thunderkat'
@@ -1313,14 +1192,12 @@
         versions    :
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS 15.1
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_msm8953_markw -b Nosgoth'
             features     : [HID, Injection]
           - android      : pie
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS 16
             author       : fasheng
             source       : 'git clone https://github.com/fasheng/nethunter_kernel_msm8953_markw -b Nosgoth'
@@ -1333,7 +1210,6 @@
         versions    :
           - android      : eleven
             linux        : '4.9'
-            kernel       : 1.0
             description  : Pixel Experience kernel with nethunter features enabled
             author       : linlinger
             source       : 'git clone https://github.com/linlinger/kernel_xiaomi_mido.git -b nethunter-pe'
@@ -1346,14 +1222,12 @@
         versions    :
           - android      : kitkat
             linux        : '3.10'
-            kernel       : 3.1
             description  : CyanogenMod 11
             author       : RahulTheVirus!
             source       : 'git clone https://github.com/RahulTheVirus/mocha-kernels.git -b nethunter-cm11'
             features     : [CDROM, Injection]
           - android      : lollipop
             linux        : '3.10'
-            kernel       : 3.1
             description  : CyanogenMod 12.1
             author       : RahulTheVirus!
             source       : 'git clone https://github.com/RahulTheVirus/mocha-kernels.git -b nethunter-cm12.1'
@@ -1366,7 +1240,6 @@
         versions    :
           - android      : pie
             linux        : '3.18'
-            kernel       : N16
             description  : One UI
             author       : S133PY
             source       : 'git clone https://github.com/Thiviyan/KRAKEN_7870_Nethunter -b nethunter'
@@ -1379,7 +1252,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 1.4
             description  : Google Play Edition 5.1
             author       : Lavanoid
             source       : 'clone https://github.com/lavanoid/android_kernel_htc_m7gpe -b android-5.1'
@@ -1392,7 +1264,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.4
             description  : Google Play Edition 6
             author       : Lavanoid
             source       : 'git clone https://github.com/lavanoid/android_kernel_htc_m8gpe -b android-6.0'
@@ -1405,7 +1276,6 @@
         versions    :
           - android      : kitkat
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 11
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-11.0'
@@ -1415,7 +1285,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 12.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-12.1'
@@ -1425,7 +1294,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 13
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/AK-OnePone.git -b cm-13.0'
@@ -1435,7 +1303,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 14.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oneplus_msm8974.git -b cm-14.1 oneplus14'
@@ -1445,7 +1312,6 @@
         versions    :
           - android      : oreo
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 15.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-15.1 oneplus15'
@@ -1455,7 +1321,6 @@
         versions    :
           - android      : pie
             linux        : '3.04'
-            kernel       : 2.2
             description  : CyanogenMod 16
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-16.0 oneplus16'
@@ -1465,7 +1330,6 @@
         versions    :
           - android      : ten
             linux        : '3.04'
-            kernel       : 3.0
             description  : LineageOS 17.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-17.1 oneplus17.1'
@@ -1475,7 +1339,6 @@
         versions    :
           - android      : eleven
             linux        : '3.04'
-            kernel       : 3.5
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-18.1 oneplus18.1'
@@ -1488,7 +1351,6 @@
         versions    :
           - android      : lollipop
             linux        : '3.10'
-            kernel       : 1.0
             description  : Oxygen OS
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b boeffla_oos3'
@@ -1498,35 +1360,30 @@
         versions    :
           - android      : lollipop
             linux        : '3.10'
-            kernel       : 2.0
             description  : CyanogenMod 12.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-12.1'
             features     : [CD-ROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 2.1
             description  : CyanogenMod 13.0
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b cm-13.0'
             features     : [CD-ROM, HID, Injection]
           - android      : nougat
             linux        : '3.10'
-            kernel       : 2.2
             description  : LineageOS 14.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-14.1'
             features     : [CD-ROM, HID, Injection]
           - android      : oreo
             linux        : '3.10'
-            kernel       : 2.2
             description  : LineageOS 15.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-15.1'
             features     : [CD-ROM, HID, Injection]
           - android      : pie
             linux        : '3.10'
-            kernel       : 2.2
             description  : LineageOS 16.0
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_msm8994.git -b cm-16.0'
@@ -1536,7 +1393,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 2.2
             description  : Oxygen OS
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8994.git -b 6.0.1-oos'
@@ -1549,14 +1405,12 @@
         versions    :
           - android      : marshmallow
             linux        : '3.18'
-            kernel       : 1.3
             description  : Oxygen OS
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_oneplus_msm8996.git -b ElementalX'
             features     : [CD-ROM, HID, Injection]
           - android      : nougat
             linux        : '3.18'
-            kernel       : 3.1
             description  : Oxygen OS
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_oneplus_msm8996.git -b nethunter-7.0'
@@ -1566,14 +1420,12 @@
         versions    :
           - android      : pie
             linux        : '3.18'
-            kernel       : 9.1
             description  : Oxygen OS 9.0
             author       : Re4son
             source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996.git -b nethunter-9.0'
             features     : [CD-ROM, HID, Injection, RTL8812AU]
           - android      : ten
             linux        : '3.18'
-            kernel       : 17.1-2
             description  : LineageOS 17.1
             author       : Re4son
             source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996_lineageos.git -b nethunter-17.1'
@@ -1583,7 +1435,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS
             author       : zanezam
             source       : 'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
@@ -1593,7 +1444,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Oneplus 3 Oxygen OS
             author       : zanezam
             source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
@@ -1603,7 +1453,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS 14
             author       : zanezam
             source       : 'git clone https://github.com/zanezam/boeffla-kernel-cm-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
@@ -1613,7 +1462,6 @@
         versions    :
           - android      : oreo
             linux        : '3.18'
-            kernel       : 1.0
             description  : Oneplus 3T LineageOs 15.1
             author       : flypatriot
             source       : 'git clone https://github.com/flypatriot/boeffla-kernel-los-nethunter-oneplus3T.git -b t_boeffla_lineage15_nethunter'
@@ -1623,7 +1471,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Oxygen OS Oneplus 3T
             author       : zanezam
             source       : 'git clone https://github.com/zanezam/boeffla-kernel-oos-oneplus3.git -b t_boeffla_cm14_nethunter-V1_aa64u541'
@@ -1636,7 +1483,6 @@
         versions    :
           - android      : nougat
             linux        : '4.04'
-            kernel       : 1.0
             description  : Oxygen OS 4
             author       : Binkybear
             source       : 'git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_oos4 oneplus5'
@@ -1646,7 +1492,6 @@
         versions    :
           - android      : nougat
             linux        : '4.04'
-            kernel       : 1.0
             description  : CyanogenMod 14
             author       : Binkybear
             source       : 'git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_cm14 oneplus5'
@@ -1659,21 +1504,18 @@
         versions    :
           - android      : ten
             linux        : '4.09'
-            kernel       : 3.0
             description  : Oxygen OS 10
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/DJY-Nethunter-Andrax-Kernel-Source -b nethunter-10.0'
             features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
           - android      : eleven
             linux        : '4.09'
-            kernel       : 1.1
             description  : Oxygen OS 11
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/android_kernel_oneplus6 -b nethunter'
             features     : [HID-4, Injection, QCACLD, RTL8812AU, RTL8188EUS]
           - android      : twelve
             linux        : '4.09'
-            kernel       : 1.1
             description  : Lineageos 19.1
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/android_kernel_oneplus6 -b nethunter'
@@ -1686,21 +1528,18 @@
         versions    :
           - android      : pie
             linux        : '4.14'
-            kernel       : 1.1
             description  : Oxygen OS 9
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150 -b nethunter-9.0'
             features     : [HID, Injection]
           - android      : ten
             linux        : '4.14'
-            kernel       : 1.1
             description  : Oxygen OS 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_oneplus_sm8150_draco -b nethunter-10.0'
             features     : [BT_RFCOMM, HID-4, Injection, QCACLD, RTL8812AU]
           - android      : eleven
             linux        : '4.14'
-            kernel       : 1.1
             description  : Oxygen OS 11
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/nethunter_kernel_oneplus7 -b nethunter-11.0'
@@ -1713,7 +1552,6 @@
         versions    :
           - android      : eleven
             linux        : '4.19'
-            kernel       : 1.0
             description  : OxygenOS/Custom A11
             author       : flyP@TR!0T
             source       : 'git clone https://github.com/flypatriot/neutrino_kernel_oneplus_sm8250.git -b neutrino-nethunter'
@@ -1723,7 +1561,6 @@
         versions    :
           - android      : twelve
             linux        : '4.19'
-            kernel       : 1.0
             description  : OxygenOS/Custom A12
             author       : flyP@TR!0T
             source       : 'git clone https://github.com/flypatriot/crdroid_12_kernel.git -b 12.0-nethunter'
@@ -1736,7 +1573,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.1
             description  : CyanogenMod 13
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/nethunter_kernel_onyx.git -b cm-13.0'
@@ -1749,14 +1585,12 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.1
             description  : LineageOS 14.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-cm-14.1 -b cm-14.1'
             features     : [HID]
           - android      : oreo
             linux        : '3.10'
-            kernel       : 1.2
             description  : LineageOS 15.1
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/kernel_osprey-oreo -b oreo-mr1'
@@ -1769,14 +1603,12 @@
         versions    :
           - android      : ten
             linux        : '4.4'
-            kernel       : 1.3
             description  : LineageOS 17.1
             author       : ciropom
             source       : 'git clone https://github.com/ciropom/android_nethunter_kernel_motorola_msm8998.git -b lineage-17.1'
             features     : [HID Injection RTL8812AU BT_RFCOMM]
           - android      : thirteen
             linux        : '4.4'
-            kernel       : 3.5
             description  : LineageOS 20
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_motorola_msm8998 -b lineage-20'
@@ -1789,7 +1621,6 @@
         versions    :
           - android      : eleven
             linux        : '4.4'
-            kernel       : 3.5
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
@@ -1802,14 +1633,12 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS 14.1
             author       : chankruze
             source       : 'git clone https://github.com/chankruze/potter_kali_kernel -b cm-14.1'
             features     : []
           - android      : pie
             linux        : '3.18'
-            kernel       : 1.0
             description  : LineageOS 16
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0'
@@ -1822,7 +1651,6 @@
         versions    :
           - android      : snow cone
             linux        : '4.9'
-            kernel       : 1.0
             description  : Android 12
             author       : Alynx
             source       : 'git clone https://github.com/V3rB0se/Alynx-RMX1971'
@@ -1835,7 +1663,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : CyanogenMod 14.1
             author       : Rishabh Rao
             source       : 'git clone https://github.com/nethunter-s2/android_kernel_leeco_s2.git -b cm-14.1'
@@ -1848,13 +1675,11 @@
         versions    :
           - android      : ten
             linux        : '4.09'
-            kernel       : 1.0
             author       : dek0der
             source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
             features     : [Injection]
           - android      : eleven
             linux        : '4.09'
-            kernel       : 1.0
             author       : dek0der
             source       : git clone 'https://github.com/dek0der/nethunter_kernel_redmi_6_pro_sakura'
             features     : [Injection]
@@ -1866,7 +1691,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : MIUI 9.0
             author       : santoni
             source       : 'git clone https://github.com/DroidKali/santoni_kernel_nethunter.git'
@@ -1879,21 +1703,18 @@
         versions    :
           - android      : lollipop
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 5
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-lollipop-release'
             features     : [CDROM, HID, Injection]
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 6
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-marshmallow-release'
             features     : [CDROM, HID, Injection]
           - android      : nougat
             linux        : '3.04'
-            kernel       : 2.1
             description  : Android 7.1
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/kernel_msm.git -b android-msm-shamu-3.10-n'
@@ -1903,14 +1724,12 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : '4.04'
             description  : LineageOS 14.1
             author       : discipuloosho
             source       : 'git clone https://github.com/discipuloosho/android_kernel_moto_shamu.git -b nethunter_cm-14.1'
             features     : []
           - android      : pie
             linux        : '3.04'
-            kernel       : '4.04'
             description  : Android 16.0
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_moto_shamu.git -b nethunter-16.0'
@@ -1923,21 +1742,18 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 1.2
             description  : Android 6.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.2
             description  : Android 7.1
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_nvidia_shield.git -b nethunter-6.0'
             features     : [CDROM, HID, Injection]
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.3
             description  : Android 7.1
             author       : SecurityAddicted
             source       : 'git clone https://github.com/SecurityAddicted/android_kernel_nvidia_shieldtablet nethunter'
@@ -1950,7 +1766,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.4
             description  : LineageOS 14.1
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_sony_msm8994 android-14.1'
@@ -1963,7 +1778,6 @@
         versions    :
           - android      : nougat
             linux        : '3.18'
-            kernel       : 1.0
             description  : Android 7.0
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_lge_msm8996 -b android-7.0'
@@ -1976,7 +1790,6 @@
         versions    :
           - android      : nougat
             linux        : '3.04'
-            kernel       : 3.0
             description  : CyanogenMod 14.1
             author       : DSR!
             source       : 'git clone https://github.com/xchwarze/nethunter-motorola-x2-kernel -b cm-14.1'
@@ -1989,21 +1802,18 @@
         versions    :
           - android      : marshmallow
             linux        : '4.04'
-            kernel       : 1.0
             description  : MIUI 8
             author       : 5h4d0wb0y
             source       : 'git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 6.x'
             features     : [HID, Injection]
           - android      : nougat
             linux        : '4.04'
-            kernel       : 1.0
             description  : MIUI 9
             author       : 5h4d0wb0y
             source       : 'git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git -b 7.x'
             features     : [Injection]
           - android      : oreo
             linux        : '4.04'
-            kernel       : 1.0
             description  : MIUI 10
             author       : 5h4d0wb0y
             source       : 'git clone https://github.com/5h4d0wb0y/android_kernel_huawei_vienna.git'
@@ -2016,7 +1826,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.04'
-            kernel       : 1.0
             description  : CyanogenMod 13
             author       : Daedroza
             source       : 'git clone https://github.com/daedroza/nethunter_kernel_apq8064.git -b master'
@@ -2029,7 +1838,6 @@
         versions    :
           - android      : marshmallow
             linux        : '3.10'
-            kernel       : 6.0.1
             description  : LineageOS 13.0
             author       : adrenogamer
             source       : 'git clone https://github.com/adrenogamer/android_kernel_asus_msm8916 -b cm-13.0'
@@ -2042,7 +1850,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : LineageOS 14.1
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1'
@@ -2052,7 +1859,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : Android 7.0
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
@@ -2065,7 +1871,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : LineageOS 14.1
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Exynos7420_Nethunter -b cm-14.1'
@@ -2075,7 +1880,6 @@
         versions    :
           - android      : nougat
             linux        : '3.10'
-            kernel       : 1.0
             description  : Android 7.0
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
