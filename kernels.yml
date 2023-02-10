@@ -578,6 +578,12 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_lg_h990 -b nethunter-8.0'
             features     : [HID, Injection]
+          - android      : eleven
+            linux        : '3.18'
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/Re4son/android_kernel_msm8996 -b nethunter-gamma-pie'
+            features     : [HID, Injection, CD-ROM, RTL88XXAU, Internal BT]
 - hammerhead:
     model   : Nexus 5
     kernels :
