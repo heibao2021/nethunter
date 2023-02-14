@@ -1435,7 +1435,7 @@
             description  : LineageOS 17.1
             author       : Re4son
             source       : 'git clone https://github.com/re4son/android_kernel_oneplus_msm8996_lineageos.git -b nethunter-17.1'
-            features     : [BT_RFCOMM, CD-ROM, HID, Injection, RTL8812AU]
+            features     : [BT_RFCOMM, CD-ROM, HID, Injection, RTL8812AU, Internal BT]
       - id          : oneplus3-cm
         description : OnePlus 3 LineageOS
         versions    :
