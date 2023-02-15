@@ -536,7 +536,7 @@
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/Re4son/android_kernel_msm8996 -b nethunter-gamma-pie'
-            features     : [HID, Injection, CD-ROM, RTL88XXAU, Internal BT]
+            features     : [HID, Injection, CD-ROM, Internal BT]
 - hammerhead:
     model   : Nexus 5
     kernels :
