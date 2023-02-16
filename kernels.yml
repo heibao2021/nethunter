@@ -1341,14 +1341,14 @@
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-17.1 oneplus17.1'
             features     : [BT_RFCOMM, HID, Injection, CDROM]
       - id          : oneplus1
-        description : CyanogenMod
+        description : LineageOS
         versions    :
           - android      : eleven
             linux        : '3.04'
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-18.1 oneplus18.1'
-            features     : [BT_RFCOMM, HID, Injection, RTL88XXAU, CDROM]
+            features     : [BT_RFCOMM, HID, Injection, CDROM, Internal BT]
 - oneplus2:
     model   : OnePlus 2
     kernels :
