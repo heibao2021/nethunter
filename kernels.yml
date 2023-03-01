@@ -38,7 +38,7 @@
 #                   RTL8812AU:   Patch to add support for rtl8812au drivers from the aircrack-ng repo.
 #                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
 #                   Internal BT: Patch to add support for internal bluetooth, kernel config
-#                                with BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
+#                                with BT_SMD or BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
 
 # - Toolchains
 #
@@ -1137,7 +1137,7 @@
             description  : Pixel Expirience, LineageOS
             author       : JIaxyga
             source       : 'git clone https://github.com/JIaxyga/nethunter_kernel_xiaomi_tissot -b nethunter_eleven'
-            features     : [BT_RFCOMM, BT_SMD, HID-4, Injection, CD-ROM, RTL8812AU, RTL8812BU, RTL8814AU, RTL8188EUS, RTL8188FU, RTL8192EUS, RTL8192FU]
+            features     : [BT_RFCOMM, Internal BT, HID-4, Injection, CD-ROM, RTL8812AU, RTL8812BU, RTL8814AU, RTL8188EUS, RTL8188FU, RTL8192EUS, RTL8192FU]
 
 - mako:
     model   : Nexus 4
