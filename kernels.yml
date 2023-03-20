@@ -302,7 +302,7 @@
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT]
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS]
 - es2:
     model   : Nokia 3.1
     kernels :
@@ -1630,7 +1630,7 @@
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT]
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
