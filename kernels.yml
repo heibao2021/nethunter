@@ -137,7 +137,7 @@
             description  : LineageOS 17.1 & Pixel Experience 10
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
-            features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU, Internal BT]
+            features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU, Internal BT, RTL8188EUS]
 - blueline:
     model   : Google Pixel 3
     kernels :
