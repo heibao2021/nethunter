@@ -1649,6 +1649,18 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0'
             features     : [HID]
+- rmx1911:
+    model   : Realme 5/5i/5s
+    kernels :
+      - id          : rmx1911
+        description : Realme 5/5i/5s for CorvusOS
+        versions    :
+          - android      : twelve
+            linux        : '4.14'
+            kernel       : 1.0
+            description  : Android 12L Corvus vS4.1-Eclipse
+            author       : Mikhail Simon
+            source       : 'git clone https://github.com/mikhailsimon/nethunter-r5x'
 - rmx1971:
     model   : Realme 5 Pro
     kernels :
