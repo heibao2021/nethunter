@@ -517,7 +517,7 @@
     model   : LG V20 International
     kernels :
       - id          : h990
-        description : LG stock Android
+        description : LG stock Android & LineageOS 18.1
         versions    :
           - android      : nougat
             linux        : '3.18'
@@ -535,8 +535,8 @@
             linux        : '3.18'
             description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/Re4son/android_kernel_msm8996 -b nethunter-gamma-pie'
-            features     : [HID, Injection, CD-ROM, Internal BT]
+            source       : 'git clone https://github.com/yesimxev/android_kernel_lge_msm8996 -b nethunter-gamma-pie'
+            features     : [HID, Injection, CD-ROM, RTL8188EUS, RTL88XXAU, Internal BT]
 - hammerhead:
     model   : Nexus 5
     kernels :
@@ -1341,14 +1341,14 @@
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-17.1 oneplus17.1'
             features     : [BT_RFCOMM, HID, Injection, CDROM]
       - id          : oneplus1
-        description : CyanogenMod
+        description : LineageOS
         versions    :
           - android      : eleven
             linux        : '3.04'
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_oppo_msm8974.git -b lineage-18.1 oneplus18.1'
-            features     : [BT_RFCOMM, HID, Injection, RTL88XXAU, CDROM]
+            features     : [BT_RFCOMM, HID, Injection, CDROM, Internal BT]
 - oneplus2:
     model   : OnePlus 2
     kernels :
@@ -1649,6 +1649,18 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/Optimus_Drunk_Potter.git -b 9.0'
             features     : [HID]
+- rmx1911:
+    model   : Realme 5/5i/5s
+    kernels :
+      - id          : rmx1911
+        description : Realme 5/5i/5s for CorvusOS
+        versions    :
+          - android      : twelve
+            linux        : '4.14'
+            kernel       : 1.0
+            description  : Android 12L Corvus vS4.1-Eclipse
+            author       : Mikhail Simon
+            source       : 'git clone https://github.com/mikhailsimon/nethunter-r5x'
 - rmx1971:
     model   : Realme 5 Pro
     kernels :
