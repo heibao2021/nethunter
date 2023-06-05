@@ -518,7 +518,7 @@
     model   : LG V20 International
     kernels :
       - id          : h990
-        description : LG stock Android & LineageOS 18.1
+        description : LG stock Android & LineageOS 18.1 & 19.1
         versions    :
           - android      : nougat
             linux        : '3.18'
@@ -538,6 +538,12 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_lge_msm8996 -b nethunter-gamma-pie'
             features     : [HID, Injection, CD-ROM, RTL8188EUS, RTL88XXAU, Internal BT]
+          - android      : twelve
+            linux        : '4.04'
+            description  : LineageOS 19.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_lge_msm8996 -b lineage-19.1'
+            features     : [HID, Injection, CD-ROM, RTL8188EUS, RTL88XXAU, Internal BT, NFS]
 - hammerhead:
     model   : Nexus 5
     kernels :
