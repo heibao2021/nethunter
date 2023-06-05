@@ -127,16 +127,16 @@
           - android      : oreo
             linux        : '3.10'
             description  : Android 8.1
-            author       : Re4son
+            author       : Re4son & yesimxev
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
-            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon, RTL8812AU]
+            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon, RTL8812AU, RTL8188EUS, Internal BT]
       - id          : angler-los
         description : LineageOS
         versions    :
           - android      : ten
             linux        : '3.10'
             description  : LineageOS 17.1 & Pixel Experience 10
-            author       : Re4son
+            author       : Re4son & yesimxev
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
             features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU, Internal BT, RTL8188EUS]
 - blueline:
