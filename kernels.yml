@@ -150,8 +150,21 @@
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
             features     : [HID, Injection]
+- blueline:
+    model   : Google Pixel 3
+    kernels :
+      - id          : blueline
+        description : Google Pixel 3 PixelDust Rom Android 13
+        versions    :
+          - android      : Tiramisu Android 13
+            linux        : '4.9'
+            kernel       : 1.2
+            description  : Android 13
+            author       : Alynx
+            source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
+            features     : [HID, Injection, BT_RFCOMM, RTL8XXX]
 - crosshatch:
-    model   : Google Pixel 3xl
+    model   : Google Pixel 3 XL
     kernels :
       - id          : crosshatch
         description : Google Pixel 3xl Stock/PixelDust Rom Android 12
@@ -162,6 +175,19 @@
             author       : Alynx
             source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
             features     : [HID, Injection]
+- crosshatch:
+    model   : Google Pixel 3 XL
+    kernels :
+      - id          : crosshatch
+        description : Google Pixel 3 XL PixelDust Rom Android 13
+        versions    :
+          - android      : Tiramisu Android 13
+            linux        : '4.9'
+            kernel       : 1.2
+            description  : Android 12
+            author       : Alynx
+            source       : 'git clone https://github.com/v3rb0se/alynx-nethunter/'
+            features     : [HID, Injection, BT_RFCOMM]
 
 - sunfish:
     model   : Google Pixel 4a
