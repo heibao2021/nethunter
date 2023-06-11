@@ -39,6 +39,7 @@
 #                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
 #                   Internal BT: Patch to add support for internal bluetooth, kernel config
 #                                with BT_SMD or BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
+#                   NFS:         Most devices come without NFS support, it is recommended if needed in a pentest.
 
 # - Toolchains
 #
@@ -126,16 +127,16 @@
           - android      : oreo
             linux        : '3.10'
             description  : Android 8.1
-            author       : Re4son
+            author       : Re4son & yesimxev
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler -b nethunter-8.1'
-            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon, RTL8812AU]
+            features     : [BT_RFCOMM, CDROM, HID, Injection, Nexmon, RTL8812AU, RTL8188EUS, Internal BT]
       - id          : angler-los
         description : LineageOS
         versions    :
           - android      : ten
             linux        : '3.10'
             description  : LineageOS 17.1 & Pixel Experience 10
-            author       : Re4son
+            author       : Re4son & yesimxev
             source       : 'git clone https://github.com/Re4son/android_kernel_huawei_angler_pixel -b nethunter-10.0'
             features     : [BT_RFCOMM, HID, Injection, Nexmon, RTL8812AU, Internal BT, RTL8188EUS]
 - blueline:
@@ -543,7 +544,7 @@
     model   : LG V20 International
     kernels :
       - id          : h990
-        description : LG stock Android & LineageOS 18.1
+        description : LG stock Android & LineageOS 18.1 & 19.1
         versions    :
           - android      : nougat
             linux        : '3.18'
@@ -563,6 +564,12 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_lge_msm8996 -b nethunter-gamma-pie'
             features     : [HID, Injection, CD-ROM, RTL8188EUS, RTL88XXAU, Internal BT]
+          - android      : twelve
+            linux        : '4.04'
+            description  : LineageOS 19.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_lge_msm8996 -b lineage-19.1'
+            features     : [HID, Injection, CD-ROM, RTL8188EUS, RTL88XXAU, Internal BT, NFS]
 - hammerhead:
     model   : Nexus 5
     kernels :
@@ -1146,12 +1153,23 @@
         description : LineageOS
         versions    :
           - android      : eleven
-            linux        : '4.4'
+            linux        : '4.14'
             description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b nethunter-18.1'
-            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD]
-
+            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
+          - android      : twelve
+            linux        : '4.14'
+            description  : LineageOS 19.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
+          - android      : thirteen
+            linux        : '4.14'
+            description  : LineageOS 20
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
 - tissot:
     model   : Xiaomi Mi A1
     kernels :
