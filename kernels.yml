@@ -1130,19 +1130,19 @@
             linux        : '4.14'
             description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
           - android      : twelve
             linux        : '4.14'
             description  : LineageOS 19.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
           - android      : thirteen
             linux        : '4.14'
             description  : LineageOS 20
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
 - tissot:
     model   : Xiaomi Mi A1
