@@ -1757,6 +1757,18 @@
             author       : santoni
             source       : 'git clone https://github.com/DroidKali/santoni_kernel_nethunter.git'
             features     : []
+- santoni-vos:
+    model   : Xiaomi Redmi 4/4X
+    kernels :
+      - id          : santoni
+        description : VoltageOS 2.5
+        versions    :
+          - android      : thirteen
+            linux        : '4.9.227'
+            description  : VoltageOS 2.5
+            author       : MomboteQ
+            source       : 'git clone https://github.com/MomboteQ/hackphone_kernel_xiaomi_msm8937 -b 13'
+            features     : [Injection, HID-4, CDROM, BT_RFCOMM]
 - shamu:
     model   : Nexus 6
     kernels :
