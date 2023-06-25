@@ -206,6 +206,10 @@ kernel/drivers/md/dm-req-crypt.ko
 kernel/drivers/md/dm-bow.ko
 kernel/drivers/media/media.ko
 kernel/drivers/media/dvb-core/dvb-core.ko
+kernel/drivers/media/dvb-frontends/si2168.ko
+kernel/drivers/media/dvb-frontends/rtl2830.ko
+kernel/drivers/media/dvb-frontends/rtl2832.ko
+kernel/drivers/media/dvb-frontends/rtl2832_sdr.ko
 kernel/drivers/media/platform/msm/camera_v2-legacy/fd/msm_fd_dev.ko
 kernel/drivers/media/platform/msm/camera_v2-legacy/fd/msm_fd_hw.ko
 kernel/drivers/media/platform/msm/camera_v2-legacy/jpeg_10/msm_jpeg_dev.ko

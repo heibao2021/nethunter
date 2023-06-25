@@ -9,6 +9,3 @@ alias i2c:it913x it913x
 alias i2c:mxl301rf mxl301rf
 alias i2c:qm1d1c0042 qm1d1c0042
 alias i2c:m88rs6000t m88rs6000t
-alias i2c:si2168 si2168
-alias i2c:rtl2830 rtl2830
-alias i2c:rtl2832 rtl2832

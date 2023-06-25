@@ -34,9 +34,5 @@ kernel/drivers/media/tuners/r820t.ko
 kernel/drivers/media/tuners/mxl301rf.ko
 kernel/drivers/media/tuners/qm1d1c0042.ko
 kernel/drivers/media/tuners/m88rs6000t.ko
-kernel/drivers/media/dvb-frontends/si2168.ko
-kernel/drivers/media/dvb-frontends/rtl2830.ko
-kernel/drivers/media/dvb-frontends/rtl2832.ko
-kernel/drivers/media/dvb-frontends/rtl2832_sdr.ko
 kernel/drivers/media/usb/gspca/gspca_main.ko
 kernel/net/bridge/br_netfilter.ko
