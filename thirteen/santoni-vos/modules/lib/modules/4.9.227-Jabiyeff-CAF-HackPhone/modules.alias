@@ -1,11 +1,1 @@
 # Aliases extracted from modules themselves.
-alias i2c:tda18212 tda18212
-alias i2c:e4000 e4000
-alias i2c:fc2580 fc2580
-alias i2c:tua9001 tua9001
-alias i2c:si2146 si2157
-alias i2c:si2157 si2157
-alias i2c:it913x it913x
-alias i2c:mxl301rf mxl301rf
-alias i2c:qm1d1c0042 qm1d1c0042
-alias i2c:m88rs6000t m88rs6000t
