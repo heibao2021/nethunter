@@ -46,7 +46,7 @@ As a last resort, you can also include: `getprop ro.product.name`
 
 Keep in mind that each name is space delimited, and you can't quote them, so don't use values with spaces in them!
 
-If porting for something other than sock, it is recommended to append to the `codename` in `[]`:
+If porting for something other than stock, it is recommended to append to the `codename` in `[]`:
 
 - CyanogenMod -> `-cm` (e.g. `[codename-cm]`)
 - LineageOS -> `-los` (e.g. `[codename-los]`)
