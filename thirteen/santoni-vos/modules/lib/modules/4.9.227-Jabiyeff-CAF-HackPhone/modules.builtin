@@ -451,6 +451,7 @@ kernel/net/802/p8022.ko
 kernel/net/802/psnap.ko
 kernel/net/802/stp.ko
 kernel/net/bluetooth/bluetooth.ko
+kernel/net/bluetooth/rfcomm/rfcomm.ko
 kernel/net/bridge/bridge.ko
 kernel/net/bridge/netfilter/ebtables.ko
 kernel/net/bridge/netfilter/ebtable_broute.ko
