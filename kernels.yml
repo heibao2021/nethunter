@@ -39,7 +39,7 @@
 #                   RTL88XXAU:   Patch to add support for rtl88xxau drivers from the aircrack-ng repo.
 #                   Internal BT: Patch to add support for internal bluetooth, kernel config
 #                                with BT_SMD or BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
-#                   NFS:         Most devices come without NFS support, it is recommended if needed in a pentest.
+#                   NFS:         Some devices come without NFS support, it is recommended if needed in a pentest.
 
 # - Toolchains
 #
@@ -94,6 +94,18 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_samsung-a5xelte -b nethunter-7.0'
             features     : [HID, Injection, RTL8812AU]
+- a7xelte:
+    model   : Samsung Galaxy A7 (2016)
+    kernels :
+      - id          : a7xelte
+        description : Galaxy A7 (2016) for LineageOS 18.1
+        versions    :
+          - android      : eleven
+            linux        : '3.10'
+            description  : LineageOS 18.1
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_samsung_universal7580 -b lineage-18.1'
+            features     : [HID, Injection, RTL88XXAU, Internal BT, BT_RFCOMM]
 - ailsa_ii:
     model   : ZTE Axon 7
     kernels :
@@ -1156,19 +1168,19 @@
             linux        : '4.14'
             description  : LineageOS 18.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
           - android      : twelve
             linux        : '4.14'
             description  : LineageOS 19.1
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
           - android      : thirteen
             linux        : '4.14'
             description  : LineageOS 20
             author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/kernel_xiaomi_laurel_sprout -b nethunter-18.1'
+            source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
 - tissot:
     model   : Xiaomi Mi A1
