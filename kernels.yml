@@ -280,7 +280,7 @@
     model   : Motorola Moto G5
     kernels :
       - id          : cedric
-        description : Motorola Moto G5 for LineageOs
+        description : Motorola Moto G5 for LineageOs 14.1
         versions    :
           - android      : nougat
             linux        : '3.18'
@@ -288,6 +288,9 @@
             author       : rajeshdubey293
             source       : 'git clone https://github.com/rajeshdubey293/android_kernel_motorola_msm8937 -b cm-14.1'
             features     : [HID]
+      - id          : cedric-oreo
+        description : Motorola Moto G5 for LineageOs 15.1
+        versions    :
           - android      : oreo
             linux        : '3.18'
             description  : LineageOS 15.1
@@ -1691,7 +1694,7 @@
     model   : Motorola Moto G5 Plus
     kernels :
       - id          : potter
-        description : Motorola Moto G5 Plus for LineageOS
+        description : Motorola Moto G5 Plus for LineageOS 14.1
         versions    :
           - android      : nougat
             linux        : '3.18'
@@ -1699,6 +1702,9 @@
             author       : chankruze
             source       : 'git clone https://github.com/chankruze/potter_kali_kernel -b cm-14.1'
             features     : []
+      - id          : potter-pie
+        description : Motorola Moto G5 Plus for LineageOS 16
+        versions    :
           - android      : pie
             linux        : '3.18'
             description  : LineageOS 16
