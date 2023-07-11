@@ -1806,6 +1806,24 @@
             author       : SecurityAddicted
             source       : 'git clone https://github.com/SecurityAddicted/android_kernel_nvidia_shieldtablet nethunter'
             features     : [CDROM, HID, Injection]
+- spacewar:
+    model   : Nothing Phone (1)
+    kernels :
+      - id          : spacewar
+        description : Nothin Phone (1) for Custom/AOSP A12 & A13
+        versions    :
+          - android      : twelve
+            linux        : '5.4'
+            description  : Custom/ASOP Android 12
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b release'
+            features     : [HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
+          - android      : thirteen
+            linux        : '3.18'
+            description  : Custom/ASOP Android 13
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b release'
+            features     : [HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
 - suzuran:
     model   : Sony Xperia Z5 Compact
     kernels :
