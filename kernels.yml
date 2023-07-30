@@ -1994,3 +1994,15 @@
             author       : XXH3X
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
             features     : []
+- j5xxx:
+    model   : Samsung Galaxy J5 (2015)
+    kernels :
+      - id          : j5xxx
+        description : Galaxy J5 (2015) for LineageOS
+        versions    :
+          - android      : nougat
+            linux        : '3.10'
+            description  : LineageOS 14.1
+            author       : djkido316
+            source       : 'git clone https://github.com/djkido316/nethunter_kernel_j5xxx'
+            features     : [HID, Injection]
