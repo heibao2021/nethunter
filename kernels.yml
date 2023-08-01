@@ -2004,7 +2004,7 @@
             linux        : '3.10'
             description  : LineageOS 14.1
             author       : djkido316
-            source       : 'git clone https://github.com/djkido316/nethunter_kernel_j5xxxx'
+            source       : 'git clone https://github.com/djkido316/nethunter-kernel_j5'
             features     : [HID, Injection]
 - j5nlte:
     model   : Samsung Galaxy J5 (2015)
@@ -2016,7 +2016,7 @@
             linux        : '3.10'
             description  : LineageOS 14.1
             author       : djkido316
-            source       : 'git clone https://github.com/djkido316/nethunter_kernel_j5xxxx'
+            source       : 'git clone https://github.com/djkido316/nethunter-kernel_j5'
             features     : [HID, Injection]
 - j53g:
     model   : Samsung Galaxy J5 (2015)
@@ -2028,5 +2028,5 @@
             linux        : '3.10'
             description  : LineageOS 14.1
             author       : djkido316
-            source       : 'git clone https://github.com/djkido316/nethunter_kernel_j5xxxx'
+            source       : 'git clone https://github.com/djkido316/nethunter-kernel_j5'
             features     : [HID, Injection]
