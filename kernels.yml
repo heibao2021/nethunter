@@ -1995,10 +1995,10 @@
             source       : 'git clone https://github.com/XXH3X/Ultimate-Kali'
             features     : []
 - j5lte:
-    model   : Samsung Galaxy J5 (2015)
+    model   : Samsung Galaxy J5 LTE (2015)
     kernels :
       - id          : j5lte
-        description : Galaxy J5 (2015) for LineageOS
+        description : Galaxy J5 LTE (2015) for LineageOS
         versions    :
           - android      : nougat
             linux        : '3.10'
@@ -2007,10 +2007,10 @@
             source       : 'git clone https://github.com/djkido316/nethunter-kernel_j5'
             features     : [HID, Injection]
 - j5nlte:
-    model   : Samsung Galaxy J5 (2015)
+    model   : Samsung Galaxy J5 NFC LTE (2015)
     kernels :
       - id          : j5nlte
-        description : Galaxy J5 (2015) for LineageOS
+        description : Galaxy J5 NFC LTE (2015) for LineageOS
         versions    :
           - android      : nougat
             linux        : '3.10'
@@ -2019,10 +2019,10 @@
             source       : 'git clone https://github.com/djkido316/nethunter-kernel_j5'
             features     : [HID, Injection]
 - j53g:
-    model   : Samsung Galaxy J5 (2015)
+    model   : Samsung Galaxy J5 3G (2015)
     kernels :
       - id          : j53g
-        description : Galaxy J5 (2015) for LineageOS
+        description : Galaxy J5 3G (2015) for LineageOS
         versions    :
           - android      : nougat
             linux        : '3.10'
