@@ -215,6 +215,20 @@
             source       : 'git clone https://github.com/V3rB0se/Alynx-nethunter-sunfish'
             features     : [HID, Injection]
 
+- surya:
+    model   : Xiaomi Poco X3 NFC
+    kernels :
+      - id          : surya
+        description : Xiaomi Poco X3 NFC Rom LineageOS-20 Android 13
+        versions    :
+          - android      : Tiramisu Android 13
+            linux        : '4.9'
+            kernel       : 4.14
+            description  : LineageOS 20
+            author       : r0ttenbeef
+            source       : 'git clone https://github.com/r0ttenbeef/android_kernel_xiaomi_surya -b lineage-20'
+            features     : [HID, Injection, RTL8812AU]
+
 - bramble:
     model   : Google Pixel 4a 5G
     kernels :
