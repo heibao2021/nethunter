@@ -227,7 +227,7 @@
             description  : LineageOS 20
             author       : r0ttenbeef
             source       : 'git clone https://github.com/r0ttenbeef/android_kernel_xiaomi_surya -b lineage-20'
-            features     : [HID, Injection, RTL8812AU]
+            features     : [HID-4, Injection, RTL8812AU, Internal BT, BT_RFCOMM]
 
 - bramble:
     model   : Google Pixel 4a 5G
