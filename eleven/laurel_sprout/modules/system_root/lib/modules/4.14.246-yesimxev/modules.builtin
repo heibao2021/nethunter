@@ -612,6 +612,9 @@ kernel/drivers/usb/phy/phy-msm-ssusb-qmp.ko
 kernel/drivers/usb/phy/phy-msm-qusb.ko
 kernel/drivers/usb/phy/phy-msm-qusb-v2.ko
 kernel/drivers/usb/phy/phy-msm-snps-hs.ko
+kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ch341.ko
+kernel/drivers/usb/serial/ftdi_sio.ko
 kernel/drivers/usb/storage/usb-storage.ko
 kernel/drivers/video/backlight/backlight.ko
 kernel/drivers/video/backlight/generic_bl.ko

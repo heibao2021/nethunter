@@ -40,6 +40,7 @@
 #                   Internal BT: Patch to add support for internal bluetooth, kernel config
 #                                with BT_SMD or BT_HCIVHCI, BT_HCIUART, BT_HCIUART_H4, ANDROID_BINDER_IPC
 #                   NFS:         Some devices come without NFS support, it is recommended if needed in a pentest.
+#                   RTL-BT:      Patch to add support for Realtek 8761B Bluetooth Dongles
 
 # - Toolchains
 #
@@ -345,6 +346,12 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS]
+          - android      : thirteen
+            linux        : '4.4'
+            description  : LineageOS 20
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-20'
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS, RTL-BT]
 - es2:
     model   : Nokia 3.1
     kernels :
@@ -1172,19 +1179,19 @@
             description  : LineageOS 18.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT, RTL-BT]
           - android      : twelve
             linux        : '4.14'
             description  : LineageOS 19.1
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT, RTL-BT]
           - android      : thirteen
             linux        : '4.14'
             description  : LineageOS 20
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_xiaomi_laurel_sprout -b lineage-18.1'
-            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT]
+            features     : [BT_RFCOMM, HID-4, CDROM, RTL88XXAU, QCACLD, RTL8818EUS, NFS, Internal BT, RTL-BT]
 - tissot:
     model   : Xiaomi Mi A1
     kernels :
@@ -1690,6 +1697,12 @@
             author       : yesimxev
             source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-18.1'
             features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS]
+          - android      : thirteen
+            linux        : '4.4'
+            description  : LineageOS 20
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/android_kernel_nokia_sdm660 -b lineage-20'
+            features     : [BT_RFCOMM, HID-4, Injection, RTL88XXAU, CDROM, Internal BT, RTL8188EUS, RTL-BT]
 - potter:
     model   : Motorola Moto G5 Plus
     kernels :
