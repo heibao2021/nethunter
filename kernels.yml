@@ -1582,6 +1582,43 @@
             author       : Binkybear
             source       : 'git clone https://github.com/nethunteros/android_kernel_oneplus_msm8998 -b boeffla_cm14 oneplus5'
             features     : [CDROM, HID, Injection]
+      - id          : oneplus5-los
+        description : LineageOS
+        versions    :
+          - android      : '13'
+            linux        : '4.04'
+            description  : LineageOS 20.0
+            author       : seppzer0
+            source       : 'git clone -b v0.3.2 https://github.com/seppzer0/s0nh_kernel'
+            features     : [HID, Injection, RTL88XXAU, RTL8187]
+      - id          : oneplus5-pa
+        description : ParanoidAndroid
+        versions    :
+          - android      : '13'
+            linux        : '4.04'
+            description  : ParanoidAndroid Topaz 8
+            author       : seppzer0
+            source       : 'git clone -b v0.3.2 https://github.com/seppzer0/s0nh_kernel'
+            features     : [HID, Injection, RTL88XXAU, RTL8187]
+      - id          : oneplus5-los-ksu
+        description : LineageOS w/ KernelSU
+        versions    :
+          - android      : '13'
+            linux        : '4.04'
+            description  : LineageOS 20.0
+            author       : seppzer0
+            source       : 'git clone -b v0.3.2 https://github.com/seppzer0/s0nh_kernel'
+            features     : [HID, Injection, RTL88XXAU, RTL8187, KernelSU]
+      - id          : oneplus5-pa-ksu
+        description : ParanoidAndroid w/ KernelSU
+        versions    :
+          - android      : '13'
+            linux        : '4.04'
+            description  : ParanoidAndroid Topaz 8
+            author       : seppzer0
+            source       : 'git clone -b v0.3.2 https://github.com/seppzer0/s0nh_kernel'
+            features     : [HID, Injection, RTL88XXAU, RTL8187, KernelSU]
+
 - oneplus6:
     model   : OnePlus 6 / 6T
     kernels :
