@@ -279,18 +279,6 @@
             author       : Binkybear
             source       : 'git clone https://github.com/binkybear/android_kernel_xiaomi_cancro.git -b cm-13.0'
             features     : [CDROM, HID, Injection]
-- catfish:
-    model   : TicWatch Pro
-    kernels :
-      - id          : catfish
-        description : TicWatch Pro for WearOS
-        versions    :
-          - android      : wearos
-            linux        : '3.18'
-            description  : WearOS 2.29
-            author       : yesimxev
-            source       : 'git clone https://github.com/yesimxev/msm-catfish-9.0-wear-os'
-            features     : [HID]
 - cedric:
     model   : Motorola Moto G5
     kernels :
@@ -1944,6 +1932,30 @@
             author       : Re4son
             source       : 'git clone https://github.com/Re4son/android_kernel_sony_msm8994 android-14.1'
             features     : [HID, Injection, Nexmon, RTL8812AU]
+- ticwatchpro:
+    model   : TicWatch Pro
+    kernels :
+      - id          : ticwatchpro
+        description : TicWatch Pro for WearOS
+        versions    :
+          - android      : wearos
+            linux        : '3.18'
+            description  : WearOS 2.29
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/msm-catfish-9.0-wear-os'
+            features     : [Injection, HID, Internal BT, BT_RFCOMM]
+- ticwatchpro3:
+    model   : TicWatch Pro 3
+    kernels :
+      - id          : ticwatchpro3
+        description : TicWatch Pro 3 for WearOS
+        versions    :
+          - android      : wearos
+            linux        : '4.09'
+            description  : WearOS 2.44
+            author       : yesimxev
+            source       : 'git clone https://github.com/yesimxev/mobvoi-ticwatch-kernel -b nethunter'
+            features     : [Injection, HID-4, NFS, Internal BT, BT_RFCOMM]
 - us996:
     model   : LG V20 US Version
     kernels :
