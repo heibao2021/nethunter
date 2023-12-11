@@ -1735,7 +1735,7 @@
             description  : LineageOS 20
             author       : Mashopy
             source       : 'git clone https://github.com/lineageos-on-pdx201/android_kernel_sony_sm6125 -b lineage-20'
-            features     : [HID-4, Injection, RTL88XXAU, BT_RFCOMM, Internal BT]         
+            features     : [HID-4, Injection, RTL88XXAU, BT_RFCOMM, Internal BT]
 - pl2:
     model   : Nokia 6.1
     kernels :
