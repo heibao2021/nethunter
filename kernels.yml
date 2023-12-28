@@ -2109,12 +2109,12 @@
 - RMX2185:
     model   : Realme C15 Mediatek
     kernels :
-      -id         : RMX2185
-      description : Realme C15 (MTK) for LineageOS
-      version     :
-        - android        : ten
-          linux          : '4.9'
-          description    : LineageOS 17.1
-          author         : Frostleaft07
-          source         : 'git clone https://github.com/Frostleaft07/android_kernel_realme_mt6765 -b Ups-4.9.207'
-          features       : [Injection]
+      - id          : RMX2185
+        description : Realme C15 (MTK) for LineageOS
+        version     :
+          - android       : ten
+            linux         : '4.9'
+            description   : LineageOS 17.1
+            author        : Frostleaft07
+            source        : 'git clone https://github.com/Frostleaft07/android_kernel_realme_mt6765 -b Ups-4.9.207'
+            features      : [Injection]
