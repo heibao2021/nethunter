@@ -2111,7 +2111,7 @@
     kernels :
       - id          : RMX2185
         description : Realme C15 (MTK) for LineageOS
-        version     :
+        versions    :
           - android       : ten
             linux         : '4.9'
             kernel        : 4.9
