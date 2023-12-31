@@ -63,7 +63,7 @@
 
 ---
 - a37-los:
-  model   : Oppo A37fw (2016)
+    model   : Oppo A37fw (2016)
     kernels :
       - id          : a37
         description : Oppo A37fw for LineageOS
