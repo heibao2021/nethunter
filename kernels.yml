@@ -2117,5 +2117,5 @@
             kernel        : 4.9
             description   : LineageOS 17.1
             author        : Frostleaft07
-            source        : 'git clone https://github.com/Frostleaft07/android_kernel_realme_mt6765 -b Ups-4.9.207'
-            features      : [Injection]
+            source        : 'git clone https://github.com/Frostleaft07/android_kernel_realme_mt6765 -b Nethunter'
+            features      : [Injection, RTL88XXAU, HID-4, BT_RFCOMM, NFS, CDROM, RTL8812AU, RTL8188EUS, Internal BT, RTL-BT]
