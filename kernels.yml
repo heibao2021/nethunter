@@ -1920,6 +1920,18 @@
             author       : kimocoder
             source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b release'
             features     : [HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
+- star2lte-los:
+    model   : Samsung Galaxy S9+ star2lte SM-G965F exynos9810
+    kernels :
+      - id          : star2lte-los
+        description : Samsung Galaxy S9+ star2lte  for LineageOS
+        versions    :
+          - android      : thirteen
+            linux        : '4.9'
+            description  : LineageOS 20
+            author       : mylezgoose
+            source       : 'git https://github.com/mylesgoose/android_kernel_samsung_exynos9810.git -b lineage-20'
+            features     : [HID-4, Injection, RTL8812AU, Internal BT, BT_RFCOMM, Docker]
 - suzuran:
     model   : Sony Xperia Z5 Compact
     kernels :
