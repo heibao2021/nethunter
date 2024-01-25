@@ -1931,7 +1931,7 @@
             description  : LineageOS 20
             author       : mylezgoose
             source       : 'git https://github.com/mylesgoose/android_kernel_samsung_exynos9810.git -b lineage-20'
-            features     : [All enabled in the kernel will need to add drivers for it now booted. HID-4, Injection, RTL8812AU, Internal BT, BT_RFCOMM, Docker]
+            features     : [ HID-4 at android terminal type "setprop sys.usb.config hid", "Injection monitormode RTL8812AU", Internal BT, BT_RFCOMM, Docker]
 - suzuran:
     model   : Sony Xperia Z5 Compact
     kernels :
