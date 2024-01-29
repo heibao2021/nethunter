@@ -1,582 +1,231 @@
-# HID gadget init
+/dev/mali0                0666   system     system
+/dev/ion                  0666   system     system
+/dev/ump                  0666   system     graphics
+/dev/exynos-mem           0660   system     graphics
+/dev/video0               0660   system     camera
+/dev/video1               0660   system     camera
+/dev/video2               0660   system     camera
+/dev/video3               0660   system     camera
+/dev/video20              0660   system     system
+# media0 is used for GSC, DECON, etc
+/dev/media0               0660   system     camera
+# media1 is used for DECON Ext WB
+/dev/media1               0660   system     graphics
+# Various devices use the v4l-subdev interface
+# We declare all such nodes simultaneously here
+/dev/v4l-subdev0          0660   system     camera
+/dev/v4l-subdev1          0660   system     camera
+/dev/v4l-subdev2          0660   system     camera
+/dev/v4l-subdev3          0660   system     camera
+/dev/v4l-subdev4          0660   system     camera
+/dev/v4l-subdev5          0660   system     camera
+/dev/v4l-subdev6          0660   system     camera
+/dev/v4l-subdev7          0660   system     camera
+/dev/v4l-subdev8          0660   system     camera
+/dev/v4l-subdev9          0660   system     camera
+/dev/v4l-subdev10         0660   system     camera
+/dev/v4l-subdev11         0660   system     camera
+/dev/v4l-subdev12         0660   system     camera
+/dev/v4l-subdev13         0660   system     camera
+/dev/v4l-subdev14         0660   system     camera
+/dev/v4l-subdev15         0660   system     camera
+/dev/v4l-subdev16         0660   system     camera
+/dev/v4l-subdev17         0660   system     camera
+/dev/v4l-subdev18         0660   system     camera
+/dev/v4l-subdev19         0660   system     camera
+# v4l-subdev20 is used for DECON Ext WB
+/dev/v4l-subdev20         0660   system     graphics
+/dev/v4l-subdev21         0660   system     graphics
+/dev/v4l-subdev32         0660   system     graphics
 
-on init
-    export TERMINFO /system/etc/terminfo
-    export TERM linux
+# gscalers
+/dev/video23              0660   media      graphics
+/dev/video26              0660   media      graphics
+/dev/video24              0660   media      graphics
+/dev/video27              0660   media      graphics
+/dev/video29              0660   media      graphics
+/dev/video30              0660   media      graphics
+# video31 is used for DECON Ext WB
+/dev/video31              0660   media      graphics
 
-on boot
-    mkdir /sys/kernel/config/usb_gadget/g1/configs/b.1
-    mkdir /sys/kernel/config/usb_gadget/g1/configs/b.1/strings/0x409
-    mkdir /sys/kernel/config/usb_gadget/g1/functions/ecm.0
-    mkdir /sys/kernel/config/usb_gadget/g1/functions/mass_storage.0
-    mkdir /sys/kernel/config/usb_gadget/g1/functions/hid.0
-    mkdir /sys/kernel/config/usb_gadget/g1/functions/hid.1
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.0/protocol "1"
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.0/subclass "1"
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.0/report_length "8"     
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.1/protocol "1"
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.1/subclass "2"
-    write /sys/kernel/config/usb_gadget/g1/functions/hid.1/report_length "4"
-    echo -ne \\x05\\x01\\x09\\x06\\xa1\\x01\\x05\\x07\\x19\\xe0\\x29\\xe7\\x15\\x00\\x25\\x01\\x75\\x01\\x95\\x08\\x81\\x02\\x95\\x01\\x75\\x08\\x81\\x03\\x95\\x05\\x75\\x01\\x05\\x08\\x19\\x01\\x29\\x05\\x91\\x02\\x95\\x01\\x75\\x03\\x91\\x03\\x95\\x06\\x75\\x08\\x15\\x00\\x25\\x65\\x05\\x07\\x19\\x00\\x29\\x65\\x81\\x00\\xc0 >  /sys/kernel/config/usb_gadget/g1/functions/hid.0/report_desc
-    echo -ne \\x05\\x01\\x09\\x02\\xa1\\x01\\x09\\x01\\xa1\\x00\\x05\\x09\\x19\\x01\\x29\\x05\\x15\\x00\\x25\\x01\\x95\\x05\\x75\\x01\\x81\\x02\\x95\\x01\\x75\\x03\\x81\\x01\\x05\\x01\\x09\\x30\\x09\\x31\\x09\\x38\\x15\\x81\\x25\\x7F\\x75\\x08\\x95\\x03\\x81\\x06\\xc0\\xc0 > /sys/kernel/config/usb_gadget/g1/functions/hid.1/report_desc
+# mscalers
+/dev/video50              0660   mediacodec      drmrpc
+/dev/m2m1shot_scaler0     0660   mediacodec      drmrpc
 
-on property:sys.usb.config=hid
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/kernel/config/usb_gadget/g1/idProduct 0xc316
-    write /sys/kernel/config/usb_gadget/g1/idVendor 0x046d
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "USB Key Mouse"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763673
-    write /sys/class/android_usb/android0/functions hid
-    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
-    write /sys/kernel/config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/configuration "hid"
-    symlink /sys/kernel/config/usb_gadget/g1/functions/hid.0 /sys/kernel/config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /sys/kernel/config/usb_gadget/g1/functions/hid.1 /sys/kernel/config/usb_gadget/g1/configs/b.1/hid.1
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-    
-on property:sys.usb.config=hid,adb
-    start adbd
+/dev/video55              0666   system     graphics
+/dev/g2d                  0660   system     graphics
+/dev/fimg2d               0666   system     graphics
+/dev/i2c-2                0660   system     system
+/dev/HPD                  0660   system     system
 
-on property:sys.usb.config=hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x046d
-    write /config/usb_gadget/g1/idProduct 0xc317
-    write /sys/class/android_usb/android0/functions hid,adb
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "USB Key Mouse adb"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763674
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# wfd
+/dev/tsmux                0660   oem_5386      graphics
+/dev/repeater             0660   oem_5386      graphics
 
-on property:sys.usb.config=win,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/kernel/config/usb_gadget/g1/idProduct 0xc316
-    write /sys/kernel/config/usb_gadget/g1/idVendor 0x046d
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "Win USB Key Mouse"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763675
-    write /sys/class/android_usb/android0/functions hid
-    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
-    write /sys/kernel/config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/configuration "hid"
-    symlink /sys/kernel/config/usb_gadget/g1/functions/hid.0 /sys/kernel/config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /sys/kernel/config/usb_gadget/g1/functions/hid.1 /sys/kernel/config/usb_gadget/g1/configs/b.1/hid.1
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-    
-on property:sys.usb.config=win,hid,adb
-    start adbd
+# mfc
+/dev/video6               0660   mediacodec mediadrm
+/dev/video7               0660   mediacodec mediadrm
+/dev/video8               0660   mediacodec mediadrm
+/dev/video9               0660   mediacodec mediadrm
+/dev/video10              0660   mediacodec mediadrm
+/dev/video11              0660   mediacodec mediadrm
 
-on property:sys.usb.config=win,hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x046d
-    write /config/usb_gadget/g1/idProduct 0xc317
-    write /sys/class/android_usb/android0/functions hid,adb
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "Win USB Key Mouse adb"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763676
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# camera
+/dev/video101             0660   cameraserver   camera
+/dev/video102             0660   cameraserver   camera
+/dev/video103             0660   cameraserver   camera
+/dev/video104             0660   cameraserver   camera
+/dev/video107             0660   cameraserver   camera
+/dev/video109             0660   cameraserver   camera
+/dev/video110             0660   cameraserver   camera
+/dev/video111             0660   cameraserver   camera
+/dev/video112             0660   cameraserver   camera
+/dev/video120             0660   cameraserver   camera
+/dev/video121             0660   cameraserver   camera
+/dev/video122             0660   cameraserver   camera
+/dev/video130             0660   cameraserver   camera
+/dev/video131             0660   cameraserver   camera
+/dev/video132             0660   cameraserver   camera
+/dev/video140             0660   cameraserver   camera
+/dev/video141             0660   cameraserver   camera
+/dev/video142             0660   cameraserver   camera
+/dev/video150             0660   cameraserver   camera
+/dev/video151             0660   cameraserver   camera
+/dev/video152             0660   cameraserver   camera
+/dev/video153             0660   cameraserver   camera
+/dev/video154             0660   cameraserver   camera
+/dev/video155             0660   cameraserver   camera
+/dev/video156             0660   cameraserver   camera
+/dev/video157             0660   cameraserver   camera
+/dev/video160             0660   cameraserver   camera
+/dev/video161             0660   cameraserver   camera
+/dev/video170             0660   cameraserver   camera
+/dev/video171             0660   cameraserver   camera
+/dev/video172             0660   cameraserver   camera
+/dev/video173             0660   cameraserver   camera
+/dev/video174             0660   cameraserver   camera
+/dev/video175             0660   cameraserver   camera
+/dev/video180             0660   cameraserver   camera
+/dev/video190             0660   cameraserver   camera
+/dev/video191             0660   cameraserver   camera
+/dev/video192             0660   cameraserver   camera
+/dev/video193             0660   cameraserver   camera
+/dev/video210             0660   cameraserver   camera
+/dev/video211             0660   cameraserver   camera
+/dev/video212             0660   cameraserver   camera
+/dev/video213             0660   cameraserver   camera
+/dev/video214             0660   cameraserver   camera
+/dev/video215             0660   cameraserver   camera
+/dev/video216             0660   cameraserver   camera
+/dev/video217             0660   cameraserver   camera
+/dev/video218             0660   cameraserver   camera
+/dev/video219             0660   cameraserver   camera
+/dev/video220             0660   cameraserver   camera
+/dev/video221             0660   cameraserver   camera
+/dev/video222             0660   cameraserver   camera
+/dev/video223             0660   cameraserver   camera
+/dev/video224             0660   cameraserver   camera
+/dev/video225             0660   cameraserver   camera
+/dev/media2               0660   media      media
+/dev/hdcp2                0660   media      media
 
-on property:sys.usb.config=win,mtp,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hid"
-    write /config/usb_gadget/g1/idVendor 0x2a70
-    write /config/usb_gadget/g1/idProduct 0xf004
-    write /sys/class/android_usb/android0/functions mtp,hid,acm
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "Win USB Keyboard Mouse MTP"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763677
-    symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# jpeg
+/dev/m2m1shot_jpeg	      0660   media          media
+/dev/video12              0660   cameraserver   media
 
-### MTP + HID + ADB ###
-on property:sys.usb.config=win,mtp,hid,adb
-    start adbd
+# audio
+/dev/seiren               0660   system     audio
 
-on property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=2
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x2a70
-    write /config/usb_gadget/g1/idProduct 0xf005
-    write /sys/class/android_usb/android0/functions mtp,hid,acm,adb    
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "USB Key Mouse MTP"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763678
-    symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-    
-### mass_storage only ###
-on property:sys.usb.config=win,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc"
-    write /config/usb_gadget/g1/idVendor 0x9051
-    write /config/usb_gadget/g1/idProduct 0x168a
-    write /sys/class/android_usb/android0/functions mass_storage
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "USB mass storage"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763679
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Mobicore
+/dev/mobicore             0700   system     system
+/dev/mobicore-user        0666   radio      system
 
-### mass_storage + adb ###
+# Secure MEM driver
+/dev/s5p-smem             0660   system     system
 
-on property:sys.usb.config=win,mass_storage,adb
-    start adbd
+#temporary
+/data/modem.bin           0400   radio      system
 
-on property:sys.usb.config=win,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x9051
-    write /config/usb_gadget/g1/idProduct 0x168b
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer Microsoft
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "USB mass storage"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber 1835763680
-    write /sys/class/android_usb/android0/functions mass_storage,adb    
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1    
-    setprop sys.usb.state ${sys.usb.config}
-    
-### RINDIS only ###
-on property:sys.usb.config=win,rndis
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a2
-    write /sys/class/android_usb/android0/functions rndis,dm    
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# DM tools
+/dev/umts_dm0             0660   radio      radio
+/dev/umts_router          0660   radio      radio
 
-### RNDIS + adb ###
-on property:sys.usb.config=win,rndis,adb
-    start adbd
+# Modem Interface
+/dev/block/platform/11120000.ufs/by-name/radio	0660   system     radio
+/dev/block/platform/11120000.ufs/by-name/cp_debug	0660	radio	system
+/dev/block/platform/11120000.ufs/by-name/RADIO	0660   system     radio
+/dev/block/platform/11120000.ufs/by-name/CP_DEBUG	0660	radio	system
+/sys/devices/platform/10000.mif_pdata	sim/ds_detect	0660	radio	system
+/dev/umts*                0660   system     radio
+/dev/umts_csd             0660   system     loop_radio
+/dev/smd4                 0660   system     radio
+/dev/ramdump_memshare     0660   system     radio
+/dev/umts_ciq*            0660   system     bridge_rw
 
-on property:sys.usb.config=win,rndis,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_adb"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a3
-    write /sys/class/android_usb/android0/functions rndis,acm,dm,adb    
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# dev ril bridge
+/dev/drb	          0660   system     radio
 
-### HID + mass_storage ###
-on property:sys.usb.config=win,hid,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc"
-    write /config/usb_gadget/g1/idVendor 0x046d
-    write /config/usb_gadget/g1/idProduct 0xc318
-    write /sys/class/android_usb/android0/functions hid,mass_storage 
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# FRP
+/dev/block/platform/11120000.ufs/by-name/frp    0660   root      system
 
-### HID + mass_storage + adb ###
-on property:sys.usb.config=win,hid,mass_storage,adb
-    start adbd
+# interactive governor parameters
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_slack			0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/min_sample_time		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/hispeed_freq		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/target_loads		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/go_hispeed_load		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/above_hispeed_delay		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/boost			0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse			0200	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/input_boost			0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse_duration		0660	system	system
+/sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy			0660	system	system
 
-on property:sys.usb.config=win,hid,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x046d
-    write /config/usb_gadget/g1/idProduct 0xc319
-    write /sys/class/android_usb/android0/functions hid,mass_storage,adb    
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Vision (VPU, SCORE)
+/dev/vertex0             0660   media      media
+/dev/vertex1             0660   media      media
 
-### RNDIS + mass_storage ###
-on property:sys.usb.config=win,rndis,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_msc"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a4
-    write /sys/class/android_usb/android0/functions rndis,mass_storage     
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Voice Trigger Sound (VTS Misc)
+/dev/vts_fio_dev         0660   audioserver   system
 
-### RNDIS + mass_storage + adb ###
-on property:sys.usb.config=win,rndis,mass_storage,adb
-    start adbd
+/dev/iva_ctl             0660   cameraserver   camera
+/dev/score               0660   cameraserver   camera
 
-on property:sys.usb.config=win,rndis,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a5
-    write /sys/class/android_usb/android0/functions rndis,mass_storage,adb    
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Google FRP solution
+/dev/block/platform/11120000.ufs/by-name/PERSISTENT    0660    system    system
 
-### RNDIS + HID ###
-on property:sys.usb.config=win,rndis,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a6
-    write /sys/class/android_usb/android0/functions rndis,hid   
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Reactivation lock
+/dev/block/platform/11120000.ufs/by-name/STEADY    0660    system    system
 
-### RNDIS + HID + adb ###
-on property:sys.usb.config=win,rndis,hid,adb
-    start adbd
+# Google FRP solution
+/dev/block/platform/11120000.ufs/by-name/persistent    0660    system    system
 
-on property:sys.usb.config=win,rndis,hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a7
-    write /sys/class/android_usb/android0/functions rndis,hid,adb    
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Reactivation lock
+/dev/block/platform/11120000.ufs/by-name/steady    0660    system    system
 
-### RNDIS + HID + mass_storage ###
-on property:sys.usb.config=win,rndis,hid,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_msc"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a8
-    write /sys/class/android_usb/android0/functions rndis,hid,mass_storage   
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# sensor sysfs properties
+/sys/devices/virtual/input/input*    poll_delay    0660    system    radio
+/sys/devices/virtual/input/input*    enable        0660    system    radio
+/dev/input/event*	  0660   system		input
 
-### RNDIS + HID + mass_storage + adb ###
-on property:sys.usb.config=win,rndis,hid,mass_storage,adb
-    start adbd
+# Sensorhub IIO
+/dev/ssp_data_injection        0660   system		system
+/dev/ssp_sensorhub        0660   system		system
+/dev/batch_io		  0600   system         system
+/dev/iio:device*          0660   system		system
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0/iio:device*    buffer/enable       0660    system    system
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0/iio:device*    buffer/length       0660    system    system
+/sys/bus/iio/devices/iio:device*    0664   system     radio
+/sys/bus/iio/devices/iio:device*	poll_delay	0660	system	system
 
-on property:sys.usb.config=win,rndis,hid,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x0525
-    write /config/usb_gadget/g1/idProduct 0xa4a9
-    write /sys/class/android_usb/android0/functions rndis,hid,mass_storage,adb
-    symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
+# Broadcom Sensorhub Bridge Driver
+/dev/bbd_sensor           0660   system     system
+/dev/bbd_control          0660   system     system
+/dev/bbd_packet           0660   system     system
+/dev/bbd_reliable         0660   system     system
+/dev/bbd_sio              0660   system     system
+/dev/bbd_patch            0660   system     system
+/dev/ttyBCM*              0660   system     system
 
-# -- End of Windows Part -- #
-
-# -- Against Mac OS -- #
-### MTP + HID ###
-on property:sys.usb.config=mac,mtp,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hid"
-    write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
-    write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
-    write /sys/class/android_usb/android0/functions mtp,hid
-    symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### MTP + HID + ADB ###
-on property:sys.usb.config=mac,mtp,hid,adb
-    start adbd
-
-on property:sys.usb.config=mac,mtp,hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
-    write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
-    write /sys/class/android_usb/android0/functions mtp,hid,adb
-    symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### HID only ###
-on property:sys.usb.config=mac,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid"
-    write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
-    write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
-    write /sys/class/android_usb/android0/functions hid
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### HID + adb ###
-on property:sys.usb.config=mac,hid,adb
-    start adbd
-
-on property:sys.usb.config=mac,hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x05ac # Apple
-    write /config/usb_gadget/g1/idProduct 0x0201 # Apple Keyboard
-    write /sys/class/android_usb/android0/functions hid,adb    
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0 
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### mass_storage only ###
-on property:sys.usb.config=mac,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc"
-    write /config/usb_gadget/g1/idVendor 0x0930
-    write /config/usb_gadget/g1/idProduct 0x6545
-    write /sys/class/android_usb/android0/functions mass_storage   
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### mass_storage + adb ###
-
-on property:sys.usb.config=mac,mass_storage,adb
-    start adbd
-
-on property:sys.usb.config=mac,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x0930
-    write /config/usb_gadget/g1/idProduct 0x6545
-    write /sys/class/android_usb/android0/functions mass_storage,adb
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM only ###
-on property:sys.usb.config=mac,ecm
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm"
-    write /config/usb_gadget/g1/idVendor 0x1d6b
-    write /config/usb_gadget/g1/idProduct 0x0104
-    write /sys/class/android_usb/android0/functions ecm
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + adb ###
-on property:sys.usb.config=mac,ecm,adb
-    start adbd
-
-on property:sys.usb.config=mac,ecm,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_adb"
-    write /config/usb_gadget/g1/idVendor 0x1d6b
-    write /config/usb_gadget/g1/idProduct 0x0104
-    write /sys/class/android_usb/android0/functions ecm,adb
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### HID + mass_storage ###
-on property:sys.usb.config=mac,hid,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions hid,mass_storage
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### HID + mass_storage + adb ###
-on property:sys.usb.config=mac,hid,mass_storage,adb
-    start adbd
-
-on property:sys.usb.config=mac,hid,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions hid,mass_storage,adb
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + HID ###
-on property:sys.usb.config=mac,ecm,hid
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions ecm,hid
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + HID + adb ###
-on property:sys.usb.config=mac,ecm,hid,adb
-    start adbd
-
-on property:sys.usb.config=mac,ecm,hid,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_adb"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions ecm,hid,adb
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + mass_storage ###
-on property:sys.usb.config=mac,ecm,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_msc"
-    write /config/usb_gadget/g1/idVendor 0x1d6b
-    write /config/usb_gadget/g1/idProduct 0x0104
-    write /sys/class/android_usb/android0/functions ecm,mass_storage
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + mass_storage + adb ###
-on property:sys.usb.config=mac,ecm,mass_storage,adb
-    start adbd
-
-on property:sys.usb.config=mac,ecm,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x1d6b
-    write /config/usb_gadget/g1/idProduct 0x0104
-    write /sys/class/android_usb/android0/functions ecm,mass_storage,adb
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + HID + mass_storage ###
-on property:sys.usb.config=mac,ecm,hid,mass_storage
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_msc"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions ecm,acm,hid,mass_storage
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-### ECM + HID + mass_storage + adb ###
-on property:sys.usb.config=mac,ecm,hid,mass_storage,adb
-    start adbd
-
-on property:sys.usb.config=mac,ecm,hid,mass_storage,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_msc_adb"
-    write /config/usb_gadget/g1/idVendor 0x05ac
-    write /config/usb_gadget/g1/idProduct 0x0201
-    write /sys/class/android_usb/android0/functions ecm,acm,hid,mass_storage,adb
-    symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
-    symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
-    symlink /config/usb_gadget/g1/functions/acm.0 /config/usb_gadget/g1/configs/b.1/acm.0
-    symlink /config/usb_gadget/g1/functions/ecm.0 /config/usb_gadget/g1/configs/b.1/ecm.0
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
- # -- End of Mac's Part -- #
- # -- HID gadget END -- #
-
-
+/dev/hidg* 0666 root root
