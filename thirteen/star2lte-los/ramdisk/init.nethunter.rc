@@ -42,6 +42,7 @@ on property:sys.usb.config=hid,adb
     write /config/usb_gadget/g1/idVendor 0x046d
     write /config/usb_gadget/g1/idProduct 0xc317
     write /sys/class/android_usb/android0/functions hid,adb
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
@@ -71,6 +72,7 @@ on property:sys.usb.config=win,hid,adb
     write /config/usb_gadget/g1/idVendor 0x046d
     write /config/usb_gadget/g1/idProduct 0xc317
     write /sys/class/android_usb/android0/functions hid,adb
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/ffs.adb
@@ -84,6 +86,7 @@ on property:sys.usb.config=win,mtp,hid
     write /config/usb_gadget/g1/idVendor 0x2a70
     write /config/usb_gadget/g1/idProduct 0xf004
     write /sys/class/android_usb/android0/functions mtp,hid,acm
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -101,6 +104,7 @@ on property:sys.usb.config=win,mtp,hid,adb && property:sys.usb.configfs=2
     write /config/usb_gadget/g1/idVendor 0x2a70
     write /config/usb_gadget/g1/idProduct 0xf005
     write /sys/class/android_usb/android0/functions mtp,hid,acm,adb    
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -172,6 +176,7 @@ on property:sys.usb.config=win,hid,mass_storage
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc"
     write /config/usb_gadget/g1/idVendor 0x046d
     write /config/usb_gadget/g1/idProduct 0xc318
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions hid,mass_storage 
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -189,7 +194,8 @@ on property:sys.usb.config=win,hid,mass_storage,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc_adb"
     write /config/usb_gadget/g1/idVendor 0x046d
     write /config/usb_gadget/g1/idProduct 0xc319
-    write /sys/class/android_usb/android0/functions hid,mass_storage,adb    
+    write /sys/class/android_usb/android0/functions hid,mass_storage,adb 
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0   
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
     symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
@@ -234,6 +240,7 @@ on property:sys.usb.config=win,rndis,hid
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid"
     write /config/usb_gadget/g1/idVendor 0x0525
     write /config/usb_gadget/g1/idProduct 0xa4a6
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions rndis,hid   
     symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
@@ -251,6 +258,7 @@ on property:sys.usb.config=win,rndis,hid,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_adb"
     write /config/usb_gadget/g1/idVendor 0x0525
     write /config/usb_gadget/g1/idProduct 0xa4a7
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0    
     write /sys/class/android_usb/android0/functions rndis,hid,adb    
     symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
@@ -266,6 +274,7 @@ on property:sys.usb.config=win,rndis,hid,mass_storage
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_msc"
     write /config/usb_gadget/g1/idVendor 0x0525
     write /config/usb_gadget/g1/idProduct 0xa4a8
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions rndis,hid,mass_storage   
     symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
@@ -284,6 +293,7 @@ on property:sys.usb.config=win,rndis,hid,mass_storage,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_hid_msc_adb"
     write /config/usb_gadget/g1/idVendor 0x0525
     write /config/usb_gadget/g1/idProduct 0xa4a9
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions rndis,hid,mass_storage,adb
     symlink /config/usb_gadget/g1/functions/rndis.0 /config/usb_gadget/g1/configs/b.1/rndis.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
@@ -304,6 +314,7 @@ on property:sys.usb.config=mac,mtp,hid
     write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
     write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
     write /sys/class/android_usb/android0/functions mtp,hid
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -319,6 +330,7 @@ on property:sys.usb.config=mac,mtp,hid,adb
     write /sys/class/android_usb/android0/enable 0
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_hid_adb"
     write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
     write /sys/class/android_usb/android0/functions mtp,hid,adb
     symlink /config/usb_gadget/g1/functions/mtp.0 /config/usb_gadget/g1/configs/b.1/mtp.0
@@ -335,6 +347,7 @@ on property:sys.usb.config=mac,hid
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid"
     write /config/usb_gadget/g1/idVendor 0x05ac	# Apple, Inc.
     write /config/usb_gadget/g1/idProduct 0x0201 # USB Keyboard
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions hid
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -351,6 +364,7 @@ on property:sys.usb.config=mac,hid,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_adb"
     write /config/usb_gadget/g1/idVendor 0x05ac # Apple
     write /config/usb_gadget/g1/idProduct 0x0201 # Apple Keyboard
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions hid,adb    
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0 
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -365,6 +379,7 @@ on property:sys.usb.config=mac,mass_storage
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "msc"
     write /config/usb_gadget/g1/idVendor 0x0930
     write /config/usb_gadget/g1/idProduct 0x6545
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions mass_storage   
     symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/b.1/mass_storage.0
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
@@ -424,6 +439,7 @@ on property:sys.usb.config=mac,hid,mass_storage
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions hid,mass_storage
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -441,6 +457,7 @@ on property:sys.usb.config=mac,hid,mass_storage,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "hid_msc_adb"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions hid,mass_storage,adb
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -456,6 +473,7 @@ on property:sys.usb.config=mac,ecm,hid
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions ecm,hid
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -474,6 +492,7 @@ on property:sys.usb.config=mac,ecm,hid,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_adb"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions ecm,hid,adb
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -522,6 +541,7 @@ on property:sys.usb.config=mac,ecm,hid,mass_storage
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_msc"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions ecm,acm,hid,mass_storage
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
@@ -541,6 +561,7 @@ on property:sys.usb.config=mac,ecm,hid,mass_storage,adb
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ecm_hid_msc_adb"
     write /config/usb_gadget/g1/idVendor 0x05ac
     write /config/usb_gadget/g1/idProduct 0x0201
+    write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/class/android_usb/android0/functions ecm,acm,hid,mass_storage,adb
     symlink /config/usb_gadget/g1/functions/hid.0 /config/usb_gadget/g1/configs/b.1/hid.0
     symlink /config/usb_gadget/g1/functions/hid.1 /config/usb_gadget/g1/configs/b.1/hid.1
