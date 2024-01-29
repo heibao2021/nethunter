@@ -1,0 +1,3 @@
+copy the file ueventd.rc to /system/vendor/etc/
+copy the file init.Nethunter.rc /system/vendor/etc/init/
+or use the nethunterhid installer.zip with magisk and press the volume up button to select that file upon running that script at prompt.
