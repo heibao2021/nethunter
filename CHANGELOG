@@ -1,4 +1,0 @@
-added support for samsung j7pro2017 ONE Ui Roms
-
-## 2023-07-08
-removed generic architecture references to resolve build issues with cedric and potter (see issue #1527 and build.py changes)

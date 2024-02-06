@@ -1,0 +1,23 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:gator_annotate_color gator
+alias symbol:gspca_disconnect gspca_main
+alias symbol:gspca_dev_probe gspca_main
+alias symbol:gator_annotate gator
+alias symbol:gspca_expo_autogain gspca_main
+alias symbol:gspca_resume gspca_main
+alias symbol:gator_annotate_marker_str gator
+alias symbol:gator_annotate_name_channel gator
+alias symbol:gspca_coarse_grained_expo_autogain gspca_main
+alias symbol:gator_annotate_channel_color gator
+alias symbol:gspca_suspend gspca_main
+alias symbol:gator_annotate_channel_end gator
+alias symbol:gspca_debug gspca_main
+alias symbol:gspca_dev_probe2 gspca_main
+alias symbol:gator_annotate_marker gator
+alias symbol:gator_annotate_end gator
+alias symbol:gspca_frame_add gspca_main
+alias symbol:gator_annotate_marker_color_str gator
+alias symbol:gator_annotate_marker_color gator
+alias symbol:gator_annotate_channel gator
+alias symbol:gator_annotate_name_group gator
+alias symbol:gator_annotate_visual gator
