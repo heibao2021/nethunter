@@ -130,7 +130,7 @@
             description  : Android 14
             author       : Hani K.
             source       : 'git clone https://github.com/Hani-K/Bifr0st.git -b 14.0-alioth'
-            features     : [HID, Injection, RTL88XXAU, RTL88XXAU, BT_RFCOMM, Internal_BT, NFS]
+            features     : [HID, Injection, RTL88XXAU, BT_RFCOMM, Internal_BT, NFS]
 - angler:
     model   : Nexus 6P
     kernels :
