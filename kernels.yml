@@ -131,6 +131,18 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_zte_msm8996.git -B nethunter-6.0'
             features     : [CDROM, HID, Injection]
+- alioth:
+    model   : Xiaomi Poco F3
+    kernels :
+      - id          : alioth-los
+        description : LineageOS Android
+        versions    :
+          - android      : fourteen
+            linux        : '4.19'
+            description  : Android 14
+            author       : Hani K.
+            source       : 'git clone https://github.com/Hani-K/Bifr0st.git -b 14.0-alioth'
+            features     : [HID, Injection, RTL88XXAU, BT_RFCOMM, Internal_BT, NFS]
 - angler:
     model   : Nexus 6P
     kernels :
