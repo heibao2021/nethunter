@@ -2004,6 +2004,24 @@
             author       : DSR!
             source       : 'git clone https://github.com/xchwarze/nethunter-motorola-x2-kernel -b cm-14.1'
             features     : [HID, Injection]
+- eva:
+    model   : Huawei P9
+    kernels :
+      - id          : eva
+        description : Huawei P9 for EMUI or LineageOS
+        versions    :
+          - android      : oreo
+            linux        : '4.04'
+            description  : EMUI
+            author       : vvvbbbcz
+            source       : 'git clone https://gitlab.com/vvvbbbcz/android_kernel_huawei_hi3650.git -b upstream'
+            features     : [HID, Injection, RTL88XXAU]
+          - android      : pie
+            linux        : '4.04'
+            description  : LineageOS 16.0
+            author       : vvvbbbcz
+            source       : 'git clone https://gitlab.com/vvvbbbcz/android_kernel_huawei_hi3650.git -b upstream'
+            features     : [HID, Injection, RTL88XXAU]
 - vienna:
     model   : Huawei P9 Plus
     kernels :
