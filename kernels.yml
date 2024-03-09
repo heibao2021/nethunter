@@ -62,6 +62,18 @@
 
 
 ---
+- a37-los:
+    model   : Oppo A37fw (2016)
+    kernels :
+      - id          : a37
+        description : Oppo A37fw for LineageOS
+        versions    :
+          - android      : ten
+            linux        : '3.10'
+            description  : LineageOS 17.1
+            author       : diamant3
+            source       : 'git clone https://github.com/diamant3/kernel_oppo_A37f.git -b lineage-17.1'
+            features     : []
 - a5uelte:
     model   : Samsung Galaxy A5 (2015)
     kernels :
