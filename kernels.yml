@@ -62,6 +62,18 @@
 
 
 ---
+- a37-los:
+    model   : Oppo A37fw (2016)
+    kernels :
+      - id          : a37
+        description : Oppo A37fw for LineageOS
+        versions    :
+          - android      : ten
+            linux        : '3.10'
+            description  : LineageOS 17.1
+            author       : diamant3
+            source       : 'git clone https://github.com/diamant3/kernel_oppo_A37f.git -b lineage-17.1'
+            features     : []
 - a5uelte:
     model   : Samsung Galaxy A5 (2015)
     kernels :
@@ -119,6 +131,18 @@
             author       : jcadduono
             source       : 'git clone https://github.com/jcadduono/android_kernel_zte_msm8996.git -B nethunter-6.0'
             features     : [CDROM, HID, Injection]
+- alioth:
+    model   : Xiaomi Poco F3
+    kernels :
+      - id          : alioth-los
+        description : LineageOS Android
+        versions    :
+          - android      : fourteen
+            linux        : '4.19'
+            description  : Android 14
+            author       : Hani K.
+            source       : 'git clone https://github.com/Hani-K/Bifr0st.git -b 14.0-alioth'
+            features     : [HID, Injection, RTL88XXAU, BT_RFCOMM, Internal_BT, NFS]
 - angler:
     model   : Nexus 6P
     kernels :
@@ -2004,6 +2028,24 @@
             author       : DSR!
             source       : 'git clone https://github.com/xchwarze/nethunter-motorola-x2-kernel -b cm-14.1'
             features     : [HID, Injection]
+- eva:
+    model   : Huawei P9
+    kernels :
+      - id          : eva
+        description : Huawei P9 for EMUI or LineageOS
+        versions    :
+          - android      : oreo
+            linux        : '4.04'
+            description  : EMUI
+            author       : vvvbbbcz
+            source       : 'git clone https://gitlab.com/vvvbbbcz/android_kernel_huawei_hi3650.git -b upstream'
+            features     : [HID, Injection, RTL88XXAU]
+          - android      : pie
+            linux        : '4.04'
+            description  : LineageOS 16.0
+            author       : vvvbbbcz
+            source       : 'git clone https://gitlab.com/vvvbbbcz/android_kernel_huawei_hi3650.git -b upstream'
+            features     : [HID, Injection, RTL88XXAU]
 - vienna:
     model   : Huawei P9 Plus
     kernels :
