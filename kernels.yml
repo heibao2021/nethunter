@@ -1942,20 +1942,26 @@
     model   : Nothing Phone (1)
     kernels :
       - id          : spacewar
-        description : Nothin Phone (1) for Custom/AOSP A12 & A13
+        description : Nothin Phone (1) for AOSP/AOSPA
         versions    :
           - android      : twelve
             linux        : '5.4'
-            description  : Custom/ASOP Android 12
+            description  : AOSP/AOSPA Android 12
             author       : kimocoder
-            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b release'
-            features     : [HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
+            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b nethunter-stable'
+            features     : [CDROM, HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
           - android      : thirteen
-            linux        : '3.18'
-            description  : Custom/ASOP Android 13
+            linux        : '5.4'
+            description  : AOSP/AOSPA Android 13
             author       : kimocoder
-            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b release'
-            features     : [HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
+            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b nethunter-stable'
+            features     : [CDROM, HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
+          - android      : fourteen
+            linux        : '5.4'
+            description  : AOSP/AOSPA Android 14
+            author       : kimocoder
+            source       : 'git clone https://github.com/kimocoder/android_kernel_nothing_sm7325 -b nethunter-stable'
+            features     : [CDROM, HID-4, RTL88XXAU, NFS, Internal BT, BT_RFCOMM, Injection]
 - star2lte-los:
     model   : Samsung Galaxy S9+ star2lte SM-G965F exynos9810
     kernels :
