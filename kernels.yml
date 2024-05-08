@@ -1823,6 +1823,18 @@
             author       : Alynx
             source       : 'git clone https://github.com/V3rB0se/Alynx-RMX1971'
             features     : [HID, Injection]
+- rmx3031:
+    model   : Realme X7 Max 5G
+    kernels :
+      - id          : rmx3031
+        description : NetHunter Kernel for Android 13 and firmware F.13 and EX01
+        versions    :
+          - android      : tiramisu
+            linux        : '4.19'
+            description  : Android 13 and firmware F.13 and EX01
+            author       : dek0der
+            source       : 'git clone https://github.com/dek0der/kernel_realme_RMX3031'
+            features     : [Injection]
 - s2:
     model   : LeEco Le 2
     kernels :
